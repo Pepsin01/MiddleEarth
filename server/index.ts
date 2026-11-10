@@ -2,7 +2,7 @@ import { createApp } from './app.ts';
 import { loadConfig } from './config.ts';
 
 const config = loadConfig();
-const app = createApp(config);
+const { app } = createApp(config);
 
 app.listen(config.port, config.host, () => {
   console.log(`Middle-earth Chronicle is listening on http://${config.host}:${config.port}`);
