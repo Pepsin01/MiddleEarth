@@ -1,0 +1,97 @@
+[
+  {
+    "id": "s2e4-the-broken-bridge",
+    "title": "The broken bridge",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "journey",
+    "pos": [3300, 2790],
+    "description": "Elrond's company finds the bridge at Axa destroyed. Galadriel's ring warns her of danger on the southern road; Elrond, who will not be led by the ring, takes it anyway.",
+    "characters": ["galadriel", "elrond"],
+    "via": [[2345, 2800]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Eldest_(episode)"
+  },
+  {
+    "id": "s2e4-tom-bombadil",
+    "title": "Tom Bombadil",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "magic",
+    "placeId": "tom-bombadils-house",
+    "description": "Alone in the desert, the Stranger follows a goat track to a cottage under strange stars and is half swallowed by a tree. Its keeper, a singing fellow called Tom Bombadil, names himself Eldest — and says the Stranger is meant to face both the Dark Wizard and Sauron.",
+    "characters": ["stranger", "tom-bombadil"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/9/97/Tom_Bombadil_meets_the_Stranger_-_TRoP.png/revision/latest?cb=20240917023342",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Tom_Bombadil"
+  },
+  {
+    "id": "s2e4-the-stoors",
+    "title": "The Stoors",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "discovery",
+    "placeId": "stoor-village",
+    "description": "Nori and Poppy are caught by Stoors, desert cousins of the Harfoots who live in a canyon. Their leader knows the name Burrows: a Stoor who went west long ago to find a land of green hills, and never came back.",
+    "characters": ["nori", "poppy"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/5/5f/Stoors_-_Rings_of_Power.png/revision/latest?cb=20240908173637",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Stoors"
+  },
+  {
+    "id": "s2e4-the-thing-in-the-mud",
+    "title": "The thing in the mud",
+    "storylineId": "southlands",
+    "importance": "minor",
+    "icon": "battle",
+    "pos": [6420, 6230],
+    "description": "Tracking Theo, the three wade into a bog where a nameless creature drags Arondir and Isildur under. Estrid, unmasked as one of Adar's branded, earns back their trust by pulling Isildur out.",
+    "characters": ["arondir", "isildur", "estrid"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/5/52/Nameless_Thing_ROP_Season_2_EP3.jpeg/revision/latest?cb=20260320045751",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Nameless_things"
+  },
+  {
+    "id": "s2e4-the-ents-of-the-south",
+    "title": "The Ents of the south",
+    "storylineId": "southlands",
+    "importance": "major",
+    "icon": "magic",
+    "pos": [6480, 6150],
+    "description": "What took Theo was a pair of Ents, Snaggleroot and Winterbloom, enraged by the army that hacked a road through their forest. Arondir asks their forgiveness, and they let their captives go.",
+    "characters": ["arondir", "isildur", "estrid", "theo"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/8/83/Arondir_meets_the_Ents.png/revision/latest?cb=20240923004550",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Ents"
+  },
+  {
+    "id": "s2e4-the-barrow-wights",
+    "title": "The Barrow-wights",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "battle",
+    "placeId": "barrow-downs",
+    "description": "In the fog of Tyrn Gorthad the dead rise. The Elves learn that only the blades the wights were buried with can lay them to rest again.",
+    "characters": ["galadriel", "elrond"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Barrow-wights"
+  },
+  {
+    "id": "s2e4-galadriel-is-taken",
+    "title": "Galadriel is taken",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "battle",
+    "pos": [4150, 3330],
+    "description": "From a ridge the company sees it: Adar's whole host, marching on Eregion. Galadriel gives Nenya to Elrond, sends him to warn the High King and holds the Orcs off alone, until Adar has her.",
+    "characters": ["galadriel", "elrond", "adar"],
+    "via": [[5900, 4750], [5200, 4800], [4580, 4860], [4350, 4400]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Eldest_(episode)"
+  }
+]

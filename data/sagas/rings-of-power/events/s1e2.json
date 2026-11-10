@@ -1,0 +1,111 @@
+[
+  {
+    "id": "s1e2-the-stranger-wakes",
+    "title": "The Stranger wakes",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "magic",
+    "placeId": "harfoot-camp",
+    "description": "Nori and Poppy cart the Stranger out of the crater and hide him near the camp. He cannot speak their tongue, but he gathers fireflies into a pattern of stars he seems to be looking for.",
+    "characters": ["nori", "poppy", "stranger"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/3/31/Nori_observes_the_Stranger_-_TRoP.png/revision/latest?cb=20220921201942",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Adrift_(episode)"
+  },
+  {
+    "id": "s1e2-tunnels-beneath-hordern",
+    "title": "Tunnels beneath Hordern",
+    "storylineId": "southlands",
+    "importance": "major",
+    "icon": "omen",
+    "placeId": "hordern",
+    "description": "In the ruins Arondir finds a tunnel dug under a house and follows it alone into the dark, where something seizes him.",
+    "characters": ["arondir", "bronwyn"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Hordern"
+  },
+  {
+    "id": "s1e2-an-orc-in-the-house",
+    "title": "An Orc in the house",
+    "storylineId": "southlands",
+    "importance": "major",
+    "icon": "battle",
+    "placeId": "tirharad",
+    "description": "An Orc breaks through the floor of Bronwyn's home. She and Theo kill it together, and its head finally convinces the villagers that they must leave.",
+    "characters": ["bronwyn", "theo"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Bronwyn"
+  },
+  {
+    "id": "s1e2-the-villagers-flee-to-the-watchtower",
+    "title": "The villagers flee to the watchtower",
+    "storylineId": "southlands",
+    "importance": "travel",
+    "icon": "journey",
+    "placeId": "ostirith",
+    "description": "The people of Tirharad climb to Ostirith, the tower the Elves have just abandoned.",
+    "characters": ["bronwyn", "theo", "waldreg"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/e/e7/Ostirith_-_The_Rings_of_Power.png/revision/latest?cb=20220904193217",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Ostirith"
+  },
+  {
+    "id": "s1e2-celebrimbors-great-design",
+    "title": "Celebrimbor's great design",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "craft",
+    "placeId": "ost-in-edhil",
+    "description": "Gil-galad sends Elrond to Eregion to help Celebrimbor, greatest of the Elven-smiths, who wants to build a forge mightier than any before — and needs it finished by spring.",
+    "characters": ["elrond", "celebrimbor"],
+    "via": [[2345, 2800], [3300, 2790], [3950, 3180]],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/2/22/Celebrimbor%27s_plans_-_TRoP.png/revision/latest?cb=20220926184101",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Celebrimbor"
+  },
+  {
+    "id": "s1e2-at-the-doors-of-khazad-dum",
+    "title": "At the doors of Khazad-dûm",
+    "storylineId": "dwarves",
+    "importance": "major",
+    "icon": "council",
+    "placeId": "khazad-dum",
+    "description": "Elrond seeks out his old friend Prince Durin for help. Turned away at the gate, he invokes a rock-breaking contest, loses it, and wins back Durin's friendship anyway over dinner with Durin's wife Disa.",
+    "characters": ["elrond", "durin-iv", "disa"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/d/d5/TRoP_-_Elrond_and_Celebrimbor_at_the_West-gate.png/revision/latest?cb=20220902053506",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Khazad-d%C3%BBm"
+  },
+  {
+    "id": "s1e2-the-kings-chest",
+    "title": "The king's chest",
+    "storylineId": "dwarves",
+    "importance": "minor",
+    "icon": "omen",
+    "placeId": "khazad-dum",
+    "description": "King Durin III distrusts the Elves' sudden interest. Together father and son open a chest holding something that shines.",
+    "characters": ["durin-iv", "durin-iii"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Durin_III"
+  },
+  {
+    "id": "s1e2-adrift-on-the-sundering-seas",
+    "title": "Adrift on the Sundering Seas",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "ship",
+    "placeId": "sundering-seas",
+    "description": "Swimming for home, Galadriel is pulled onto a raft of shipwrecked Men. A sea-worm smashes it; only she and a guarded Southlander named Halbrand come through the storm, until a ship finds them.",
+    "characters": ["galadriel", "halbrand"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/6/68/Galadriel_and_Halbrand_at_sea_-_TRoP.png/revision/latest?cb=20220919210126",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Belegaer"
+  }
+]

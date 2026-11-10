@@ -49,6 +49,9 @@ export function characterProblems(character: Character, ctx: RefContext): string
   }
   for (const reveal of character.reveals ?? []) {
     if (!ctx.episodeIds.has(reveal.from)) problems.push(`${who} has a reveal in the unknown episode "${reveal.from}".`);
+    if (reveal.storylineId && !ctx.storylineIds.has(reveal.storylineId)) {
+      problems.push(`${who} has a reveal using the unknown storyline "${reveal.storylineId}".`);
+    }
     if (reveal.event && !ctx.eventIds.has(reveal.event)) problems.push(`${who} has a reveal at the unknown event "${reveal.event}".`);
   }
   return problems;

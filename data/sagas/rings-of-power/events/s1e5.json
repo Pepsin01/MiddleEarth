@@ -1,0 +1,136 @@
+[
+  {
+    "id": "s1e5-this-wandering-day",
+    "title": "This Wandering Day",
+    "storylineId": "harfoots",
+    "importance": "minor",
+    "icon": "journey",
+    "pos": [5880, 3700],
+    "description": "The Harfoots trek through marsh and woodland toward their autumn home. Nori teaches the Stranger his first words, among them 'friend' and 'peril'.",
+    "characters": ["nori", "poppy", "stranger", "sadoc"],
+    "via": [[5870, 3480]],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/7/7a/Nori_%26_Stranger_-_TRoP.png/revision/latest?cb=20221016203350",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Harfoots"
+  },
+  {
+    "id": "s1e5-three-in-white",
+    "title": "Three in white",
+    "storylineId": "harfoots",
+    "importance": "minor",
+    "icon": "omen",
+    "pos": [5960, 3330],
+    "description": "Three pale figures arrive at the Stranger's crater and study the scorched ground. They are looking for him.",
+    "characters": [],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/b/b6/The_Mystics_-_TRoP.png/revision/latest?cb=20221025023817",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Mystics"
+  },
+  {
+    "id": "s1e5-wolves-in-the-wood",
+    "title": "Wolves in the wood",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "battle",
+    "pos": [6200, 4020],
+    "description": "Wolves fall on the stragglers. The Stranger drives them off with a blow that shakes the earth — and frightens Nori when the ice that heals his arm nearly takes hers.",
+    "characters": ["nori", "poppy", "stranger", "sadoc"],
+    "via": [[6050, 3950]],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/f/fa/Stranger_opposes_wolves_-_TRoP.png/revision/latest?cb=20220929221752",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Partings_(episode)"
+  },
+  {
+    "id": "s1e5-stand-or-kneel",
+    "title": "Stand or kneel",
+    "storylineId": "southlands",
+    "importance": "major",
+    "icon": "council",
+    "placeId": "ostirith",
+    "description": "Bronwyn asks the refugees to stay and fight; half of them follow Waldreg down the hill to Adar instead. Theo finally shows Arondir the hilt, and the Elf recognises it: a key, made to enslave the Southlands.",
+    "characters": ["bronwyn", "arondir", "theo", "waldreg"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Ostirith"
+  },
+  {
+    "id": "s1e5-only-blood-can-bind",
+    "title": "Only blood can bind",
+    "storylineId": "shadow",
+    "importance": "minor",
+    "icon": "death",
+    "pos": [7040, 5430],
+    "description": "Waldreg hails Adar as Sauron and is beaten for the name. To prove his loyalty he is handed a knife and a boy from his own village.",
+    "characters": ["adar", "waldreg"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/0/07/Waldreg%27s_choice_-_TRoP.png/revision/latest?cb=20221001223142",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Waldreg"
+  },
+  {
+    "id": "s1e5-recruits-for-the-expedition",
+    "title": "Recruits for the expedition",
+    "storylineId": "numenor",
+    "importance": "minor",
+    "icon": "battle",
+    "placeId": "armenelos",
+    "description": "Galadriel drills the volunteers in the square, one Elf against a dozen. Isildur, refused by his father, schemes for a place aboard; Halbrand insists he is staying in Númenor.",
+    "characters": ["galadriel", "valandil", "isildur", "elendil", "halbrand"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/14/Valandil_%26_Galadriel_-_TRoP.png/revision/latest?cb=20221029194636",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Partings_(episode)"
+  },
+  {
+    "id": "s1e5-fire-in-the-harbour",
+    "title": "Fire in the harbour",
+    "storylineId": "numenor",
+    "importance": "minor",
+    "icon": "disaster",
+    "placeId": "armenelos",
+    "description": "Urged on by Eärien, Kemen slips aboard to burn the ships. Isildur, stowed away below, drags him out of the blaze and keeps his secret.",
+    "characters": ["kemen", "isildur", "earien"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/5/5e/Kemen_%26_Isildur_-_TRoP.png/revision/latest?cb=20221027022854",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Kemen"
+  },
+  {
+    "id": "s1e5-the-song-of-the-roots-of-hithaeglir",
+    "title": "The song of the roots of Hithaeglir",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "council",
+    "placeId": "lindon",
+    "description": "Durin dines in Lindon. Afterwards Gil-galad tells Elrond the legend behind his interest — that mithril holds the light of a lost Silmaril — and the truth: the Elves are fading, and without it they must leave Middle-earth by spring.",
+    "characters": ["elrond", "gil-galad", "celebrimbor", "durin-iv"],
+    "via": [[4540, 3724], [3950, 3180], [3300, 2790], [2345, 2800]],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/1d/Gil-galad_at_meeting_with_Durin.jpeg/revision/latest?cb=20220901001922",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Mithril"
+  },
+  {
+    "id": "s1e5-numenor-sails-to-war",
+    "title": "Númenor sails to war",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "ship",
+    "placeId": "armenelos",
+    "description": "Halbrand takes up the kingship Galadriel offers him. Three ships leave the harbour for Middle-earth with the Queen Regent aboard.",
+    "characters": ["galadriel", "halbrand", "miriel", "elendil", "isildur", "valandil"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/5/5d/Galadriel_%26_Halbrand_setting_sail_-_TRoP.png/revision/latest?cb=20220929215511",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Partings_(episode)"
+  }
+]

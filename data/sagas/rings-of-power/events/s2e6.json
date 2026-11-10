@@ -1,0 +1,80 @@
+[
+  {
+    "id": "s2e6-an-enemys-offer",
+    "title": "An enemy's offer",
+    "storylineId": "shadow",
+    "importance": "major",
+    "icon": "council",
+    "pos": [4420, 3800],
+    "description": "Adar shows Galadriel Morgoth's crown, which once unmade Sauron's body, and asks for her ring to finish the work. She sees the trap too late: Sauron has no army of his own — so he lured Adar's here.",
+    "characters": ["galadriel", "adar"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/0/0d/Adar_-_S2_E6.png/revision/latest?cb=20240922183112",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Iron_Crown"
+  },
+  {
+    "id": "s2e6-the-queen-of-the-sea",
+    "title": "The Queen of the Sea",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "magic",
+    "placeId": "armenelos",
+    "description": "Elendil refuses to bend the knee and is sentenced to trial by the abyss. Míriel takes his place and is cast into the sea; the sea-worm lets her go, and the Faithful hail her Queen of the Sea.",
+    "characters": ["miriel", "elendil", "pharazon", "earien", "kemen"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a9/Seaworm.png/revision/latest?cb=20241003021142",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Tar-M%C3%ADriel"
+  },
+  {
+    "id": "s2e6-a-staff-or-his-friends",
+    "title": "A staff, or his friends",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "magic",
+    "pos": [9040, 3990],
+    "description": "Tom leads the Stranger to a grove of dead trees to find his staff — and warns that he must choose between his destiny and Nori, whom a vision shows in the hands of the Dark Wizard. The Stranger chooses his friends.",
+    "characters": ["stranger", "tom-bombadil"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Tom_Bombadil"
+  },
+  {
+    "id": "s2e6-hunted-among-the-stoors",
+    "title": "Hunted among the Stoors",
+    "storylineId": "harfoots",
+    "importance": "minor",
+    "icon": "omen",
+    "placeId": "stoor-village",
+    "description": "Nori and Poppy lie low in the canyon while the Dark Wizard's riders search for the halflings who travelled with the Istar.",
+    "characters": ["nori", "poppy"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Stoors"
+  },
+  {
+    "id": "s2e6-annatar-takes-charge",
+    "title": "Annatar takes charge",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "omen",
+    "placeId": "ost-in-edhil",
+    "description": "While Celebrimbor loses himself in the Nine, Annatar quietly takes over the running of the city — and hands the smith a vial of 'mithril' that is nothing of the kind.",
+    "characters": ["celebrimbor", "halbrand", "mirdania"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Annatar"
+  },
+  {
+    "id": "s2e6-the-siege-of-eregion-begins",
+    "title": "The siege of Eregion begins",
+    "storylineId": "shadow",
+    "importance": "major",
+    "icon": "battle",
+    "pos": [4470, 3770],
+    "description": "Adar's catapults open fire on Ost-in-Edhil. Inside the forge, wrapped in Annatar's illusion of a quiet morning, Celebrimbor hears nothing.",
+    "characters": ["adar"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a7/SiegeOfEregion.png/revision/latest?cb=20250327132435",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Siege_of_Eregion"
+  }
+]

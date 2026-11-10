@@ -1,0 +1,135 @@
+[
+  {
+    "id": "s1e1-saurons-mark-in-the-frozen-fortress",
+    "title": "Sauron's mark in the frozen fortress",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "discovery",
+    "placeId": "durnost",
+    "description": "After centuries of hunting, Galadriel's company reaches an abandoned stronghold in the Forodwaith. Inside they find Sauron's sigil burned into an anvil and kill a snow-troll — but her soldiers refuse to follow her any further north.",
+    "characters": ["galadriel"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/d/d1/D%C3%BArnost_-_TRoP.png/revision/latest?cb=20221126033810",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/D%C3%BArnost"
+  },
+  {
+    "id": "s1e1-the-harfoots-of-rhovanion",
+    "title": "The Harfoots of Rhovanion",
+    "storylineId": "harfoots",
+    "importance": "minor",
+    "icon": "star",
+    "placeId": "harfoot-camp",
+    "description": "A hidden camp of Harfoots waits for its next migration. Nori Brandyfoot keeps wandering beyond the permitted trails, to the dismay of her elders.",
+    "characters": ["nori", "poppy", "sadoc"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a8/Harfoot_village_-_The_Rings_of_Power.png/revision/latest?cb=20220908023208",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Harfoots"
+  },
+  {
+    "id": "s1e1-galadriel-is-honoured-and-sent-away",
+    "title": "Galadriel is honoured, and sent away",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "council",
+    "placeId": "lindon",
+    "description": "In Lindon, Elrond urges Galadriel to put up her sword. High King Gil-galad declares the war over and rewards her company with passage across the sea to Valinor.",
+    "characters": ["galadriel", "elrond", "gil-galad"],
+    "via": [[4450, 1350], [3350, 2150], [2450, 2650]],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/9/98/Gil-galad_%28A_Shadow_of_the_Past%29.png/revision/latest?cb=20221024020120",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Lindon"
+  },
+  {
+    "id": "s1e1-arondirs-last-watch",
+    "title": "Arondir's last watch",
+    "storylineId": "southlands",
+    "importance": "major",
+    "icon": "bond",
+    "placeId": "tirharad",
+    "description": "The Elves' long watch over the Southlands is ending. Arondir, drawn to the healer Bronwyn, lingers in Tirharad — where a cow giving black milk hints that something is wrong in the land.",
+    "characters": ["arondir", "bronwyn", "theo", "waldreg"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/0/0b/Arondir_speaks_to_Bronwyn_-_TRoP.png/revision/latest?cb=20220926172711",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Tirharad"
+  },
+  {
+    "id": "s1e1-a-broken-sword-under-the-floorboards",
+    "title": "A broken sword under the floorboards",
+    "storylineId": "southlands",
+    "importance": "minor",
+    "icon": "omen",
+    "placeId": "tirharad",
+    "description": "Bronwyn's son Theo shows a friend what he has found hidden in a barn: the hilt of a black sword marked with Sauron's sign, which stirs when it tastes his blood.",
+    "characters": ["theo"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/4/4b/Dark_hilt_-_TRoP.png/revision/latest?cb=20220928152030",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Theo"
+  },
+  {
+    "id": "s1e1-hordern-in-flames",
+    "title": "Hordern in flames",
+    "storylineId": "southlands",
+    "importance": "major",
+    "icon": "disaster",
+    "placeId": "hordern",
+    "description": "Following the sickness to its source, Arondir and Bronwyn come over a hill to find the neighbouring village burning and empty.",
+    "characters": ["arondir", "bronwyn"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/4/46/Hordern_-_The_Rings_of_Power.png/revision/latest?cb=20220902204620",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Hordern"
+  },
+  {
+    "id": "s1e1-the-ship-leaves-the-grey-havens",
+    "title": "The ship leaves the Grey Havens",
+    "storylineId": "elves",
+    "importance": "travel",
+    "icon": "ship",
+    "placeId": "grey-havens",
+    "description": "Galadriel boards the ship for the Undying Lands with the soldiers of her company.",
+    "characters": ["galadriel"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/8/81/Mithlondwide.jpg/revision/latest?cb=20220923022528",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Grey_Havens"
+  },
+  {
+    "id": "s1e1-galadriel-leaps-into-the-sea",
+    "title": "Galadriel leaps into the sea",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "ship",
+    "placeId": "far-west",
+    "description": "At the very threshold of Valinor, Galadriel cannot let her hunt go. As the light opens for her companions she steps back and dives into the sea, an ocean away from Middle-earth.",
+    "characters": ["galadriel"],
+    "via": [[2000, 2960], [1560, 3010], [900, 3500]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/A_Shadow_of_the_Past_(episode)"
+  },
+  {
+    "id": "s1e1-a-man-falls-from-the-sky",
+    "title": "A man falls from the sky",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "magic",
+    "pos": [5960, 3330],
+    "description": "A meteor crosses the whole of Middle-earth and crashes near the Harfoot camp. In the burning crater Nori finds a huge, bewildered stranger.",
+    "characters": ["nori", "stranger"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/f/f0/Stranger_arrival_-_TRoP.png/revision/latest?cb=20220921030828",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/A_Shadow_of_the_Past_(episode)"
+  }
+]

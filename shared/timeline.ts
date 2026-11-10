@@ -105,20 +105,36 @@ export function buildTimeline(bundle: Pick<SagaBundle, 'saga' | 'places' | 'char
 
   const tracks = new Map<string, Stop[]>();
   for (const timed of events) {
-    if (!timed.pos) continue;
+    // Flashbacks are shown on the map but nobody travels to them.
+    if (!timed.pos || timed.event.flashback) continue;
     for (const characterId of timed.event.characters) {
       let track = tracks.get(characterId);
       if (!track) tracks.set(characterId, (track = []));
       track.push({
         at: timed,
         pos: timed.pos,
-        via: timed.event.via ?? [],
+        via: routeFor(track.at(-1), timed.pos, timed.event.via),
         exit: timed.event.exits?.includes(characterId) ?? false,
       });
     }
   }
 
   return { episodes, episodeById, events, eventById, eventsByEpisode, placeById, characterById, tracks };
+}
+
+/**
+ * An event's route ("via") is shared by everybody taking part, but not everybody
+ * arrives the same way. A character follows the route only when it makes sense for them:
+ *   - they were already on the map (someone appearing for the first time just appears),
+ *   - they were somewhere else (people already at the spot do not walk the route),
+ *   - and the route starts on their side: its first point is no farther from where
+ *     they were than the destination itself. Others travel in a straight line.
+ */
+function routeFor(previous: Stop | undefined, destination: Point, via: Point[] | undefined): Point[] {
+  if (!via?.length || !previous || previous.exit) return [];
+  const here = previous.pos;
+  if (here[0] === destination[0] && here[1] === destination[1]) return [];
+  return distance(here, via[0]) <= distance(here, destination) ? via : [];
 }
 
 /** The moment the time slider points at: a specific event, or the end of an episode. */
@@ -200,6 +216,7 @@ function dropRepeats(points: Point[]): Point[] {
 
 export interface Identity {
   name: string;
+  storylineId?: string;
   description?: string;
   wikiUrl?: string;
   image?: ImageRef;
@@ -211,6 +228,7 @@ export interface Identity {
 export function identityAt(timeline: Timeline, character: Character, time: Time): Identity {
   const identity: Identity = {
     name: character.name,
+    storylineId: character.storylineId,
     description: character.description,
     wikiUrl: character.wikiUrl,
     image: character.image,
@@ -221,6 +239,7 @@ export function identityAt(timeline: Timeline, character: Character, time: Time)
     if (!moment || !isAtOrBefore(moment, time)) continue;
     identity.revealed = true;
     if (reveal.name) identity.name = reveal.name;
+    if (reveal.storylineId) identity.storylineId = reveal.storylineId;
     if (reveal.description) identity.description = reveal.description;
     if (reveal.wikiUrl) identity.wikiUrl = reveal.wikiUrl;
     if (reveal.image) identity.image = reveal.image;

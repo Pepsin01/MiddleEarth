@@ -81,6 +81,67 @@ describe('character positions', () => {
     ]);
   });
 
+  it('lets only those characters follow a route for whom it makes sense', () => {
+    const data = bundle();
+    // Everyone meets in the mines; the route describes the way from Lindon in the west.
+    data.events.push({
+      id: 'gathering',
+      episodeId: 's2e1',
+      title: 'Gathering',
+      storylineId: 'dwarves',
+      importance: 'major',
+      placeId: 'moria',
+      via: [[250, 200]],
+      characters: ['durin', 'galadriel', 'stranger'],
+    });
+    data.characters.push({ id: 'newcomer', name: 'Newcomer' });
+    data.events.push({ ...data.events.at(-1)!, id: 'second', title: 'Second', characters: ['newcomer'] });
+    const routed = buildTimeline(data);
+    const before = cursorTime(routed, 's2e1', 'e5');
+    const after = endOfEpisode(2);
+    // Durin and the Stranger come from Lindon: they follow the route.
+    expect(characterPath(routed, 'durin', before, after)).toEqual([[[100, 100], [250, 200], [500, 400]]]);
+    expect(characterPath(routed, 'stranger', before, after)).toEqual([[[100, 100], [250, 200], [500, 400]]]);
+    // Galadriel is already in the mines: she does not walk to Lindon and back.
+    expect(characterPath(routed, 'galadriel', before, after)).toEqual([]);
+    // Someone appearing for the first time simply appears.
+    expect(characterPath(routed, 'newcomer', before, after)).toEqual([]);
+  });
+
+  it('ignores a route that starts on the far side of the destination', () => {
+    const data = bundle();
+    data.events.push({
+      id: 'far-route',
+      episodeId: 's2e1',
+      title: 'Arrivals',
+      storylineId: 'elves',
+      importance: 'major',
+      pos: [150, 150],
+      via: [[900, 700]],
+      characters: ['durin'],
+    });
+    const routed = buildTimeline(data);
+    // Durin is in Lindon, right next to the destination; the route begins far away in the east.
+    expect(characterPath(routed, 'durin', cursorTime(routed, 's2e1', 'e5'), endOfEpisode(2))).toEqual([[[100, 100], [150, 150]]]);
+  });
+
+  it('shows flashbacks on the map without moving anyone there', () => {
+    const data = bundle();
+    data.events.push({
+      id: 'long-ago',
+      episodeId: 's2e1',
+      title: 'Long ago',
+      storylineId: 'elves',
+      importance: 'minor',
+      pos: [900, 700],
+      characters: ['galadriel'],
+      flashback: true,
+    });
+    const withFlashback = buildTimeline(data);
+    expect(withFlashback.eventById.get('long-ago')?.pos).toEqual([900, 700]);
+    expect(characterAt(withFlashback, 'galadriel', endOfEpisode(2))?.pos).toEqual([500, 400]);
+  });
+
   it('does not draw a line across an exit', () => {
     // Durin stays in the mines (no movement), exits, then reappears in Lindon: no line connects the two.
     expect(characterPath(timeline, 'durin', endOfEpisode(0), endOfEpisode(2))).toEqual([]);
@@ -93,6 +154,18 @@ describe('identity reveals', () => {
   it('keeps the secret until the reveal episode', () => {
     expect(identityAt(timeline, stranger, endOfEpisode(1))).toMatchObject({ name: 'The Stranger', revealed: false });
     expect(identityAt(timeline, stranger, startOfEpisode(2))).toMatchObject({ name: 'Gandalf', revealed: true });
+  });
+
+  it('can time a reveal by an event and change the storyline colour', () => {
+    const halbrand = {
+      id: 'halbrand',
+      name: 'Halbrand',
+      storylineId: 'elves',
+      reveals: [{ from: 's1e2', event: 'e4', name: 'Sauron', storylineId: 'dwarves' }],
+    };
+    // e3 and e4 are both in s1e2; the mask only drops at e4
+    expect(identityAt(timeline, halbrand, cursorTime(timeline, 's1e2', 'e3'))).toMatchObject({ name: 'Halbrand', storylineId: 'elves' });
+    expect(identityAt(timeline, halbrand, cursorTime(timeline, 's1e2', 'e4'))).toMatchObject({ name: 'Sauron', storylineId: 'dwarves' });
   });
 });
 
