@@ -1,1 +1,397 @@
-[]
+[
+  {
+    "id": "galadriel",
+    "name": "Galadriel",
+    "group": "Elves",
+    "storylineId": "elves",
+    "description": "Commander of the Northern Armies, who has hunted Sauron for centuries and will not believe the war is over.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Galadriel",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/4/43/Galadriel_in_Lindon_-_The_Rings_of_Power.png/revision/latest?cb=20220904205002",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "elrond",
+    "name": "Elrond",
+    "group": "Elves",
+    "storylineId": "elves",
+    "description": "Half-elven herald of the High King: a politician and a poet, and an old friend of both Galadriel and Durin.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Elrond",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/c/c9/Elrond_under_Khazad-d%C3%BBm_-_TRoP.png/revision/latest?cb=20221024172647",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "gil-galad",
+    "name": "Gil-galad",
+    "group": "Elves",
+    "storylineId": "elves",
+    "description": "High King of the Elves, ruling from Lindon.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Gil-galad",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/f/fe/Gilgaladrop.png/revision/latest?cb=20250322164731",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "cirdan",
+    "name": "Círdan",
+    "group": "Elves",
+    "storylineId": "elves",
+    "description": "The Shipwright, lord of the Grey Havens and eldest of the Elves in Middle-earth.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/C%C3%ADrdan",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/e/e4/CirdanRingsofpower.png/revision/latest?cb=20250323180551",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "celebrimbor",
+    "name": "Celebrimbor",
+    "group": "Elves",
+    "storylineId": "rings",
+    "description": "Lord of Eregion and the greatest Elven-smith of the age.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Celebrimbor",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/7/73/Celebrimbor_in_Lindon_-_TRoP.png/revision/latest?cb=20220926174244",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "mirdania",
+    "name": "Mirdania",
+    "group": "Elves",
+    "storylineId": "rings",
+    "description": "A gifted smith of Eregion and Celebrimbor's apprentice.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Mirdania",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/f/ff/Mirdania_first_look.png/revision/latest?cb=20240726004433",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "arondir",
+    "name": "Arondir",
+    "group": "Elves",
+    "storylineId": "southlands",
+    "description": "A Silvan Elf soldier posted to watch the Southlands, in love with the healer Bronwyn.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Arondir",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/2/2f/Arondir_-_The_Rings_of_Power.png/revision/latest?cb=20220907195425",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "bronwyn",
+    "name": "Bronwyn",
+    "group": "Southlanders",
+    "storylineId": "southlands",
+    "description": "Healer of Tirharad and mother of Theo.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Bronwyn",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/e/e5/TRoP_-_Bronwyn_still.jpg/revision/latest?cb=20220419184718",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "theo",
+    "name": "Theo",
+    "group": "Southlanders",
+    "storylineId": "southlands",
+    "description": "Bronwyn's son, who has found something he should not have.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Theo",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/13/Imagetheo.png/revision/latest?cb=20260225122326",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "waldreg",
+    "name": "Waldreg",
+    "group": "Southlanders",
+    "storylineId": "southlands",
+    "description": "The tavern-keeper of Tirharad, whose family remembers the old days.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Waldreg",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/13/Waldreg2.png/revision/latest?cb=20260203144601",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "estrid",
+    "name": "Estrid",
+    "group": "Southlanders",
+    "storylineId": "southlands",
+    "description": "A Southlander who survived the making of Mordor.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Estrid",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/8/8c/Estrid_first_look.jpg/revision/latest?cb=20240611013601",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "halbrand",
+    "name": "Halbrand",
+    "group": "Southlanders",
+    "storylineId": "southlands",
+    "description": "A castaway from the Southlands with a past he would rather forget.",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/c/cb/Halbrand_in_prison_-_TRoP.png/revision/latest?cb=20220919210140",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "reveals": [
+      {
+        "from": "s1e8",
+        "event": "s1e8-halbrand-unmasked",
+        "name": "Sauron",
+        "storylineId": "shadow",
+        "wikiUrl": "https://lotr.fandom.com/wiki/Sauron",
+        "description": "The Dark Lord, Morgoth's greatest servant. 'Halbrand, king of the Southlands' was a mask."
+      },
+      {
+        "from": "s2e2",
+        "event": "s2e2-the-lord-of-gifts",
+        "name": "Sauron (as Annatar)",
+        "image": {
+          "source": "https://static.wikia.nocookie.net/lotr/images/7/7e/Annatar_rop.jpg/revision/latest?cb=20240727130059",
+          "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+        },
+        "description": "The Dark Lord, now in a fair Elvish form as Annatar, 'Lord of Gifts', a supposed emissary of the Valar at Celebrimbor's side."
+      }
+    ]
+  },
+  {
+    "id": "adar",
+    "name": "Adar",
+    "group": "Servants of shadow",
+    "storylineId": "shadow",
+    "description": "A scarred Elf whom the Orcs call 'father'.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Adar",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/8/86/Adar.png/revision/latest?cb=20260310192016",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "reveals": [
+      {
+        "from": "s2e1",
+        "image": {
+          "source": "https://static.wikia.nocookie.net/lotr/images/4/40/Adar_-_RoP_S02.png/revision/latest?cb=20240727093957",
+          "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+        }
+      }
+    ]
+  },
+  {
+    "id": "durin-iv",
+    "name": "Durin IV",
+    "group": "Dwarves",
+    "storylineId": "dwarves",
+    "description": "Prince of Khazad-dûm and Elrond's hot-headed old friend.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Durin_IV",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/b/bd/Durin_IV_faces_King_Durin_-_TRoP.png/revision/latest?cb=20221024230448",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "disa",
+    "name": "Disa",
+    "group": "Dwarves",
+    "storylineId": "dwarves",
+    "description": "Durin's wife, a stone-singer who can hear the mountain.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Disa",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a9/TRoP_-_Disa_first_look.png/revision/latest?cb=20220921205214",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "durin-iii",
+    "name": "Durin III",
+    "group": "Dwarves",
+    "storylineId": "dwarves",
+    "description": "King of Khazad-dûm, wary of Elves and of digging too deep.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Durin_III",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/ad/Durin_III.png/revision/latest?cb=20260309084935",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "miriel",
+    "name": "Míriel",
+    "group": "Númenóreans",
+    "storylineId": "numenor",
+    "description": "Queen Regent of Númenor, ruling for her ailing father and haunted by a vision.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Tar-M%C3%ADriel",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/b/bc/TRoP_-_Miriel_as_Queen-regent.jpg/revision/latest?cb=20220901022216",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "elendil",
+    "name": "Elendil",
+    "group": "Númenóreans",
+    "storylineId": "numenor",
+    "description": "A sea-captain of noble line whose name means Elf-friend.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Elendil",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/c/c2/Elendil_-_The_Rings_of_Power.png/revision/latest?cb=20220913204315",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "isildur",
+    "name": "Isildur",
+    "group": "Númenóreans",
+    "storylineId": "numenor",
+    "description": "Elendil's restless son, a sailor who wants something more.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Isildur",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/f/f9/TROPIsildur.jpg/revision/latest?cb=20220901001321",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "earien",
+    "name": "Eärien",
+    "group": "Númenóreans",
+    "storylineId": "numenor",
+    "description": "Elendil's daughter, an apprentice of the Builders' Guild.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/E%C3%A4rien",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/e/e9/E%C3%A4rien_-_The_Rings_of_Power.png/revision/latest?cb=20221016031409",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "pharazon",
+    "name": "Pharazôn",
+    "group": "Númenóreans",
+    "storylineId": "numenor",
+    "description": "The Queen Regent's cousin and chancellor, beloved by the people of Númenor.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Ar-Pharaz%C3%B4n",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/f/fe/Pharazon_first_look.jpg/revision/latest?cb=20220714204505",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "reveals": [
+      {
+        "from": "s2e5",
+        "name": "Ar-Pharazôn",
+        "description": "King of Númenor, having taken the sceptre from his cousin Míriel."
+      }
+    ]
+  },
+  {
+    "id": "kemen",
+    "name": "Kemen",
+    "group": "Númenóreans",
+    "storylineId": "numenor",
+    "description": "Pharazôn's ambitious son.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Kemen",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/2/21/Kemen_s2.png/revision/latest?cb=20260311114601",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "valandil",
+    "name": "Valandil",
+    "group": "Númenóreans",
+    "storylineId": "numenor",
+    "description": "Isildur's loyal friend from the Sea Guard.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Valandil",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a6/Valandil_-_The_Rings_of_Power.png/revision/latest?cb=20221027213314",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "nori",
+    "name": "Nori Brandyfoot",
+    "group": "Harfoots",
+    "storylineId": "harfoots",
+    "description": "A curious young Harfoot who keeps straying off the trail.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Elanor_Brandyfoot",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/5/5f/Nori_Brandyfoot_-_The_Rings_of_Power.png/revision/latest?cb=20220924013900",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "poppy",
+    "name": "Poppy Proudfellow",
+    "group": "Harfoots",
+    "storylineId": "harfoots",
+    "description": "Nori's cautious and loyal best friend.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Poppy_Proudfellow",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/7/75/Poppy_Proudfellow_-_The_Rings_of_Power.png/revision/latest?cb=20220907192953",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "sadoc",
+    "name": "Sadoc Burrows",
+    "group": "Harfoots",
+    "storylineId": "harfoots",
+    "description": "Trail-finder of the Harfoots and keeper of their star-book.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Sadoc_Burrows",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/6/6b/Sadoc_Burrows_-_%28The_Eye%29.png/revision/latest?cb=20221024221837",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "stranger",
+    "name": "The Stranger",
+    "group": "Wizards",
+    "storylineId": "harfoots",
+    "description": "A giant of a man who fell from the sky in a ball of fire, remembering nothing.",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/2/24/The_Stranger_renewed_-_TRoP.png/revision/latest?cb=20221016041322",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "reveals": [
+      {
+        "from": "s2e8",
+        "event": "s2e8-a-name-at-last",
+        "name": "Gandalf",
+        "wikiUrl": "https://lotr.fandom.com/wiki/Gandalf",
+        "image": {
+          "source": "https://static.wikia.nocookie.net/lotr/images/d/d9/Gandalftrop.png/revision/latest?cb=20260305113554",
+          "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+        },
+        "description": "One of the Istari, the wizards sent to Middle-earth to oppose Sauron. The halflings called him Grand-Elf; he will be known as Gandalf."
+      }
+    ]
+  },
+  {
+    "id": "tom-bombadil",
+    "name": "Tom Bombadil",
+    "group": "Wizards",
+    "storylineId": "harfoots",
+    "description": "A merry, ancient fellow who keeps a house in the desert and calls himself Eldest.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Tom_Bombadil",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a4/Tom_-_TRoP_S2_E4.png/revision/latest?cb=20240917023831",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  },
+  {
+    "id": "dark-wizard",
+    "name": "The Dark Wizard",
+    "group": "Wizards",
+    "storylineId": "harfoots",
+    "description": "A sorcerer who rules in Rhûn from the fortress of Caras Gaer.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Dark_Wizard",
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/5/59/Dark_Wizard_-_TRoP_S2_E2.png/revision/latest?cb=20240914232113",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    }
+  }
+]

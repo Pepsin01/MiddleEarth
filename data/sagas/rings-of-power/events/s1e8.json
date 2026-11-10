@@ -1,0 +1,125 @@
+[
+  {
+    "id": "s1e8-not-sauron",
+    "title": "Not Sauron",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "battle",
+    "placeId": "greenwood",
+    "description": "In the Greenwood the Mystics hail the Stranger as Lord Sauron and try to carry him east. The Harfoots come to his rescue; he takes up the Mystics' staff and scatters them — and as they vanish they call him something else: Istar. Sadoc dies of his wound at sunrise.",
+    "characters": ["stranger", "nori", "poppy", "sadoc"],
+    "exits": ["sadoc"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/2/24/The_Stranger_renewed_-_TRoP.png/revision/latest?cb=20221016041322",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Mystics"
+  },
+  {
+    "id": "s1e8-a-smith-from-the-southlands",
+    "title": "A smith from the Southlands",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "arrival",
+    "placeId": "ost-in-edhil",
+    "description": "Six days' ride brings Galadriel and the wounded Halbrand to Eregion, just as Gil-galad is about to end Celebrimbor's work. Healed, Halbrand offers the great smith a thought: do not stretch the mithril — alloy it.",
+    "characters": ["galadriel", "halbrand", "elrond", "celebrimbor", "gil-galad"],
+    "via": [[6560, 5630], [5900, 5350], [5000, 4950], [4580, 4860], [4350, 4400], [4400, 3950]],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/d/d3/Halbrand_%26_Celebrimbor_-_TRoP.png/revision/latest?cb=20221015035131",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Eregion"
+  },
+  {
+    "id": "s1e8-the-king-is-dead",
+    "title": "The king is dead",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "death",
+    "placeId": "armenelos",
+    "description": "Tar-Palantir dies. Eärien, sent to sketch him for his tomb, finds the palantír uncovered and waiting.",
+    "characters": ["earien", "pharazon", "kemen"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/d/df/Tar-Palantir_-_TRoP.png/revision/latest?cb=20220925204231",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Tar-Palantir"
+  },
+  {
+    "id": "s1e8-halbrand-unmasked",
+    "title": "Halbrand unmasked",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "omen",
+    "placeId": "ost-in-edhil",
+    "description": "An old scroll proves that the line of Southland kings died out a thousand years ago. Confronted by the river, Halbrand drops the mask — he is Sauron — and offers Galadriel a throne at his side. She refuses him.",
+    "characters": ["galadriel", "halbrand"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/14/Galadriel_reacts_to_Halbrand%27s_true_identity_-_TRoP.png/revision/latest?cb=20221016034850",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Sauron"
+  },
+  {
+    "id": "s1e8-three-rings-for-the-elven-kings",
+    "title": "Three Rings for the Elven-kings",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "craft",
+    "placeId": "ost-in-edhil",
+    "description": "Galadriel tells no one who Halbrand was — only that there must be three, to balance one another. Her brother's dagger is melted down for its gold and silver of Valinor, and Narya, Nenya and Vilya are made.",
+    "characters": ["galadriel", "elrond", "celebrimbor"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/e/e0/The_Three_Rings_-_TRoP.png/revision/latest?cb=20221015044319",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
+  },
+  {
+    "id": "s1e8-the-fleet-comes-home-to-black-sails",
+    "title": "The fleet comes home to black sails",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "ship",
+    "placeId": "armenelos",
+    "description": "Míriel and Elendil sail home to a harbour hung with mourning. Elendil sees the banners; the blind queen cannot.",
+    "characters": ["miriel", "elendil", "valandil"],
+    "via": [[6265, 6270], [5620, 6420], [4600, 7000], [3600, 8000], [2700, 8700], [2150, 8400]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Alloyed_(episode)"
+  },
+  {
+    "id": "s1e8-nori-chooses-the-road",
+    "title": "Nori chooses the road",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "journey",
+    "pos": [7000, 3800],
+    "description": "The Harfoots move on under a new trail-finder. Nori leaves her family to go with the Stranger toward the lands of Rhûn, where the stars he remembers can be found.",
+    "characters": ["stranger", "nori"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Rh%C3%BBn"
+  },
+  {
+    "id": "s1e8-the-harfoots-travel-on",
+    "title": "The Harfoots travel on",
+    "storylineId": "harfoots",
+    "importance": "travel",
+    "icon": "journey",
+    "placeId": "the-grove",
+    "description": "Poppy stays with the caravan as it sets out again.",
+    "characters": ["poppy"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Harfoots"
+  },
+  {
+    "id": "s1e8-sauron-enters-mordor",
+    "title": "Sauron enters Mordor",
+    "storylineId": "shadow",
+    "importance": "major",
+    "icon": "journey",
+    "pos": [6980, 5330],
+    "description": "Alone, the one who was Halbrand crosses the mountains and looks down on the burning mountain and the land made ready for him.",
+    "characters": ["halbrand"],
+    "via": [[4400, 3950], [4350, 4400], [4580, 4860], [5200, 4800], [5900, 4750], [6500, 4900], [6760, 5090]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Mordor"
+  }
+]

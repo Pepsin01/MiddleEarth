@@ -1,0 +1,103 @@
+[
+  {
+    "id": "s2e7-the-river-is-turned",
+    "title": "The river is turned",
+    "storylineId": "shadow",
+    "importance": "major",
+    "icon": "battle",
+    "pos": [4470, 3770],
+    "description": "Adar's engines bring down a cliff upstream and dam the river that guards the city. The bed runs dry, and the Orcs storm the walls on foot.",
+    "characters": ["adar"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a7/SiegeOfEregion.png/revision/latest?cb=20250327132435",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Siege_of_Eregion"
+  },
+  {
+    "id": "s2e7-elrond-pleads-with-durin",
+    "title": "Elrond pleads with Durin",
+    "storylineId": "dwarves",
+    "importance": "major",
+    "icon": "council",
+    "placeId": "khazad-dum",
+    "description": "Elrond begs Durin for an army, and Durin agrees — until his father, deep in the ring's grip, orders the diggers down toward the mithril and the thing that sleeps below it. Durin stays to stop him.",
+    "characters": ["elrond", "durin-iv", "disa", "durin-iii"],
+    "via": [[2345, 2800], [3300, 2790], [3950, 3180]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Durin_IV"
+  },
+  {
+    "id": "s2e7-the-nine",
+    "title": "The Nine",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "craft",
+    "placeId": "ost-in-edhil",
+    "description": "Celebrimbor notices a mouse he has seen before, and the illusion of a peaceful city cracks. He finishes the Nine in chains while Annatar turns his own smiths against him. Mirdania is hurled from the wall.",
+    "characters": ["celebrimbor", "halbrand", "mirdania"],
+    "exits": ["mirdania"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/6/6d/Celebrimbor_with_nine.png/revision/latest?cb=20260327093919",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
+  },
+  {
+    "id": "s2e7-the-charge-of-lindon",
+    "title": "The charge of Lindon",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "battle",
+    "pos": [4380, 3690],
+    "description": "Gil-galad and Elrond arrive with the cavalry of Lindon. Adar stops their charge by holding up his hostage: Galadriel.",
+    "characters": ["elrond", "gil-galad"],
+    "via": [[2345, 2800], [3300, 2790], [3950, 3180]],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/1c/Adar_greets_Elrond_-_TRoP.png/revision/latest?cb=20240929033718",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Siege_of_Eregion"
+  },
+  {
+    "id": "s2e7-arondir-frees-galadriel",
+    "title": "Arondir frees Galadriel",
+    "storylineId": "elves",
+    "importance": "minor",
+    "icon": "bond",
+    "pos": [4420, 3800],
+    "description": "Following the Orcs' trail all the way from the south, Arondir slips into the camp by night and helps Galadriel escape into the besieged city.",
+    "characters": ["arondir", "galadriel"],
+    "via": [[6560, 5630], [5900, 5350], [5000, 4950], [4580, 4860], [4350, 4400], [4400, 3950]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Arondir"
+  },
+  {
+    "id": "s2e7-celebrimbors-last-gift",
+    "title": "Celebrimbor's last gift",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "bond",
+    "placeId": "ost-in-edhil",
+    "description": "Celebrimbor cuts off his own thumb to slip his chains and puts the Nine into Galadriel's hands. He stays behind to buy her time.",
+    "characters": ["galadriel", "celebrimbor"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/d/d0/CelebrimborBalcony.png/revision/latest?cb=20241005165850",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Celebrimbor"
+  },
+  {
+    "id": "s2e7-dawn-without-the-dwarves",
+    "title": "Dawn without the Dwarves",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "battle",
+    "pos": [4460, 3700],
+    "description": "At sunrise the Dwarves have not come. A troll breaks the wall and the last Elves are overrun; Adar cuts Arondir down and takes Nenya from Elrond.",
+    "characters": ["elrond", "gil-galad", "arondir", "adar"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/17/ElrondEregion.png/revision/latest?cb=20250322165302",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Siege_of_Eregion"
+  }
+]

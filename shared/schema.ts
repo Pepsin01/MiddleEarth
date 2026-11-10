@@ -118,9 +118,13 @@ export const Place = z.object({
  * fields set here replace the character's normal ones.
  */
 export const Reveal = z.object({
+  /** Episode from which the new identity is known ... */
   from: Id,
+  /** ... or, more precisely, the event that reveals it. */
   event: Id.optional(),
   name: Title.optional(),
+  /** New storyline colour for the portrait, e.g. when a friend turns out to be the enemy. */
+  storylineId: Id.optional(),
   description: Text.optional(),
   wikiUrl: HttpUrl.optional(),
   image: ImageRef.optional(),
@@ -176,6 +180,8 @@ const eventFields = {
   exits: z.array(Id).optional(),
   /** Route the characters took to get here: points passed on the way, in order. */
   via: z.array(Point).optional(),
+  /** A scene from the past or a vision: it is shown on the map, but the characters do not travel to it. */
+  flashback: z.boolean().optional(),
   image: ImageRef.optional(),
   wikiUrl: HttpUrl.optional(),
 };

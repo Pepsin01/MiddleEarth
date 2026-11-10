@@ -1,0 +1,104 @@
+[
+  {
+    "id": "s2e1-the-death-of-sauron",
+    "title": "The death of Sauron",
+    "storylineId": "shadow",
+    "importance": "major",
+    "icon": "death",
+    "placeId": "durnost",
+    "description": "Long ago, at the dawn of the Second Age: in a fortress of the north Sauron proclaims himself the Orcs' new master. Adar crowns him with Morgoth's crown — points downward — and the Orcs finish it. What is left of him seeps into the rock and, over centuries, crawls back toward a body.",
+    "characters": ["halbrand", "adar"],
+    "flashback": true,
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/0/0b/Sauron_takes_the_crown_-_TRoP.png/revision/latest?cb=20241003231623",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Sauron"
+  },
+  {
+    "id": "s2e1-the-man-on-the-raft",
+    "title": "The man on the raft",
+    "storylineId": "shadow",
+    "importance": "minor",
+    "icon": "ship",
+    "pos": [2700, 5800],
+    "description": "Reborn in the shape of a man, Sauron takes a dead traveller's royal pouch, boards a refugee ship — and survives the sea-worm that wrecks it, to drift toward a raft and Galadriel.",
+    "characters": ["halbrand"],
+    "flashback": true,
+    "wikiUrl": "https://lotr.fandom.com/wiki/Sauron"
+  },
+  {
+    "id": "s2e1-elrond-flees-with-the-three",
+    "title": "Elrond flees with the Three",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "council",
+    "placeId": "lindon",
+    "description": "In Lindon Galadriel confesses that Halbrand was Sauron. Gil-galad wants to use the rings anyway; Elrond, sure that they are tainted, seizes them and leaps from a waterfall.",
+    "characters": ["galadriel", "elrond", "gil-galad"],
+    "via": [[3950, 3180], [3300, 2790], [2345, 2800]],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/6/67/Galadriel_in_Lindon_-_TRoP_S2.png/revision/latest?cb=20240915012902",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
+  },
+  {
+    "id": "s2e1-cirdans-choice",
+    "title": "Círdan's choice",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "magic",
+    "placeId": "grey-havens",
+    "description": "Elrond brings the rings to Círdan the Shipwright, eldest of the Elves, who agrees to drop them into the deepest sea — until he looks at them.",
+    "characters": ["elrond", "cirdan"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/14/C%C3%ADrdan_RoP_first_look.jpg/revision/latest?cb=20240711230154",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/C%C3%ADrdan"
+  },
+  {
+    "id": "s2e1-the-light-returns-to-lindon",
+    "title": "The light returns to Lindon",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "magic",
+    "placeId": "lindon",
+    "description": "As the last leaves fall from the great tree, Círdan arrives wearing Narya. Gil-galad takes Vilya, Galadriel takes Nenya, and the tree bursts into bloom. Elrond alone will not trust them.",
+    "characters": ["galadriel", "gil-galad", "cirdan", "elrond"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/c/c5/Lindonrop.png/revision/latest?cb=20250324210005",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
+  },
+  {
+    "id": "s2e1-lost-in-rhun",
+    "title": "Lost in Rhûn",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "journey",
+    "placeId": "rhun-wastes",
+    "description": "The Stranger and Nori wander the wastes of Rhûn in circles, starving — until Poppy catches up with Sadoc's old maps, and a Harfoot walking-song points the way.",
+    "characters": ["stranger", "nori", "poppy"],
+    "via": [[7300, 3900], [8200, 4350], [8800, 4400]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Rh%C3%BBn"
+  },
+  {
+    "id": "s2e1-a-prisoner-in-mordor",
+    "title": "A prisoner in Mordor",
+    "storylineId": "shadow",
+    "importance": "major",
+    "icon": "council",
+    "pos": [7230, 5500],
+    "description": "Halbrand lets Adar's Orcs take him. He tells Adar that Sauron has returned and sits in Eregion among the Elves — and offers to deliver him, if Adar will bring his army. Waldreg, who tormented him in his cell, does not outlive his release.",
+    "characters": ["halbrand", "adar", "waldreg"],
+    "exits": ["waldreg"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/4/40/Adar_-_RoP_S02.png/revision/latest?cb=20240727093957",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Adar"
+  }
+]

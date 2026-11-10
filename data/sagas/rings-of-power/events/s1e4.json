@@ -1,0 +1,144 @@
+[
+  {
+    "id": "s1e4-the-great-wave",
+    "title": "The Great Wave",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "omen",
+    "placeId": "armenelos",
+    "description": "The Queen Regent dreams of a wave swallowing Númenor. Galadriel's demand for an army and an audience with the true king ends with the Elf locked up beside Halbrand.",
+    "characters": ["miriel", "galadriel"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/ae/Vision_of_N%C3%BAmenor%27s_downfall_-_TRoP.png/revision/latest?cb=20220920124421",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Tar-M%C3%ADriel"
+  },
+  {
+    "id": "s1e4-pharazon-calms-the-crowd",
+    "title": "Pharazôn calms the crowd",
+    "storylineId": "numenor",
+    "importance": "minor",
+    "icon": "council",
+    "placeId": "armenelos",
+    "description": "Anger at the Elf in the palace boils over in the streets. Chancellor Pharazôn turns the mob with a single speech, watched by his son Kemen and by Eärien.",
+    "characters": ["pharazon", "kemen", "earien"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/c/c6/Pharazon_speech_-_TRoP.png/revision/latest?cb=20221024231449",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Ar-Pharaz%C3%B4n"
+  },
+  {
+    "id": "s1e4-dismissed-from-the-sea-guard",
+    "title": "Dismissed from the Sea Guard",
+    "storylineId": "numenor",
+    "importance": "minor",
+    "icon": "ship",
+    "pos": [2620, 7900],
+    "description": "Isildur lets a line slip on purpose to get himself expelled from the cadets — and drags his friends Valandil and Ontamo down with him.",
+    "characters": ["isildur", "valandil"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Isildur"
+  },
+  {
+    "id": "s1e4-adars-message",
+    "title": "Adar's message",
+    "storylineId": "shadow",
+    "importance": "major",
+    "icon": "council",
+    "pos": [7040, 5430],
+    "description": "Adar turns out to be a scarred Elf whom the Orcs call father. He sends Arondir back to his people with an ultimatum: give up the land and swear fealty, or be destroyed.",
+    "characters": ["adar", "arondir"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/e/ef/Adar_speaks_to_Arondir_-_TRoP.png/revision/latest?cb=20220928153131",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Adar"
+  },
+  {
+    "id": "s1e4-the-hilt-and-the-mark",
+    "title": "The hilt and the mark",
+    "storylineId": "southlands",
+    "importance": "major",
+    "icon": "omen",
+    "placeId": "ostirith",
+    "description": "Foraging in abandoned Tirharad, Theo is hunted by Orcs who want his broken sword; the freed Arondir carries him back to the tower. There old Waldreg shows Theo a matching scar and tells him whose weapon it is.",
+    "characters": ["theo", "arondir", "bronwyn", "waldreg"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/1c/Arondir_%26_Theo_at_Tirharad_-_TRoP.png/revision/latest?cb=20221024163259",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Ostirith"
+  },
+  {
+    "id": "s1e4-elves-and-dwarves-build-the-forge",
+    "title": "Elves and Dwarves build the forge",
+    "storylineId": "rings",
+    "importance": "minor",
+    "icon": "craft",
+    "placeId": "ost-in-edhil",
+    "description": "Celebrimbor's tower rises with Dwarven help. But Durin has stopped coming, and Elrond goes back under the mountain to find out why.",
+    "characters": ["elrond", "celebrimbor"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Eregion"
+  },
+  {
+    "id": "s1e4-mithril",
+    "title": "Mithril",
+    "storylineId": "dwarves",
+    "importance": "major",
+    "icon": "discovery",
+    "placeId": "khazad-dum",
+    "description": "Elrond discovers what Durin has been hiding below the Mirrormere: a new ore, light as silk and harder than steel. He swears to keep the secret, just as the shaft collapses on the miners.",
+    "characters": ["elrond", "durin-iv", "disa"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/6/6a/Durin_reveals_mithril_fragment_-_TRoP.png/revision/latest?cb=20220918211927",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Mithril"
+  },
+  {
+    "id": "s1e4-the-king-and-the-palantir",
+    "title": "The King and the palantír",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "magic",
+    "placeId": "armenelos",
+    "description": "Galadriel breaks out and climbs the tower to find the true king, Tar-Palantir, old and bedridden. Míriel shows her the seeing-stone and the doom it foretells — a doom she believes begins with the arrival of an Elf.",
+    "characters": ["galadriel", "miriel"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a2/Palant%C3%ADr_of_N%C3%BAmenor_-_TRoP.png/revision/latest?cb=20220928152240",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Palant%C3%ADri"
+  },
+  {
+    "id": "s1e4-durin-is-sent-to-lindon",
+    "title": "Durin is sent to Lindon",
+    "storylineId": "dwarves",
+    "importance": "minor",
+    "icon": "council",
+    "placeId": "khazad-dum",
+    "description": "After the collapse the king closes the mine, but lets his son travel to Lindon with Elrond to learn what the Elves really want.",
+    "characters": ["durin-iv", "durin-iii", "elrond"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/b/bd/Durin_IV_faces_King_Durin_-_TRoP.png/revision/latest?cb=20221024230448",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Durin_IV"
+  },
+  {
+    "id": "s1e4-the-white-tree-sheds-its-petals",
+    "title": "The White Tree sheds its petals",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "omen",
+    "placeId": "armenelos",
+    "description": "As Galadriel is rowed out to exile, the petals of Nimloth fall — the tears of the Valar. Míriel changes course: Númenor will sail with the Elf to the aid of the Southlands.",
+    "characters": ["miriel", "galadriel", "elendil", "pharazon"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/b/b7/Nimloth_-_The_Rings_of_Power.png/revision/latest?cb=20220917222111",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/The_Great_Wave_(episode)"
+  }
+]

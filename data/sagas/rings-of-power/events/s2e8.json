@@ -1,0 +1,175 @@
+[
+  {
+    "id": "s2e8-durins-bane",
+    "title": "Durin's Bane",
+    "storylineId": "dwarves",
+    "importance": "major",
+    "icon": "death",
+    "placeId": "khazad-dum",
+    "description": "Durin III breaks through into the mithril — and the Balrog. Free of the ring at last, he names his son king and leaps at the demon with his axe as the cavern comes down.",
+    "characters": ["durin-iii", "durin-iv", "disa"],
+    "exits": ["durin-iii"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/6/6e/Durin_vs_balrog.png/revision/latest?cb=20260309084047",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Durin's_Bane"
+  },
+  {
+    "id": "s2e8-the-dark-wizards-offer",
+    "title": "The Dark Wizard's offer",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "council",
+    "placeId": "stoor-village",
+    "description": "The Dark Wizard greets the Stranger as an old friend: five of them were sent, he says, and together the two of them could rule in place of Sauron. Refused, he brings the canyon down on the Stoors.",
+    "characters": ["stranger", "dark-wizard", "nori", "poppy"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/5/59/Dark_Wizard_-_TRoP_S2_E2.png/revision/latest?cb=20240914232113",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Dark_Wizard"
+  },
+  {
+    "id": "s2e8-farewell-to-nori",
+    "title": "Farewell to Nori",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "bond",
+    "placeId": "stoor-village",
+    "description": "The Stoors must find a new home, and Nori and Poppy will go with them. In the rubble the Stranger finds the staff that was meant for him.",
+    "characters": ["stranger", "nori", "poppy"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Stoors"
+  },
+  {
+    "id": "s2e8-the-faithful-are-hunted",
+    "title": "The Faithful are hunted",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "omen",
+    "placeId": "armenelos",
+    "description": "In the palantír Pharazôn sees Sauron's face, and brands the Faithful as his servants. Eärien warns her father in time; Míriel stays to face the king and sends Elendil west with a sword — Narsil, the White Flame.",
+    "characters": ["pharazon", "miriel", "elendil", "earien", "kemen"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/e/ec/ArPharazonPalantir.png/revision/latest?cb=20250408151135",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Narsil"
+  },
+  {
+    "id": "s2e8-elendil-rides-west",
+    "title": "Elendil rides west",
+    "storylineId": "numenor",
+    "importance": "travel",
+    "icon": "journey",
+    "placeId": "andunie",
+    "description": "Elendil escapes toward Andúnië, the stronghold of the Faithful in the west of the island.",
+    "characters": ["elendil"],
+    "via": [[1250, 7900], [800, 7950]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/And%C3%BAni%C3%AB"
+  },
+  {
+    "id": "s2e8-pelargir-is-claimed-for-the-king",
+    "title": "Pelargir is claimed for the king",
+    "storylineId": "southlands",
+    "importance": "major",
+    "icon": "crown",
+    "placeId": "pelargir",
+    "description": "Kemen lands at Pelargir and declares it a fortress of Númenor: its people will cut timber for the crown. He orders Isildur home and will not have a 'low' woman aboard, so Isildur sails without Estrid.",
+    "characters": ["kemen", "isildur", "estrid", "theo"],
+    "via": [[2150, 8400], [2700, 8700], [3600, 8000], [4600, 7000], [5620, 6420]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Pelargir"
+  },
+  {
+    "id": "s2e8-the-death-of-celebrimbor",
+    "title": "The death of Celebrimbor",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "death",
+    "placeId": "ost-in-edhil",
+    "description": "Sauron tortures Celebrimbor for the Nine. The smith dies naming him what he will become — Lord of the Rings — and Sauron weeps as he kills him.",
+    "characters": ["celebrimbor", "halbrand"],
+    "exits": ["celebrimbor"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/15/CelebrimborDeath.png/revision/latest?cb=20241005170847",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Celebrimbor"
+  },
+  {
+    "id": "s2e8-the-orcs-choose-a-new-master",
+    "title": "The Orcs choose a new master",
+    "storylineId": "shadow",
+    "importance": "major",
+    "icon": "death",
+    "pos": [4420, 3800],
+    "description": "Nenya has healed Adar into the Elf he once was. He gives the ring back to Galadriel and offers peace — and his own children, turned by Sauron, cut him down as they once cut down their first master.",
+    "characters": ["adar", "galadriel"],
+    "exits": ["adar"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/4/4c/Adar_healed_-_TRoP.png/revision/latest?cb=20241003232726",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Adar"
+  },
+  {
+    "id": "s2e8-sauron-and-galadriel",
+    "title": "Sauron and Galadriel",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "battle",
+    "pos": [4610, 3690],
+    "description": "On a cliff above the burning city the two duel. Sauron wounds her with Morgoth's crown and takes the Nine; Galadriel keeps Nenya and throws herself from the edge.",
+    "characters": ["galadriel", "halbrand"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Sauron"
+  },
+  {
+    "id": "s2e8-the-dwarves-arrive",
+    "title": "The Dwarves arrive",
+    "storylineId": "dwarves",
+    "importance": "minor",
+    "icon": "battle",
+    "pos": [4590, 3750],
+    "description": "King Durin IV's warriors reach Eregion at last and cover the retreat of the surviving Elves.",
+    "characters": [],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Siege_of_Eregion"
+  },
+  {
+    "id": "s2e8-a-hidden-valley",
+    "title": "A hidden valley",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "council",
+    "placeId": "imladris",
+    "description": "The survivors shelter in a valley north of Eregion. Elrond and Gil-galad heal Galadriel with their rings, and she chooses to stand and fight. The sanctuary will one day be called Imladris.",
+    "characters": ["galadriel", "elrond", "gil-galad", "arondir"],
+    "via": [[4800, 3350], [5000, 3050]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Rivendell"
+  },
+  {
+    "id": "s2e8-a-name-at-last",
+    "title": "A name at last",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "discovery",
+    "placeId": "tom-bombadils-house",
+    "description": "Back at Tom's fireside, staff in hand, the Stranger thinks over what the Stoors kept calling him — Grand-Elf. He has a name now: Gandalf.",
+    "characters": ["stranger", "tom-bombadil"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a5/Gandalfstaffrop.png/revision/latest?cb=20260224111843",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Gandalf"
+  },
+  {
+    "id": "s2e8-a-crown-and-seven-rings",
+    "title": "A crown and seven rings",
+    "storylineId": "dwarves",
+    "importance": "minor",
+    "icon": "crown",
+    "placeId": "khazad-dum",
+    "description": "Durin and Disa mourn the old king. Other Dwarf-lords are already asking after the rings he promised them, and the throne is not yet secure.",
+    "characters": ["durin-iv", "disa"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Durin_IV"
+  }
+]

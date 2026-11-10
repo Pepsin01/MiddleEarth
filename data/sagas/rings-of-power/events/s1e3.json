@@ -1,0 +1,93 @@
+[
+  {
+    "id": "s1e3-slaves-in-the-trench",
+    "title": "Slaves in the trench",
+    "storylineId": "southlands",
+    "importance": "major",
+    "icon": "battle",
+    "pos": [7040, 5430],
+    "description": "Arondir wakes in chains among captured Elves and Men, forced by Orcs to dig a great trench across the Southlands. Their break-out ends in blood, and he is dragged off to face the one the Orcs call Adar.",
+    "characters": ["arondir"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/18/Arondir_in_captivity_-_TRoP.png/revision/latest?cb=20220926172725",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Arondir"
+  },
+  {
+    "id": "s1e3-the-island-kingdom",
+    "title": "The island kingdom",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "arrival",
+    "placeId": "armenelos",
+    "description": "Captain Elendil brings the castaways to Númenor, mightiest kingdom of Men, which long ago turned its back on the Elves. Queen Regent Míriel grants them three days of shelter, and no ship.",
+    "characters": ["galadriel", "halbrand", "elendil", "miriel", "pharazon"],
+    "via": [[2550, 6250], [2750, 6560], [3300, 7150], [3350, 7800], [2600, 8550], [2150, 8400]],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/6/66/Armenelos_-_The_Rings_of_Power.png/revision/latest?cb=20220909061026",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/N%C3%BAmenor"
+  },
+  {
+    "id": "s1e3-the-sea-cadets",
+    "title": "The sea cadets",
+    "storylineId": "numenor",
+    "importance": "minor",
+    "icon": "ship",
+    "pos": [2620, 7900],
+    "description": "Elendil's son Isildur is days from earning his commission in the Sea Guard, but something keeps calling him west — to the dismay of his friends and of his sister Eärien.",
+    "characters": ["isildur", "valandil"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/d/d9/Isildur_as_cadet_-_The_Rings_of_Power.png/revision/latest?cb=20220917192509",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Isildur"
+  },
+  {
+    "id": "s1e3-the-sigil-is-a-map",
+    "title": "The sigil is a map",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "discovery",
+    "placeId": "hall-of-lore",
+    "description": "Elendil rides with Galadriel to the Hall of Lore. There she learns that Sauron's mark is no mere symbol but a map of the Southlands — the place where a realm of evil is to be made.",
+    "characters": ["galadriel", "elendil"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/7/75/Galadriel_%26_Elendil_in_the_Hall_of_Lore_-_TRoP.png/revision/latest?cb=20220919214238",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Adar_(episode)"
+  },
+  {
+    "id": "s1e3-halbrand-behind-bars",
+    "title": "Halbrand behind bars",
+    "storylineId": "numenor",
+    "importance": "minor",
+    "icon": "battle",
+    "placeId": "armenelos",
+    "description": "Looking for work at a forge, Halbrand is cornered by guildsmen, breaks their bones and lands in a cell. Galadriel has worked out what his pouch means: he is the lost heir of the Southlands.",
+    "characters": ["halbrand", "galadriel"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/c/cb/Halbrand_in_prison_-_TRoP.png/revision/latest?cb=20220919210140",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Adar_(episode)"
+  },
+  {
+    "id": "s1e3-the-stranger-is-discovered",
+    "title": "The Stranger is discovered",
+    "storylineId": "harfoots",
+    "importance": "major",
+    "icon": "star",
+    "placeId": "harfoot-camp",
+    "description": "Searching Sadoc's star-charts, the Stranger stumbles into the Harfoots' festival. The Brandyfoots are sent to the back of the caravan as punishment — where the Stranger takes hold of their cart and pulls.",
+    "characters": ["nori", "poppy", "stranger", "sadoc"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/a/a2/Sadoc%27s_book_-_TRoP.png/revision/latest?cb=20220921202000",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Harfoots"
+  }
+]

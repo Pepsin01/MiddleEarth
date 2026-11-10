@@ -1,0 +1,86 @@
+[
+  {
+    "id": "s2e5-the-doors-of-durin",
+    "title": "The Doors of Durin",
+    "storylineId": "dwarves",
+    "importance": "minor",
+    "icon": "craft",
+    "pos": [4830, 3655],
+    "description": "The Seven are finished. At the West-gate of Khazad-dûm Celebrimbor and the Dwarf-smith Narvi unveil doors inlaid with ithildin, a token of friendship between the two realms.",
+    "characters": ["celebrimbor", "halbrand", "durin-iv", "disa"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/2/2a/TRoP-S2-E5-Narvi_unveils_the_Doors_of_Durin-cropped.jpg/revision/latest?cb=20260309025532",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Doors_of_Durin"
+  },
+  {
+    "id": "s2e5-the-kings-ring",
+    "title": "The king's ring",
+    "storylineId": "dwarves",
+    "importance": "major",
+    "icon": "magic",
+    "placeId": "khazad-dum",
+    "description": "Wearing his ring, Durin III sees through the stone and knows exactly where to cut new sun-shafts. Light returns — and with it a hunger for gold. Singing to the rock, Disa finds a deep hall and hears something waiting beneath it.",
+    "characters": ["durin-iii", "durin-iv", "disa"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/1/10/DurinIII_ring.png/revision/latest?cb=20260327092459",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Durin_III"
+  },
+  {
+    "id": "s2e5-rings-for-men",
+    "title": "Rings for Men",
+    "storylineId": "rings",
+    "importance": "major",
+    "icon": "craft",
+    "placeId": "ost-in-edhil",
+    "description": "Annatar wants nine rings for Men; Celebrimbor refuses. When Durin warns that the Seven are changing his father, Annatar lays the blame on Celebrimbor's lie to the High King, and guilt drives the smith back to the forge.",
+    "characters": ["celebrimbor", "halbrand", "mirdania", "durin-iv"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/4/4d/CelebrimborAnnatar.png/revision/latest?cb=20241005170045",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
+  },
+  {
+    "id": "s2e5-blood-at-the-shrine",
+    "title": "Blood at the shrine",
+    "storylineId": "numenor",
+    "importance": "major",
+    "icon": "death",
+    "placeId": "armenelos",
+    "description": "King Pharazôn strips the Faithful of their ranks and sends Kemen to tear down their oldest shrine. Kemen provokes a brawl and runs Valandil through from behind; Elendil is arrested for starting a riot.",
+    "characters": ["kemen", "valandil", "elendil", "earien", "pharazon", "miriel"],
+    "exits": ["valandil"],
+    "image": {
+      "source": "https://static.wikia.nocookie.net/lotr/images/6/6a/Temple_of_the_Faithful_1.png/revision/latest?cb=20241004042622",
+      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+    },
+    "wikiUrl": "https://lotr.fandom.com/wiki/Valandil"
+  },
+  {
+    "id": "s2e5-elronds-warning",
+    "title": "Elrond's warning",
+    "storylineId": "elves",
+    "importance": "major",
+    "icon": "council",
+    "placeId": "lindon",
+    "description": "Elrond reaches Lindon with Nenya and the news that Adar is marching on Eregion. Gil-galad will not spend his army on rescuing Galadriel while Sauron is the greater danger.",
+    "characters": ["elrond", "gil-galad", "cirdan"],
+    "via": [[3640, 2960], [3300, 2790], [2345, 2800]],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Halls_of_Stone_(episode)"
+  },
+  {
+    "id": "s2e5-adars-prisoner",
+    "title": "Adar's prisoner",
+    "storylineId": "shadow",
+    "importance": "minor",
+    "icon": "journey",
+    "pos": [4420, 3800],
+    "description": "Adar's host makes camp before Ost-in-Edhil with Galadriel in chains. He does not want her dead: he wants to talk.",
+    "characters": ["galadriel", "adar"],
+    "wikiUrl": "https://lotr.fandom.com/wiki/Adar"
+  }
+]
