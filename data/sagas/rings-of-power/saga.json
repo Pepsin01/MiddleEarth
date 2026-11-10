@@ -1,0 +1,61 @@
+{
+  "id": "rings-of-power",
+  "title": "The Rings of Power",
+  "subtitle": "The Second Age of Middle-earth",
+  "description": "The Lord of the Rings: The Rings of Power (Prime Video). Events and journeys of the series, episode by episode.",
+  "wikiUrl": "https://lotr.fandom.com/wiki/The_Lord_of_the_Rings:_The_Rings_of_Power",
+  "mapId": "second-age",
+  "seasons": [
+    {
+      "id": "s1",
+      "title": "Season 1",
+      "episodes": [
+        { "id": "s1e1", "title": "A Shadow of the Past", "airDate": "2022-09-01" },
+        { "id": "s1e2", "title": "Adrift", "airDate": "2022-09-01" },
+        { "id": "s1e3", "title": "Adar", "airDate": "2022-09-09" },
+        { "id": "s1e4", "title": "The Great Wave", "airDate": "2022-09-16" },
+        { "id": "s1e5", "title": "Partings", "airDate": "2022-09-23" },
+        { "id": "s1e6", "title": "Udûn", "airDate": "2022-09-30" },
+        { "id": "s1e7", "title": "The Eye", "airDate": "2022-10-07" },
+        { "id": "s1e8", "title": "Alloyed", "airDate": "2022-10-14" }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Season 2",
+      "episodes": [
+        { "id": "s2e1", "title": "Elven Kings Under the Sky", "airDate": "2024-08-29" },
+        { "id": "s2e2", "title": "Where the Stars are Strange", "airDate": "2024-08-29" },
+        { "id": "s2e3", "title": "The Eagle and the Sceptre", "airDate": "2024-08-29" },
+        { "id": "s2e4", "title": "Eldest", "airDate": "2024-09-05" },
+        { "id": "s2e5", "title": "Halls of Stone", "airDate": "2024-09-12" },
+        { "id": "s2e6", "title": "Where Is He?", "airDate": "2024-09-19" },
+        { "id": "s2e7", "title": "Doomed to Die", "airDate": "2024-09-26" },
+        { "id": "s2e8", "title": "Shadow and Flame", "airDate": "2024-10-03" }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Season 3",
+      "episodes": [
+        { "id": "s3e1", "title": "Episode 1", "airDate": "2026-11-11" },
+        { "id": "s3e2", "title": "Episode 2", "airDate": "2026-11-11" },
+        { "id": "s3e3", "title": "Episode 3", "airDate": "2026-11-11" },
+        { "id": "s3e4", "title": "Episode 4", "airDate": "2026-11-11" },
+        { "id": "s3e5", "title": "Episode 5", "airDate": "2026-11-18" },
+        { "id": "s3e6", "title": "Episode 6", "airDate": "2026-11-18" },
+        { "id": "s3e7", "title": "Episode 7", "airDate": "2026-11-25" },
+        { "id": "s3e8", "title": "Episode 8", "airDate": "2026-11-25" }
+      ]
+    }
+  ],
+  "storylines": [
+    { "id": "elves", "title": "The Elves of Lindon", "color": "#2b6cb0" },
+    { "id": "rings", "title": "Eregion and the Rings", "color": "#b07d12" },
+    { "id": "dwarves", "title": "Khazad-dûm", "color": "#b3541e" },
+    { "id": "numenor", "title": "Númenor", "color": "#1c7c8c" },
+    { "id": "southlands", "title": "The Southlands", "color": "#a32a2a" },
+    { "id": "harfoots", "title": "The Stranger and the Harfoots", "color": "#3f8a3a" },
+    { "id": "shadow", "title": "Sauron, Adar and the Orcs", "color": "#5a3d8a" }
+  ]
+}

@@ -18,6 +18,7 @@
     "check": "npm run typecheck && npm run test && npm run data:check",
     "media:fetch": "node scripts/fetch-media.ts",
     "map:tiles": "node scripts/make-tiles.ts",
+    "map:add": "node scripts/add-map.ts",
     "data:check": "node scripts/check-data.ts"
   },
   "dependencies": {
@@ -42,6 +43,7 @@
     "concurrently": "^10.0.7",
     "leaflet": "^1.9.4",
     "lucide-react": "^1.71.0",
+    "playwright-core": "^1.65.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "supertest": "^7.3.2",

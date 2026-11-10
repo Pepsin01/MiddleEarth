@@ -1,0 +1,20 @@
+{
+  "id": "second-age",
+  "title": "Middle-earth and Númenor",
+  "width": 12098,
+  "height": 9630,
+  "image": {
+    "file": "maps/second-age/source.jpg",
+    "source": "https://www.deviantart.com/kirsikura/art/Middle-Earth-and-Numenor---Tolkien-Style-Map-1233193480"
+  },
+  "tiles": {
+    "path": "maps/second-age/tiles",
+    "size": 256,
+    "maxZoom": 6,
+    "ext": "webp"
+  },
+  "credit": "Map: “Middle Earth and Numenor – Tolkien Style Map” © KirsiKura (fan art, DeviantArt)",
+  "creditUrl": "https://www.deviantart.com/kirsikura/art/Middle-Earth-and-Numenor---Tolkien-Style-Map-1233193480",
+  "background": "#2b241c",
+  "tint": "#efe3c8"
+}
