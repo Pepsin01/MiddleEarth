@@ -1,0 +1,24 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+.vite/
+
+# Pictures and maps are deliberately NOT committed (most are copyrighted).
+# They are re-created with `npm run media:fetch` - see docs/GUIDE.md.
+data/media/
+
+# Automatic backups written by the server before every save
+data/backups/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Logs, test output, editor leftovers
+*.log
+test-results/
+playwright-report/
+.DS_Store
+Thumbs.db
