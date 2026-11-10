@@ -6,6 +6,7 @@ import { createApi } from './api.ts';
 import { Auth } from './auth.ts';
 import type { Config } from './config.ts';
 import { HttpError } from './errors.ts';
+import { createMediaRoutes } from './media.ts';
 import { Store } from './store.ts';
 
 export interface App {
@@ -25,6 +26,7 @@ export function createApp(config: Config): App {
   app.use('/api', (_req, res) => {
     res.status(404).json({ error: 'Not found.' });
   });
+  app.use(createMediaRoutes(store.mediaDir));
 
   // In production the same server also delivers the built web app.
   const indexHtml = path.join(config.distDir, 'index.html');
@@ -40,7 +42,11 @@ export function createApp(config: Config): App {
       res.status(error.status).json({ error: error.message, details: error.details });
       return;
     }
-    const type = (error as { type?: string } | null)?.type;
+    const { type, status } = (error ?? {}) as { type?: string; status?: number };
+    if (status === 404) {
+      res.status(404).json({ error: 'Not found.' });
+      return;
+    }
     if (type === 'entity.parse.failed') {
       res.status(400).json({ error: 'The request was not valid JSON.' });
       return;

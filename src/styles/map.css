@@ -1,0 +1,25 @@
+.map {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  outline: none;
+}
+
+.leaflet-container {
+  font: inherit;
+  background: inherit;
+}
+
+/* Blend the black-and-white map into the paper colour laid underneath it. */
+.map--tinted .leaflet-tile-pane {
+  mix-blend-mode: multiply;
+}
+
+.map:not(.map--tinted) .leaflet-paper-pane {
+  display: none;
+}
+
+/* Tiles are drawn slightly enlarged to hide hairline gaps between them at fractional zoom levels. */
+.leaflet-tile {
+  outline: 1px solid transparent;
+}
