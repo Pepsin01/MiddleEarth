@@ -1,15 +1,29 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import express from 'express';
+import type { NextFunction, Request, Response } from 'express';
+import { createApi } from './api.ts';
+import { Auth } from './auth.ts';
 import type { Config } from './config.ts';
+import { HttpError } from './errors.ts';
+import { Store } from './store.ts';
 
-export function createApp(config: Config): express.Express {
+export interface App {
+  app: express.Express;
+  store: Store;
+}
+
+export function createApp(config: Config): App {
   const app = express();
+  const store = new Store(config.dataDir, config.maxBackups);
+  const auth = new Auth(config);
+
   app.disable('x-powered-by');
   if (config.trustProxy) app.set('trust proxy', 1);
 
-  app.get('/api/health', (_req, res) => {
-    res.json({ ok: true });
+  app.use('/api', createApi(store, auth));
+  app.use('/api', (_req, res) => {
+    res.status(404).json({ error: 'Not found.' });
   });
 
   // In production the same server also delivers the built web app.
@@ -21,5 +35,23 @@ export function createApp(config: Config): express.Express {
     });
   }
 
-  return app;
+  app.use((error: unknown, _req: Request, res: Response, _next: NextFunction) => {
+    if (error instanceof HttpError) {
+      res.status(error.status).json({ error: error.message, details: error.details });
+      return;
+    }
+    const type = (error as { type?: string } | null)?.type;
+    if (type === 'entity.parse.failed') {
+      res.status(400).json({ error: 'The request was not valid JSON.' });
+      return;
+    }
+    if (type === 'entity.too.large') {
+      res.status(413).json({ error: 'The request is too large.' });
+      return;
+    }
+    console.error(error);
+    res.status(500).json({ error: 'Something went wrong on the server. See the server log for details.' });
+  });
+
+  return { app, store };
 }
