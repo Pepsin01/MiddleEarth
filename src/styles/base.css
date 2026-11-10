@@ -1,0 +1,70 @@
+@import '@fontsource-variable/cinzel';
+@import '@fontsource-variable/eb-garamond';
+@import '@fontsource-variable/eb-garamond/wght-italic.css';
+
+:root {
+  /* Parchment and ink */
+  --paper: #efe6d0;
+  --paper-light: #f7f1e1;
+  --paper-dark: #e2d5b6;
+  --edge: #c9b88f;
+  --ink: #2a2016;
+  --ink-soft: #5d4f3c;
+  --ink-faint: #8b7b63;
+  --red: #9b2c1e;
+  --gold: #a8842c;
+  --shadow: 0 6px 24px rgb(42 32 22 / 0.22);
+
+  --font-display: 'Cinzel Variable', 'Cinzel', 'Trajan Pro', serif;
+  --font-body: 'EB Garamond Variable', 'EB Garamond', Georgia, 'Times New Roman', serif;
+
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: var(--paper);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+.boot {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
