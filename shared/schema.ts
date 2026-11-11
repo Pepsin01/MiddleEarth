@@ -55,12 +55,21 @@ export const ImageRef = z
     file: MediaPath.optional(),
     source: HttpUrl.optional(),
     credit: z.string().trim().max(300).optional(),
+    /** Web page the picture comes from; the credit line links to it. */
+    page: HttpUrl.optional(),
     /** Point of interest (0..1 from the left, 0..1 from the top) kept visible in round or cropped views. */
     focus: z.tuple([z.number().min(0).max(1), z.number().min(0).max(1)]).optional(),
   })
   .refine((value) => Boolean(value.file || value.source), 'A picture needs a file or a source link');
 
 const Text = z.string().trim().max(4000);
+
+/**
+ * Link to a web page showing a picture that would fit, for example a still on the wiki.
+ * The app only shows it as a link: most sites do not allow their pictures to be copied
+ * or embedded automatically. Open it, save or copy the picture, and add it in the editor.
+ */
+const SuggestedPicture = HttpUrl.optional();
 const Title = z.string().trim().min(1, 'Required').max(160);
 const IsoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, 'Use a date like 2026-11-11');
 
@@ -71,6 +80,7 @@ export const Episode = z.object({
   synopsis: Text.optional(),
   wikiUrl: HttpUrl.optional(),
   image: ImageRef.optional(),
+  suggestedPicture: SuggestedPicture,
 });
 
 export const Season = z.object({
@@ -110,6 +120,7 @@ export const Place = z.object({
   description: Text.optional(),
   wikiUrl: HttpUrl.optional(),
   image: ImageRef.optional(),
+  suggestedPicture: SuggestedPicture,
 });
 
 /**
@@ -125,6 +136,8 @@ export const Reveal = z.object({
   name: Title.optional(),
   /** New storyline colour for the portrait, e.g. when a friend turns out to be the enemy. */
   storylineId: Id.optional(),
+  /** New actor, when the role was recast. */
+  playedBy: z.string().trim().max(120).optional(),
   description: Text.optional(),
   wikiUrl: HttpUrl.optional(),
   image: ImageRef.optional(),
@@ -137,9 +150,12 @@ export const Character = z.object({
   group: z.string().trim().max(60).optional(),
   /** Storyline whose colour rings the portrait. */
   storylineId: Id.optional(),
+  /** The actor, shown as "Played by ...". */
+  playedBy: z.string().trim().max(120).optional(),
   description: Text.optional(),
   wikiUrl: HttpUrl.optional(),
   image: ImageRef.optional(),
+  suggestedPicture: SuggestedPicture,
   reveals: z.array(Reveal).optional(),
 });
 
@@ -183,6 +199,7 @@ const eventFields = {
   /** A scene from the past or a vision: it is shown on the map, but the characters do not travel to it. */
   flashback: z.boolean().optional(),
   image: ImageRef.optional(),
+  suggestedPicture: SuggestedPicture,
   wikiUrl: HttpUrl.optional(),
 };
 

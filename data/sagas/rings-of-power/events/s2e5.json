@@ -8,10 +8,7 @@
     "pos": [4830, 3655],
     "description": "The Seven are finished. At the West-gate of Khazad-dûm Celebrimbor and the Dwarf-smith Narvi unveil doors inlaid with ithildin, a token of friendship between the two realms.",
     "characters": ["celebrimbor", "halbrand", "durin-iv", "disa"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/2/2a/TRoP-S2-E5-Narvi_unveils_the_Doors_of_Durin-cropped.jpg/revision/latest?cb=20260309025532",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:TRoP-S2-E5-Narvi_unveils_the_Doors_of_Durin-cropped.jpg",
     "wikiUrl": "https://lotr.fandom.com/wiki/Doors_of_Durin"
   },
   {
@@ -23,10 +20,7 @@
     "placeId": "khazad-dum",
     "description": "Wearing his ring, Durin III sees through the stone and knows exactly where to cut new sun-shafts. Light returns — and with it a hunger for gold. Singing to the rock, Disa finds a deep hall and hears something waiting beneath it.",
     "characters": ["durin-iii", "durin-iv", "disa"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/1/10/DurinIII_ring.png/revision/latest?cb=20260327092459",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:DurinIII_ring.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Durin_III"
   },
   {
@@ -38,10 +32,7 @@
     "placeId": "ost-in-edhil",
     "description": "Annatar wants nine rings for Men; Celebrimbor refuses. When Durin warns that the Seven are changing his father, Annatar lays the blame on Celebrimbor's lie to the High King, and guilt drives the smith back to the forge.",
     "characters": ["celebrimbor", "halbrand", "mirdania", "durin-iv"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/4/4d/CelebrimborAnnatar.png/revision/latest?cb=20241005170045",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:CelebrimborAnnatar.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
   },
   {
@@ -54,10 +45,7 @@
     "description": "King Pharazôn strips the Faithful of their ranks and sends Kemen to tear down their oldest shrine. Kemen provokes a brawl and runs Valandil through from behind; Elendil is arrested for starting a riot.",
     "characters": ["kemen", "valandil", "elendil", "earien", "pharazon", "miriel"],
     "exits": ["valandil"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/6/6a/Temple_of_the_Faithful_1.png/revision/latest?cb=20241004042622",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Temple_of_the_Faithful_1.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Valandil"
   },
   {

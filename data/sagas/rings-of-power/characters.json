@@ -6,9 +6,14 @@
     "storylineId": "elves",
     "description": "Commander of the Northern Armies, who has hunted Sauron for centuries and will not believe the war is over.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Galadriel",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Galadriel_in_Lindon_-_The_Rings_of_Power.png",
+    "playedBy": "Morfydd Clark",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/4/43/Galadriel_in_Lindon_-_The_Rings_of_Power.png/revision/latest?cb=20220904205002",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/galadriel.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Morfydd_Clark_LotR-RoP_Premiere_2022.jpg/500px-Morfydd_Clark_LotR-RoP_Premiere_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Morfydd_Clark_LotR-RoP_Premiere_2022.jpg",
+      "focus": [0.52, 0.2]
     }
   },
   {
@@ -18,9 +23,14 @@
     "storylineId": "elves",
     "description": "Half-elven herald of the High King: a politician and a poet, and an old friend of both Galadriel and Durin.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Elrond",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Elrond_under_Khazad-d%C3%BBm_-_TRoP.png",
+    "playedBy": "Robert Aramayo",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/c/c9/Elrond_under_Khazad-d%C3%BBm_-_TRoP.png/revision/latest?cb=20221024172647",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/elrond.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Robert_Aramayo_LotR-TRoP_Asia_Premiere_2022.jpg/500px-Robert_Aramayo_LotR-TRoP_Asia_Premiere_2022.jpg",
+      "credit": "Photo: BB Entertainment, CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Robert_Aramayo_LotR-TRoP_Asia_Premiere_2022.jpg",
+      "focus": [0.5, 0.28]
     }
   },
   {
@@ -30,9 +40,14 @@
     "storylineId": "elves",
     "description": "High King of the Elves, ruling from Lindon.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Gil-galad",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Gilgaladrop.png",
+    "playedBy": "Benjamin Walker",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/f/fe/Gilgaladrop.png/revision/latest?cb=20250322164731",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/gil-galad.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Benjamin_Walker_LotR-RoP_Premiere_2022.jpg/500px-Benjamin_Walker_LotR-RoP_Premiere_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Benjamin_Walker_LotR-RoP_Premiere_2022.jpg",
+      "focus": [0.5, 0.3]
     }
   },
   {
@@ -42,9 +57,14 @@
     "storylineId": "elves",
     "description": "The Shipwright, lord of the Grey Havens and eldest of the Elves in Middle-earth.",
     "wikiUrl": "https://lotr.fandom.com/wiki/C%C3%ADrdan",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:CirdanRingsofpower.png",
+    "playedBy": "Ben Daniels",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/e/e4/CirdanRingsofpower.png/revision/latest?cb=20250323180551",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/cirdan.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Ben_Daniels%2C_2017.jpg/500px-Ben_Daniels%2C_2017.jpg",
+      "credit": "Photo: Luigi Novi, CC BY 4.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Ben_Daniels,_2017.jpg",
+      "focus": [0.5, 0.3]
     }
   },
   {
@@ -54,9 +74,14 @@
     "storylineId": "rings",
     "description": "Lord of Eregion and the greatest Elven-smith of the age.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Celebrimbor",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Celebrimbor_in_Lindon_-_TRoP.png",
+    "playedBy": "Charles Edwards",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/7/73/Celebrimbor_in_Lindon_-_TRoP.png/revision/latest?cb=20220926174244",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/celebrimbor.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Charles_Edwards_at_World_Premiere_London%2C_The_Rings_of_Power_2022.jpg/500px-Charles_Edwards_at_World_Premiere_London%2C_The_Rings_of_Power_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Charles_Edwards_at_World_Premiere_London,_The_Rings_of_Power_2022.jpg",
+      "focus": [0.5, 0.33]
     }
   },
   {
@@ -66,10 +91,8 @@
     "storylineId": "rings",
     "description": "A gifted smith of Eregion and Celebrimbor's apprentice.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Mirdania",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/f/ff/Mirdania_first_look.png/revision/latest?cb=20240726004433",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Mirdania_first_look.png",
+    "playedBy": "Amelia Kenworthy"
   },
   {
     "id": "arondir",
@@ -78,9 +101,14 @@
     "storylineId": "southlands",
     "description": "A Silvan Elf soldier posted to watch the Southlands, in love with the healer Bronwyn.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Arondir",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Arondir_-_The_Rings_of_Power.png",
+    "playedBy": "Ismael Cruz Córdova",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/2/2f/Arondir_-_The_Rings_of_Power.png/revision/latest?cb=20220907195425",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/arondir.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Ismael_Cruz_C%C3%B3rdova_LotR-TRoP_Premiere_2022.jpg/500px-Ismael_Cruz_C%C3%B3rdova_LotR-TRoP_Premiere_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Ismael_Cruz_C%C3%B3rdova_LotR-TRoP_Premiere_2022.jpg",
+      "focus": [0.48, 0.3]
     }
   },
   {
@@ -90,9 +118,14 @@
     "storylineId": "southlands",
     "description": "Healer of Tirharad and mother of Theo.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Bronwyn",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:TRoP_-_Bronwyn_still.jpg",
+    "playedBy": "Nazanin Boniadi",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/e/e5/TRoP_-_Bronwyn_still.jpg/revision/latest?cb=20220419184718",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/bronwyn.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Nazanin_Boniadi_LotR-TRoP_Asia_2022.jpg/500px-Nazanin_Boniadi_LotR-TRoP_Asia_2022.jpg",
+      "credit": "Photo: BB Entertainment, CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Nazanin_Boniadi_LotR-TRoP_Asia_2022.jpg",
+      "focus": [0.45, 0.22]
     }
   },
   {
@@ -102,10 +135,8 @@
     "storylineId": "southlands",
     "description": "Bronwyn's son, who has found something he should not have.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Theo",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/1/13/Imagetheo.png/revision/latest?cb=20260225122326",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Imagetheo.png",
+    "playedBy": "Tyroe Muhafidin"
   },
   {
     "id": "waldreg",
@@ -114,10 +145,8 @@
     "storylineId": "southlands",
     "description": "The tavern-keeper of Tirharad, whose family remembers the old days.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Waldreg",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/1/13/Waldreg2.png/revision/latest?cb=20260203144601",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Waldreg2.png",
+    "playedBy": "Geoff Morrell"
   },
   {
     "id": "estrid",
@@ -126,10 +155,8 @@
     "storylineId": "southlands",
     "description": "A Southlander who survived the making of Mordor.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Estrid",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/8/8c/Estrid_first_look.jpg/revision/latest?cb=20240611013601",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Estrid_first_look.jpg",
+    "playedBy": "Nia Towle"
   },
   {
     "id": "halbrand",
@@ -137,9 +164,14 @@
     "group": "Southlanders",
     "storylineId": "southlands",
     "description": "A castaway from the Southlands with a past he would rather forget.",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Halbrand_in_prison_-_TRoP.png",
+    "playedBy": "Charlie Vickers",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/c/cb/Halbrand_in_prison_-_TRoP.png/revision/latest?cb=20220919210140",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/halbrand.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Charlie_Vickers_interview_for_the_Rings_of_Power_2023_%28cropped%29.jpg/500px-Charlie_Vickers_interview_for_the_Rings_of_Power_2023_%28cropped%29.jpg",
+      "credit": "Photo: Agostxna, CC BY-SA 4.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Charlie_Vickers_interview_for_the_Rings_of_Power_2023_(cropped).jpg",
+      "focus": [0.5, 0.36]
     },
     "reveals": [
       {
@@ -154,10 +186,6 @@
         "from": "s2e2",
         "event": "s2e2-the-lord-of-gifts",
         "name": "Sauron (as Annatar)",
-        "image": {
-          "source": "https://static.wikia.nocookie.net/lotr/images/7/7e/Annatar_rop.jpg/revision/latest?cb=20240727130059",
-          "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-        },
         "description": "The Dark Lord, now in a fair Elvish form as Annatar, 'Lord of Gifts', a supposed emissary of the Valar at Celebrimbor's side."
       }
     ]
@@ -169,16 +197,25 @@
     "storylineId": "shadow",
     "description": "A scarred Elf whom the Orcs call 'father'.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Adar",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Adar.png",
+    "playedBy": "Joseph Mawle",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/8/86/Adar.png/revision/latest?cb=20260310192016",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/adar.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Joseph_Mawle_in_Shell_2012.jpg/500px-Joseph_Mawle_in_Shell_2012.jpg",
+      "credit": "Photo: Dublin International Film Festival, CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Joseph_Mawle_in_Shell_2012.jpg",
+      "focus": [0.36, 0.36]
     },
     "reveals": [
       {
         "from": "s2e1",
+        "playedBy": "Sam Hazeldine",
         "image": {
-          "source": "https://static.wikia.nocookie.net/lotr/images/4/40/Adar_-_RoP_S02.png/revision/latest?cb=20240727093957",
-          "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+          "file": "img/characters/adar-season-2.jpg",
+          "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sam_Hazeldine_-_The_Journey_Is_The_Destination.jpg/500px-Sam_Hazeldine_-_The_Journey_Is_The_Destination.jpg",
+          "credit": "Photo: Samhazeldine, CC BY-SA 4.0, via Wikimedia Commons",
+          "page": "https://commons.wikimedia.org/wiki/File:Sam_Hazeldine_-_The_Journey_Is_The_Destination.jpg",
+          "focus": [0.42, 0.26]
         }
       }
     ]
@@ -190,9 +227,14 @@
     "storylineId": "dwarves",
     "description": "Prince of Khazad-dûm and Elrond's hot-headed old friend.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Durin_IV",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Durin_IV_faces_King_Durin_-_TRoP.png",
+    "playedBy": "Owain Arthur",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/b/bd/Durin_IV_faces_King_Durin_-_TRoP.png/revision/latest?cb=20221024230448",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/durin-iv.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Owain_Arthur_at_World_Premiere_London%2C_The_Rings_of_Power_2022.jpg/500px-Owain_Arthur_at_World_Premiere_London%2C_The_Rings_of_Power_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Owain_Arthur_at_World_Premiere_London,_The_Rings_of_Power_2022.jpg",
+      "focus": [0.5, 0.42]
     }
   },
   {
@@ -202,9 +244,14 @@
     "storylineId": "dwarves",
     "description": "Durin's wife, a stone-singer who can hear the mountain.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Disa",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:TRoP_-_Disa_first_look.png",
+    "playedBy": "Sophia Nomvete",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/a9/TRoP_-_Disa_first_look.png/revision/latest?cb=20220921205214",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/disa.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Sophia_Nomvete_at_World_Premiere_London%2C_The_Rings_of_Power_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Sophia_Nomvete_at_World_Premiere_London,_The_Rings_of_Power_2022.jpg",
+      "focus": [0.5, 0.25]
     }
   },
   {
@@ -214,9 +261,14 @@
     "storylineId": "dwarves",
     "description": "King of Khazad-dûm, wary of Elves and of digging too deep.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Durin_III",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Durin_III.png",
+    "playedBy": "Peter Mullan",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/ad/Durin_III.png/revision/latest?cb=20260309084935",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/durin-iii.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/PeterMullan.JPG/500px-PeterMullan.JPG",
+      "credit": "Photo: Andymiah, CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:PeterMullan.JPG",
+      "focus": [0.5, 0.36]
     }
   },
   {
@@ -226,9 +278,14 @@
     "storylineId": "numenor",
     "description": "Queen Regent of Númenor, ruling for her ailing father and haunted by a vision.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Tar-M%C3%ADriel",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:TRoP_-_Miriel_as_Queen-regent.jpg",
+    "playedBy": "Cynthia Addai-Robinson",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/b/bc/TRoP_-_Miriel_as_Queen-regent.jpg/revision/latest?cb=20220901022216",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/miriel.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Cynthia_Addai-Robinson_at_53rd_Saturn_Awards_2026.jpg/500px-Cynthia_Addai-Robinson_at_53rd_Saturn_Awards_2026.jpg",
+      "credit": "Photo: Kevin Paul, CC BY 4.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Cynthia_Addai-Robinson_at_53rd_Saturn_Awards_2026.jpg",
+      "focus": [0.45, 0.2]
     }
   },
   {
@@ -238,9 +295,14 @@
     "storylineId": "numenor",
     "description": "A sea-captain of noble line whose name means Elf-friend.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Elendil",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Elendil_-_The_Rings_of_Power.png",
+    "playedBy": "Lloyd Owen",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/c/c2/Elendil_-_The_Rings_of_Power.png/revision/latest?cb=20220913204315",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/elendil.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Lloyd_Owen_LotR-TRoP_Premiere_2022.jpg/500px-Lloyd_Owen_LotR-TRoP_Premiere_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Lloyd_Owen_LotR-TRoP_Premiere_2022.jpg",
+      "focus": [0.5, 0.26]
     }
   },
   {
@@ -250,9 +312,14 @@
     "storylineId": "numenor",
     "description": "Elendil's restless son, a sailor who wants something more.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Isildur",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:TROPIsildur.jpg",
+    "playedBy": "Maxim Baldry",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/f/f9/TROPIsildur.jpg/revision/latest?cb=20220901001321",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/isildur.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Maxim_Baldry_LotR-TRoP_Premiere_2022.jpg/500px-Maxim_Baldry_LotR-TRoP_Premiere_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Maxim_Baldry_LotR-TRoP_Premiere_2022.jpg",
+      "focus": [0.4, 0.28]
     }
   },
   {
@@ -262,9 +329,14 @@
     "storylineId": "numenor",
     "description": "Elendil's daughter, an apprentice of the Builders' Guild.",
     "wikiUrl": "https://lotr.fandom.com/wiki/E%C3%A4rien",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:E%C3%A4rien_-_The_Rings_of_Power.png",
+    "playedBy": "Ema Horvath",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/e/e9/E%C3%A4rien_-_The_Rings_of_Power.png/revision/latest?cb=20221016031409",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/earien.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ema_Horvath_LotR-TRoP_Asia_Premiere_2022_%28cropped%29.jpg/500px-Ema_Horvath_LotR-TRoP_Asia_Premiere_2022_%28cropped%29.jpg",
+      "credit": "Photo: BB Entertainment, CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Ema_Horvath_LotR-TRoP_Asia_Premiere_2022_(cropped).jpg",
+      "focus": [0.48, 0.42]
     }
   },
   {
@@ -274,10 +346,8 @@
     "storylineId": "numenor",
     "description": "The Queen Regent's cousin and chancellor, beloved by the people of Númenor.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Ar-Pharaz%C3%B4n",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/f/fe/Pharazon_first_look.jpg/revision/latest?cb=20220714204505",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Pharazon_first_look.jpg",
+    "playedBy": "Trystan Gravelle",
     "reveals": [
       {
         "from": "s2e5",
@@ -293,9 +363,14 @@
     "storylineId": "numenor",
     "description": "Pharazôn's ambitious son.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Kemen",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Kemen_s2.png",
+    "playedBy": "Leon Wadham",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/2/21/Kemen_s2.png/revision/latest?cb=20260311114601",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/kemen.png",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Leon_Wadham_The_Cafe.png/500px-Leon_Wadham_The_Cafe.png",
+      "credit": "Photo: The Cafe, CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Leon_Wadham_The_Cafe.png",
+      "focus": [0.42, 0.4]
     }
   },
   {
@@ -305,9 +380,14 @@
     "storylineId": "numenor",
     "description": "Isildur's loyal friend from the Sea Guard.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Valandil",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Valandil_-_The_Rings_of_Power.png",
+    "playedBy": "Alex Tarrant",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/a6/Valandil_-_The_Rings_of_Power.png/revision/latest?cb=20221027213314",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/valandil.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Alex_Tarrant_-_DMV.jpg/500px-Alex_Tarrant_-_DMV.jpg",
+      "credit": "Photo: Kevin Paul, CC BY 4.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Alex_Tarrant_-_DMV.jpg",
+      "focus": [0.5, 0.35]
     }
   },
   {
@@ -317,9 +397,14 @@
     "storylineId": "harfoots",
     "description": "A curious young Harfoot who keeps straying off the trail.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Elanor_Brandyfoot",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Nori_Brandyfoot_-_The_Rings_of_Power.png",
+    "playedBy": "Markella Kavenagh",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/5/5f/Nori_Brandyfoot_-_The_Rings_of_Power.png/revision/latest?cb=20220924013900",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/nori.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Markella_Kavenagh_at_World_Premiere_London%2C_The_Rings_of_Power_2022.jpg/500px-Markella_Kavenagh_at_World_Premiere_London%2C_The_Rings_of_Power_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Markella_Kavenagh_at_World_Premiere_London,_The_Rings_of_Power_2022.jpg",
+      "focus": [0.4, 0.38]
     }
   },
   {
@@ -329,9 +414,14 @@
     "storylineId": "harfoots",
     "description": "Nori's cautious and loyal best friend.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Poppy_Proudfellow",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Poppy_Proudfellow_-_The_Rings_of_Power.png",
+    "playedBy": "Megan Richards",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/7/75/Poppy_Proudfellow_-_The_Rings_of_Power.png/revision/latest?cb=20220907192953",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/poppy.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Megan_Richards_LotR-TRoP_Asia_2022.jpg/500px-Megan_Richards_LotR-TRoP_Asia_2022.jpg",
+      "credit": "Photo: BB Entertainment, CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Megan_Richards_LotR-TRoP_Asia_2022.jpg",
+      "focus": [0.5, 0.28]
     }
   },
   {
@@ -341,9 +431,14 @@
     "storylineId": "harfoots",
     "description": "Trail-finder of the Harfoots and keeper of their star-book.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Sadoc_Burrows",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Sadoc_Burrows_-_(The_Eye).png",
+    "playedBy": "Lenny Henry",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/6/6b/Sadoc_Burrows_-_%28The_Eye%29.png/revision/latest?cb=20221024221837",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/sadoc.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Sir_Lenny_Henry_signing_books_%282%29_-_Copy.jpg/500px-Sir_Lenny_Henry_signing_books_%282%29_-_Copy.jpg",
+      "credit": "Photo: Dudley Council, CC BY 2.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Sir_Lenny_Henry_signing_books_(2)_-_Copy.jpg",
+      "focus": [0.62, 0.22]
     }
   },
   {
@@ -352,9 +447,14 @@
     "group": "Wizards",
     "storylineId": "harfoots",
     "description": "A giant of a man who fell from the sky in a ball of fire, remembering nothing.",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:The_Stranger_renewed_-_TRoP.png",
+    "playedBy": "Daniel Weyman",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/2/24/The_Stranger_renewed_-_TRoP.png/revision/latest?cb=20221016041322",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/stranger.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Daniel_Weyman_at_World_Premiere_London%2C_The_Rings_of_Power_2022.jpg/500px-Daniel_Weyman_at_World_Premiere_London%2C_The_Rings_of_Power_2022.jpg",
+      "credit": "Photo: O Bolseiro (The Baggins), CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Daniel_Weyman_at_World_Premiere_London,_The_Rings_of_Power_2022.jpg",
+      "focus": [0.48, 0.3]
     },
     "reveals": [
       {
@@ -362,10 +462,6 @@
         "event": "s2e8-a-name-at-last",
         "name": "Gandalf",
         "wikiUrl": "https://lotr.fandom.com/wiki/Gandalf",
-        "image": {
-          "source": "https://static.wikia.nocookie.net/lotr/images/d/d9/Gandalftrop.png/revision/latest?cb=20260305113554",
-          "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-        },
         "description": "One of the Istari, the wizards sent to Middle-earth to oppose Sauron. The halflings called him Grand-Elf; he will be known as Gandalf."
       }
     ]
@@ -377,9 +473,14 @@
     "storylineId": "harfoots",
     "description": "A merry, ancient fellow who keeps a house in the desert and calls himself Eldest.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Tom_Bombadil",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Tom_-_TRoP_S2_E4.png",
+    "playedBy": "Rory Kinnear",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/a4/Tom_-_TRoP_S2_E4.png/revision/latest?cb=20240917023831",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/tom-bombadil.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Rory_Kinnear_2012_%28cropped%29.jpg/500px-Rory_Kinnear_2012_%28cropped%29.jpg",
+      "credit": "Photo: Sonnenuntergang, CC BY-SA 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Rory_Kinnear_2012_(cropped).jpg",
+      "focus": [0.5, 0.36]
     }
   },
   {
@@ -389,9 +490,14 @@
     "storylineId": "harfoots",
     "description": "A sorcerer who rules in Rhûn from the fortress of Caras Gaer.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Dark_Wizard",
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Dark_Wizard_-_TRoP_S2_E2.png",
+    "playedBy": "Ciarán Hinds",
     "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/5/59/Dark_Wizard_-_TRoP_S2_E2.png/revision/latest?cb=20240914232113",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
+      "file": "img/characters/dark-wizard.jpg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Ciar%C3%A1n_Hinds_in_2022.jpg/500px-Ciar%C3%A1n_Hinds_in_2022.jpg",
+      "credit": "Photo: WelcomeScreenUK, CC BY 3.0, via Wikimedia Commons",
+      "page": "https://commons.wikimedia.org/wiki/File:Ciar%C3%A1n_Hinds_in_2022.jpg",
+      "focus": [0.48, 0.3]
     }
   }
 ]

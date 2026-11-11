@@ -27,11 +27,12 @@ function megabytes(bytes: number): string {
   return `${(bytes / 1e6).toFixed(1)} MB`;
 }
 
-async function fetchOne(file: string, source: string): Promise<void> {
+/** Downloads one picture unless it is already there. Returns whether a website was contacted. */
+async function fetchOne(file: string, source: string): Promise<boolean> {
   const target = mediaFile(store.mediaDir, file);
   if (!force && (await exists(target))) {
     present++;
-    return;
+    return false;
   }
   try {
     const result = await fetchSource(source, target);
@@ -41,16 +42,15 @@ async function fetchOne(file: string, source: string): Promise<void> {
     failures.push(`${file}  <-  ${source}\n      ${(error as Error).message}`);
     console.log(`  ! ${file}  FAILED`);
   }
+  return true;
 }
 
-/** Runs the jobs a few at a time, to be gentle with the websites the pictures come from. */
-async function inBatches(jobs: Array<() => Promise<void>>, size = 4): Promise<void> {
-  let next = 0;
-  await Promise.all(
-    Array.from({ length: size }, async () => {
-      while (next < jobs.length) await jobs[next++]();
-    }),
-  );
+/** Runs the jobs one after another with a short pause, to be gentle with the websites the pictures come from. */
+async function oneByOne(jobs: Array<() => Promise<boolean>>): Promise<void> {
+  for (const job of jobs) {
+    const usedTheNetwork = await job();
+    if (usedTheNetwork) await new Promise((resolve) => setTimeout(resolve, 1200));
+  }
 }
 
 const maps = await store.listMaps();
@@ -73,7 +73,7 @@ for (const summary of await store.listSagas()) {
   }
 }
 console.log(`Pictures (${wanted.size})`);
-await inBatches([...wanted].map(([file, source]) => () => fetchOne(file, source)));
+await oneByOne([...wanted].map(([file, source]) => () => fetchOne(file, source)));
 
 if (withTiles) {
   console.log('Map tiles');

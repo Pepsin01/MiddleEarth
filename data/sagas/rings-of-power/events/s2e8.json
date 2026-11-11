@@ -9,10 +9,7 @@
     "description": "Durin III breaks through into the mithril — and the Balrog. Free of the ring at last, he names his son king and leaps at the demon with his axe as the cavern comes down.",
     "characters": ["durin-iii", "durin-iv", "disa"],
     "exits": ["durin-iii"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/6/6e/Durin_vs_balrog.png/revision/latest?cb=20260309084047",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Durin_vs_balrog.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Durin's_Bane"
   },
   {
@@ -24,10 +21,7 @@
     "placeId": "stoor-village",
     "description": "The Dark Wizard greets the Stranger as an old friend: five of them were sent, he says, and together the two of them could rule in place of Sauron. Refused, he brings the canyon down on the Stoors.",
     "characters": ["stranger", "dark-wizard", "nori", "poppy"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/5/59/Dark_Wizard_-_TRoP_S2_E2.png/revision/latest?cb=20240914232113",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Dark_Wizard_-_TRoP_S2_E2.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Dark_Wizard"
   },
   {
@@ -50,10 +44,7 @@
     "placeId": "armenelos",
     "description": "In the palantír Pharazôn sees Sauron's face, and brands the Faithful as his servants. Eärien warns her father in time; Míriel stays to face the king and sends Elendil west with a sword — Narsil, the White Flame.",
     "characters": ["pharazon", "miriel", "elendil", "earien", "kemen"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/e/ec/ArPharazonPalantir.png/revision/latest?cb=20250408151135",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:ArPharazonPalantir.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Narsil"
   },
   {
@@ -90,10 +81,7 @@
     "description": "Sauron tortures Celebrimbor for the Nine. The smith dies naming him what he will become — Lord of the Rings — and Sauron weeps as he kills him.",
     "characters": ["celebrimbor", "halbrand"],
     "exits": ["celebrimbor"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/1/15/CelebrimborDeath.png/revision/latest?cb=20241005170847",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:CelebrimborDeath.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Celebrimbor"
   },
   {
@@ -106,10 +94,7 @@
     "description": "Nenya has healed Adar into the Elf he once was. He gives the ring back to Galadriel and offers peace — and his own children, turned by Sauron, cut him down as they once cut down their first master.",
     "characters": ["adar", "galadriel"],
     "exits": ["adar"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/4/4c/Adar_healed_-_TRoP.png/revision/latest?cb=20241003232726",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Adar_healed_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Adar"
   },
   {
@@ -155,10 +140,7 @@
     "placeId": "tom-bombadils-house",
     "description": "Back at Tom's fireside, staff in hand, the Stranger thinks over what the Stoors kept calling him — Grand-Elf. He has a name now: Gandalf.",
     "characters": ["stranger", "tom-bombadil"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/a5/Gandalfstaffrop.png/revision/latest?cb=20260224111843",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Gandalfstaffrop.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Gandalf"
   },
   {

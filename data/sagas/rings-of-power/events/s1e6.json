@@ -8,10 +8,7 @@
     "placeId": "ostirith",
     "description": "Adar marches on the watchtower and finds it deserted — until Arondir's arrow brings the whole tower down on his vanguard.",
     "characters": ["arondir", "adar"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/e/e7/Ostirith_-_The_Rings_of_Power.png/revision/latest?cb=20220904193217",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Ostirith_-_The_Rings_of_Power.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Ostirith"
   },
   {
@@ -35,10 +32,7 @@
     "placeId": "tirharad",
     "description": "The villagers defend Tirharad by night and win — then discover that the dead are their own neighbours. Orc arrows follow, Bronwyn is badly wounded, and Adar takes the tavern. To save his mother, Theo gives up the hilt.",
     "characters": ["arondir", "bronwyn", "theo", "adar", "waldreg"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/4/42/TRoP_-_Tirharad_first_look.png/revision/latest?cb=20220210170134",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:TRoP_-_Tirharad_first_look.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Tirharad"
   },
   {
@@ -51,10 +45,7 @@
     "description": "At dawn the cavalry of Númenor sweeps into the village. Galadriel and Halbrand ride Adar down in the forest.",
     "characters": ["galadriel", "halbrand", "miriel", "elendil", "isildur", "valandil"],
     "via": [[5620, 6420], [6265, 6270], [6600, 5800], [6800, 5700]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/e/ec/Isildur_in_Tirharad_-_TRoP.png/revision/latest?cb=20221003034501",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Isildur_in_Tirharad_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Ud%C3%BBn_(episode)"
   },
   {
@@ -66,10 +57,7 @@
     "placeId": "tirharad",
     "description": "Adar claims to be one of the first Orcs — an Elf twisted by Morgoth — and to have killed Sauron himself for spending his children's lives. Halbrand asks him only: 'Do you remember me?'",
     "characters": ["galadriel", "adar", "halbrand"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/1/11/Adar_captured_by_Galadriel_-_TRoP.png/revision/latest?cb=20220930055057",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Adar_captured_by_Galadriel_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Adar"
   },
   {
@@ -81,10 +69,7 @@
     "placeId": "tirharad",
     "description": "Míriel presents Halbrand to the survivors as the king they were promised, and Tirharad cheers him.",
     "characters": ["halbrand", "bronwyn", "miriel"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/6/65/Halbrand_at_Tirharad_-_TRoP.png/revision/latest?cb=20220930051406",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Halbrand_at_Tirharad_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Ud%C3%BBn_(episode)"
   },
   {
@@ -96,10 +81,7 @@
     "placeId": "ostirith",
     "description": "The bundle Adar carried was a decoy. In the ruins of Ostirith, Waldreg sets the real hilt into its lock; the dam breaks and the river pours through the Orcs' tunnels toward the mountain.",
     "characters": ["waldreg"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/9/9c/Waldreg_uses_the_hilt_-_TRoP.png/revision/latest?cb=20221001223349",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Waldreg_uses_the_hilt_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Waldreg"
   },
   {
@@ -111,10 +93,7 @@
     "placeId": "orodruin",
     "description": "Water meets fire beneath the mountain. Orodruin explodes, and a wall of ash and flame rolls over Tirharad.",
     "characters": [],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/d/dc/Orodruin_eruption_-_TRoP.png/revision/latest?cb=20221001044051",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Orodruin_eruption_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Mount_Doom"
   }
 ]

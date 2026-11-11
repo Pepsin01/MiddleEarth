@@ -75,9 +75,34 @@ export interface DownloadResult {
   contentType: string;
 }
 
+const sleep = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
+
+/**
+ * Asks for a picture. When the website says "too many requests, come back later",
+ * we wait as long as it asks (up to a minute) and try again, a few times.
+ * A plain refusal (for example 403: this site does not want automated downloads)
+ * is accepted as an answer and not worked around.
+ */
+async function politeFetch(url: string): Promise<Response> {
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT, Accept: 'image/*,*/*;q=0.5' }, redirect: 'follow' });
+    if (res.status !== 429 && res.status !== 503) return res;
+    const asked = Number(res.headers.get('retry-after'));
+    const wait = Number.isFinite(asked) && asked > 0 ? asked : 10;
+    await res.body?.cancel();
+    // A short pause we simply sit out. A long one means "stop for now": say so instead of knocking again.
+    if (wait > 30 || attempt >= 2) {
+      const minutes = Math.ceil(wait / 60);
+      throw new Error(`${new URL(url).hostname} asks for a pause of about ${minutes} minute${minutes === 1 ? '' : 's'} (too many requests). Run the command again later; what is already downloaded is kept.`);
+    }
+    await sleep(wait * 1000 + 500);
+  }
+}
+
 /** Downloads one picture to `file` (written atomically). Only http(s) picture responses up to `maxBytes` are accepted. */
 export async function download(url: string, file: string, maxBytes = 200 * 1024 * 1024): Promise<DownloadResult> {
-  const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT, Accept: 'image/*,*/*;q=0.5' }, redirect: 'follow' });
+  const res = await politeFetch(url);
+  if (res.status === 403) throw new Error(`The website refuses automated downloads of this picture (HTTP 403). Save it in your browser and upload it instead: ${url}`);
   if (!res.ok || !res.body) throw new Error(`HTTP ${res.status} for ${url}`);
   const contentType = (res.headers.get('content-type') ?? '').split(';')[0].trim().toLowerCase();
   if (!contentType.startsWith('image/')) throw new Error(`Not a picture (${contentType || 'unknown type'}): ${url}`);
