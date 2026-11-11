@@ -1,12 +1,14 @@
-import { ArrowLeft, BookOpen, ChevronLeft, ChevronRight, ExternalLink, LocateFixed, MapPin, Route, X } from 'lucide-react';
+import { ArrowLeft, BookOpen, ChevronLeft, ChevronRight, ExternalLink, ImageIcon, LocateFixed, MapPin, Route, X } from 'lucide-react';
 import type { CSSProperties, ReactNode } from 'react';
-import type { Character, Place } from '../../shared/schema.ts';
-import { characterAt, identityAt } from '../../shared/timeline.ts';
+import type { Character, ImageRef, Place } from '../../shared/schema.ts';
+import { characterAt, hasHiddenIdentity, identityAt } from '../../shared/timeline.ts';
 import type { Time, TimedEvent } from '../../shared/timeline.ts';
 import { formatDate, plural } from '../lib/format.ts';
-import { eventPicture, eventsAtPlace, journeySoFar, storylineColor, useScene } from '../scene.ts';
+import { eventPicture, eventsAtPlace, journeySoFar, storylineColor } from '../scene.ts';
+import { useScene } from '../useScene.ts';
 import { useStore } from '../store.ts';
 import { iconFor } from './icons.tsx';
+import { MapVignette } from './MapVignette.tsx';
 import { Picture, Portrait } from './Picture.tsx';
 
 const PLACE_KIND: Record<Place['kind'], string> = {
@@ -28,6 +30,31 @@ export function WikiLink({ url }: { url: string | undefined }) {
     <a className="wiki-link" href={url} target="_blank" rel="noreferrer">
       Read more on the wiki <ExternalLink aria-hidden="true" />
     </a>
+  );
+}
+
+/** Link to a still on the wiki. The wiki does not let other sites show its pictures, so it can only be linked. */
+export function StillLink({ url, label = 'See a still from the series on the wiki' }: { url: string | undefined; label?: string }) {
+  if (!url) return null;
+  return (
+    <a className="wiki-link wiki-link--still" href={url} target="_blank" rel="noreferrer">
+      <ImageIcon aria-hidden="true" /> {label} <ExternalLink aria-hidden="true" />
+    </a>
+  );
+}
+
+function PhotoCredit({ image }: { image: ImageRef | undefined }) {
+  if (!image?.credit) return null;
+  return (
+    <p className="credit">
+      {image.page ? (
+        <a href={image.page} target="_blank" rel="noreferrer">
+          {image.credit}
+        </a>
+      ) : (
+        image.credit
+      )}
+    </p>
   );
 }
 
@@ -110,6 +137,7 @@ function EpisodeView() {
           <h2>{ref.episode.title}</h2>
           {ref.episode.synopsis && <p className="prose">{ref.episode.synopsis}</p>}
           <WikiLink url={ref.episode.wikiUrl} />
+          {!ref.episode.image && <StillLink url={ref.episode.suggestedPicture} />}
           <section>
             <h3>What happens</h3>
             {events.length > 0 ? (
@@ -143,12 +171,22 @@ function EventView({ timed }: { timed: TimedEvent }) {
   const previous = siblings[index - 1];
   const next = siblings[index + 1];
   const characters = event.characters.map((id) => timeline.characterById.get(id)).filter((entry): entry is Character => entry !== undefined);
+  const picture = eventPicture(timed);
+  const Icon = iconFor(event);
 
   return (
     <>
       <Header />
       <div className="detail__scroll">
-        <Picture image={eventPicture(timeline, timed)} width={960} alt="" className="picture--hero" credit />
+        {picture ? (
+          <Picture image={picture} width={960} alt="" className="picture--hero" credit />
+        ) : (
+          timed.pos && (
+            <MapVignette pos={timed.pos} color={storyline?.color ?? '#6b5b45'}>
+              <Icon aria-hidden="true" />
+            </MapVignette>
+          )
+        )}
         <div className="detail__body">
           <p className="eyebrow">
             <span className="swatch" style={{ background: storyline?.color }} />
@@ -179,6 +217,7 @@ function EventView({ timed }: { timed: TimedEvent }) {
             </section>
           )}
           <WikiLink url={event.wikiUrl} />
+          {!event.image && <StillLink url={event.suggestedPicture} />}
           {event.episodeId !== episodeId && (
             <p className="notice">
               This happens in {episode.code}, “{episode.episode.title}”.{' '}
@@ -228,6 +267,7 @@ function CharacterView({ character }: { character: Character }) {
             <div>
               {character.group && <p className="eyebrow">{character.group}</p>}
               <h2>{identity.name}</h2>
+              {identity.playedBy && <p className="played-by">Played by {identity.playedBy}</p>}
               {state ? (
                 <button type="button" className="place-link" onClick={() => flyTo(state.pos)}>
                   <MapPin aria-hidden="true" /> {where}
@@ -237,6 +277,7 @@ function CharacterView({ character }: { character: Character }) {
               )}
             </div>
           </div>
+          <PhotoCredit image={identity.image} />
           {identity.description && <p className="prose">{identity.description}</p>}
           <div className="actions">
             <button type="button" className={`button${followed ? ' is-on' : ''}`} onClick={() => toggleFollow(character.id)} aria-pressed={followed}>
@@ -244,6 +285,9 @@ function CharacterView({ character }: { character: Character }) {
             </button>
             <WikiLink url={identity.wikiUrl} />
           </div>
+          {journey.length > 0 && !hasHiddenIdentity(timeline, character, scene.time) && (
+            <StillLink url={character.suggestedPicture} label="See the character on the wiki" />
+          )}
           {journey.length > 0 && (
             <section>
               <h3>Journey so far</h3>
@@ -273,7 +317,13 @@ function PlaceView({ place }: { place: Place }) {
     <>
       <Header />
       <div className="detail__scroll">
-        <Picture image={place.image} width={960} alt="" className="picture--hero" credit />
+        {place.image ? (
+          <Picture image={place.image} width={960} alt="" className="picture--hero" credit />
+        ) : (
+          <MapVignette pos={place.pos} color="#6b5b45">
+            <MapPin aria-hidden="true" />
+          </MapVignette>
+        )}
         <div className="detail__body">
           <p className="eyebrow">{PLACE_KIND[place.kind]}</p>
           <h2>{place.name}</h2>
@@ -282,6 +332,7 @@ function PlaceView({ place }: { place: Place }) {
           </button>
           {place.description && <p className="prose">{place.description}</p>}
           <WikiLink url={place.wikiUrl} />
+          {!place.image && <StillLink url={place.suggestedPicture} />}
           {present.length > 0 && (
             <section>
               <h3>Here now</h3>

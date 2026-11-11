@@ -1,12 +1,11 @@
 /**
  * Works out what the map should show for the current position of the time
  * slider: which events, which characters and where, which overlays.
+ * Pure logic only - the React hook that feeds it from the app state is in useScene.ts.
  */
-import { useMemo } from 'react';
 import type { Character, ImageRef, Overlay, Place, Point, SagaBundle } from '../shared/schema.ts';
 import { characterAt, cursorTime, identityAt, isAtOrBefore, isBefore, overlayVisible } from '../shared/timeline.ts';
 import type { EpisodeRef, Identity, Stop, Time, TimedEvent, Timeline } from '../shared/timeline.ts';
-import { useStore } from './store.ts';
 
 export interface SceneCharacter {
   character: Character;
@@ -92,30 +91,9 @@ export function buildScene(
   return { time, episode, current, history: [...spots.values()], characters, overlays };
 }
 
-export function useScene(): Scene | null {
-  const bundle = useStore((state) => state.bundle);
-  const timeline = useStore((state) => state.timeline);
-  const episodeId = useStore((state) => state.episodeId);
-  const stepEventId = useStore((state) => state.stepEventId);
-  const hiddenStorylines = useStore((state) => state.hiddenStorylines);
-  const followed = useStore((state) => state.followed);
-  const showHistory = useStore((state) => state.options.history);
-  return useMemo(
-    () => (bundle && timeline ? buildScene(bundle, timeline, episodeId, stepEventId, hiddenStorylines, followed, showHistory) : null),
-    [bundle, timeline, episodeId, stepEventId, hiddenStorylines, followed, showHistory],
-  );
-}
-
-/** The picture to show for an event: its own, else its place's, else that of the first character taking part. */
-export function eventPicture(timeline: Timeline, timed: TimedEvent): ImageRef | undefined {
-  if (timed.event.image) return timed.event.image;
-  if (timed.place?.image) return timed.place.image;
-  for (const characterId of timed.event.characters) {
-    const character = timeline.characterById.get(characterId);
-    const image = character && identityAt(timeline, character, timed.time).image;
-    if (image) return image;
-  }
-  return undefined;
+/** The picture to show for an event: its own, else its place's. Without either, a map excerpt is shown instead. */
+export function eventPicture(timed: TimedEvent): ImageRef | undefined {
+  return timed.event.image ?? timed.place?.image;
 }
 
 /** Events a character has taken part in up to (and including) the given moment, latest first. */

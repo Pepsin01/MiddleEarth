@@ -1,4 +1,4 @@
-import type { ImageRef, SagaBundle } from '../../shared/schema.ts';
+import type { ImageRef, SagaBundle, StoryEvent } from '../../shared/schema.ts';
 import { firstAppearance, identityAt, isAtOrBefore } from '../../shared/timeline.ts';
 import type { Time, Timeline } from '../../shared/timeline.ts';
 import { eventPicture, storylineColor } from '../scene.ts';
@@ -10,6 +10,8 @@ export interface SearchResult {
   subtitle: string;
   color: string;
   image?: ImageRef;
+  /** For events: the event itself, so its symbol can be shown. */
+  event?: StoryEvent;
 }
 
 /** Lowercase without accents, so "numenor" finds "Númenor". */
@@ -79,7 +81,8 @@ export function search(bundle: SagaBundle, timeline: Timeline, query: string, sc
         title: timed.event.title,
         subtitle: [timed.episode.code, timed.place?.name].filter(Boolean).join(' · '),
         color: storylineColor(bundle, timed.event.storylineId),
-        image: eventPicture(timeline, timed),
+        image: eventPicture(timed),
+        event: timed.event,
         rank,
       });
     }

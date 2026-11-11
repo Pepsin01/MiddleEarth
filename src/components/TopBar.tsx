@@ -1,12 +1,13 @@
-import { Layers, Menu, Search as SearchIcon, X } from 'lucide-react';
+import { Layers, MapPin, Menu, Search as SearchIcon, X } from 'lucide-react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { CSSProperties, KeyboardEvent, ReactNode } from 'react';
 import { characterAt, endOfEpisode } from '../../shared/timeline.ts';
 import type { Time } from '../../shared/timeline.ts';
 import { search } from '../lib/search.ts';
 import type { SearchResult } from '../lib/search.ts';
-import { useScene } from '../scene.ts';
+import { useScene } from '../useScene.ts';
 import { useStore } from '../store.ts';
+import { iconFor } from './icons.tsx';
 import { Picture, Portrait } from './Picture.tsx';
 import { Popover } from './Popover.tsx';
 
@@ -120,9 +121,7 @@ function Search({ scope }: { scope: Time }) {
                 {result.kind === 'character' ? (
                   <Portrait image={result.image} name={result.title} size={36} color={result.color} />
                 ) : (
-                  <span className="result__thumb" style={{ '--c': result.color } as CSSProperties}>
-                    <Picture image={result.image} width={96} alt="" />
-                  </span>
+                  <ResultThumb result={result} />
                 )}
                 <span className="result__text">
                   <strong>{result.title}</strong>
@@ -137,6 +136,16 @@ function Search({ scope }: { scope: Time }) {
         </ul>
       )}
     </div>
+  );
+}
+
+/** Small square in front of a search result: its picture if there is one, otherwise the event's symbol or a place pin. */
+function ResultThumb({ result }: { result: SearchResult }) {
+  const Icon = result.event ? iconFor(result.event) : MapPin;
+  return (
+    <span className="result__thumb" style={{ '--c': result.color } as CSSProperties}>
+      {result.image ? <Picture image={result.image} width={96} alt="" /> : <Icon aria-hidden="true" />}
+    </span>
   );
 }
 

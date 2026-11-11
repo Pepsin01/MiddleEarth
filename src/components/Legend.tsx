@@ -1,6 +1,6 @@
 import { Focus, X } from 'lucide-react';
 import { useMemo } from 'react';
-import { useScene } from '../scene.ts';
+import { useScene } from '../useScene.ts';
 import type { SceneCharacter } from '../scene.ts';
 import { useStore } from '../store.ts';
 import { Portrait } from './Picture.tsx';

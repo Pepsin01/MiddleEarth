@@ -30,7 +30,17 @@ export function Picture({ image, width, alt, className = '', credit = false }: P
         style={{ objectPosition: focusPosition(image, '50% 30%') }}
         onError={() => setFailed(true)}
       />
-      {credit && image?.credit && <figcaption>{image.credit}</figcaption>}
+      {credit && image?.credit && (
+        <figcaption>
+          {image.page ? (
+            <a href={image.page} target="_blank" rel="noreferrer">
+              {image.credit}
+            </a>
+          ) : (
+            image.credit
+          )}
+        </figcaption>
+      )}
     </figure>
   );
 }
