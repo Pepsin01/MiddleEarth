@@ -10,6 +10,7 @@
  * serve them (including shrunk versions so the browser never loads a huge file
  * for a thumbnail).
  */
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
@@ -17,6 +18,7 @@ import { Readable } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import express from 'express';
 import sharp from 'sharp';
+import { slugify } from '../shared/ids.ts';
 import { MediaPath } from '../shared/schema.ts';
 import { HttpError } from './errors.ts';
 
@@ -140,6 +142,45 @@ export async function fetchSource(source: string, file: string, maxBytes?: numbe
     }
   }
   throw lastError ?? new Error(`Nothing to download for ${source}`);
+}
+
+const STORED_FORMATS: Record<string, string> = { jpeg: 'jpg', png: 'png', webp: 'webp', gif: 'gif', avif: 'avif', heif: 'avif' };
+
+/**
+ * Stores a picture that was uploaded or pasted in the editor and returns its media path
+ * ("img/uploads/<name>-<fingerprint>.<ext>"). Anything that is not a real picture is refused.
+ */
+export async function storeUpload(mediaDir: string, data: Buffer, originalName: string): Promise<string> {
+  let format: string | undefined;
+  try {
+    format = (await sharp(data).metadata()).format;
+  } catch {
+    format = undefined;
+  }
+  const extension = format ? STORED_FORMATS[format] : undefined;
+  if (!extension) throw new HttpError(400, 'This file is not a picture the app can use (JPEG, PNG, WebP, GIF or AVIF).');
+  const base = slugify(path.basename(originalName).replace(/\.[^.]+$/, ''), 40);
+  const fingerprint = crypto.createHash('sha1').update(data).digest('hex').slice(0, 8);
+  const relative = `img/uploads/${base}-${fingerprint}.${extension}`;
+  const target = mediaFile(mediaDir, relative);
+  await fsp.mkdir(path.dirname(target), { recursive: true });
+  await fsp.writeFile(target, data);
+  return relative;
+}
+
+/** Downloads a picture from a web address into the uploads folder. Fails with a readable message when the site refuses. */
+export async function storeFromWeb(mediaDir: string, url: string): Promise<string> {
+  const temporary = path.join(mediaDir, 'img', 'uploads', `.incoming-${crypto.randomBytes(6).toString('hex')}`);
+  try {
+    await fetchSource(url, temporary, 25 * 1024 * 1024);
+    const name = decodeURIComponent(new URL(url).pathname.split('/').pop() || 'picture');
+    return await storeUpload(mediaDir, await fsp.readFile(temporary), name);
+  } catch (error) {
+    if (error instanceof HttpError) throw error;
+    throw new HttpError(502, `Could not get that picture: ${(error as Error).message}`);
+  } finally {
+    await fsp.rm(temporary, { force: true });
+  }
 }
 
 /** Serves /media/... (the files as they are) and /thumb/<width>/... (shrunk copies, created on first use). */

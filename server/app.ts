@@ -43,15 +43,16 @@ export function createApp(config: Config): App {
       return;
     }
     const { type, status } = (error ?? {}) as { type?: string; status?: number };
-    if (status === 404) {
-      res.status(404).json({ error: 'Not found.' });
+    // Refusals raised by Express itself (unknown file, forbidden path, ...) keep their status.
+    if (typeof status === 'number' && status >= 400 && status < 500 && !type) {
+      res.status(status).json({ error: status === 404 ? 'Not found.' : 'The request was refused.' });
       return;
     }
     if (type === 'entity.parse.failed') {
       res.status(400).json({ error: 'The request was not valid JSON.' });
       return;
     }
-    if (type === 'entity.too.large') {
+    if (type === 'entity.too.large' || (error as { code?: string } | null)?.code === 'LIMIT_FILE_SIZE') {
       res.status(413).json({ error: 'The request is too large.' });
       return;
     }
