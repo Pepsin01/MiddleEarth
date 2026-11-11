@@ -78,6 +78,8 @@ Other fields of the event form:
 - **Route taken to get here** — press "Add route points" and click the map along the way. Without route points characters travel in a straight line. Route points are followed only by characters who come from that direction; anyone arriving from elsewhere takes a straight line. If two groups arrive by different roads, give each group its own waypoint event first.
 - **Flashback** — the event is shown, but nobody travels to it.
 
+**Filling in from the wiki** — every form has a "Wiki link" field with a search line under it. Type a name ("Pelargir"), pick the page from the list, and the form takes over the link, the page's opening paragraph and a link to its main picture. Pasting a wiki address and pressing "Fill in" does the same. Nothing you already typed is overwritten. Read the text before saving: wiki pages describe the whole story, so the paragraph may give away later events.
+
 **Change or delete something** — select it on the map (or through search), then press Edit at the top of the side panel. Delete is at the bottom of the form. A place or character that is still used by events can only be deleted after a second confirmation, which explains what happens to those events.
 
 **Characters** — Add → A character. Name, group (used in the list on the left), storyline colour, actor, portrait, wiki link. A character appears on the map from their first event on.

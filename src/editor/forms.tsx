@@ -9,7 +9,9 @@ import { EVENT_ICONS } from '../components/icons.tsx';
 import { storylineColor } from '../scene.ts';
 import { useStore } from '../store.ts';
 import type { SelectionKind } from '../store.ts';
+import type { WikiInfo } from '../lib/wiki.ts';
 import { Field, ImageField, SelectField, TextArea, TextField, blank } from './fields.tsx';
+import { WikiField } from './WikiField.tsx';
 
 const IMPORTANCE_LABEL = { major: 'Major event (large marker)', minor: 'Minor event (small marker)', travel: 'Waypoint (mainly shapes the route)' } as const;
 
@@ -112,6 +114,24 @@ function usePicked(onPos: (point: Point) => void, onVia?: (point: Point) => void
     // only react to a new pick, not to re-created callbacks
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [picked]);
+}
+
+/** Takes over what the wiki returned, without overwriting anything already typed. Returns a note for the user. */
+function fillFromWiki<T extends { wikiUrl: string; description: string; suggestedPicture: string }>(
+  info: WikiInfo,
+  nameKey: 'title' | 'name',
+  setForm: (update: (current: T) => T) => void,
+): string {
+  let kept = false;
+  setForm((current) => {
+    const next: Record<string, unknown> = { ...current, wikiUrl: info.url };
+    if (!String(next[nameKey] ?? '').trim()) next[nameKey] = info.title;
+    if (!current.description.trim() && info.summary) next.description = info.summary;
+    else if (info.summary) kept = true;
+    if (!current.suggestedPicture.trim() && info.suggestedPicture) next.suggestedPicture = info.suggestedPicture;
+    return next as T;
+  });
+  return `Filled in from “${info.title}”: link${info.summary ? ', text' : ''}${info.suggestedPicture ? ', suggested picture' : ''}.${kept ? ' Your own text was kept.' : ''} Check the text for spoilers.`;
 }
 
 /* ------------------------------------------------------------------- event */
@@ -286,7 +306,7 @@ export function EventForm({ id }: { id: string | null }) {
         A flashback or vision (shown, but nobody travels there)
       </label>
       <ImageField label="Picture" value={form.image} onChange={(value) => set('image', value)} suggestion={blank(form.suggestedPicture)} />
-      <TextField label="Wiki link" type="url" value={form.wikiUrl} onChange={(value) => set('wikiUrl', value)} placeholder="https://lotr.fandom.com/wiki/…" />
+      <WikiField value={form.wikiUrl} onChange={(value) => set('wikiUrl', value)} onFill={(info) => fillFromWiki(info, 'title', setForm)} />
       <TextField label="Link to a fitting still (optional)" type="url" value={form.suggestedPicture} onChange={(value) => set('suggestedPicture', value)} hint="Shown as a link while the event has no picture of its own." />
     </FormShell>
   );
@@ -359,7 +379,12 @@ export function CharacterForm({ id }: { id: string | null }) {
       <TextField label="Played by" value={form.playedBy} onChange={(value) => set('playedBy', value)} />
       <TextArea label="Description" value={form.description} onChange={(value) => set('description', value)} />
       <ImageField label="Portrait" value={form.image} onChange={(value) => set('image', value)} round suggestion={blank(form.suggestedPicture)} />
-      <TextField label="Wiki link" type="url" value={form.wikiUrl} onChange={(value) => set('wikiUrl', value)} hint="Leave empty if the wiki page itself would give away a secret; put it in the reveal instead." />
+      <WikiField
+        value={form.wikiUrl}
+        onChange={(value) => set('wikiUrl', value)}
+        onFill={(info) => fillFromWiki(info, 'name', setForm)}
+        hint="Leave the link empty if the wiki page itself would give away a secret; put it in the reveal instead."
+      />
       <TextField label="Link to a fitting still (optional)" type="url" value={form.suggestedPicture} onChange={(value) => set('suggestedPicture', value)} />
 
       <div className="field">
@@ -443,7 +468,7 @@ export function PlaceForm({ id }: { id: string | null }) {
       <PositionPicker pos={form.pos} />
       <TextArea label="Description" value={form.description} onChange={(value) => set('description', value)} />
       <ImageField label="Picture" value={form.image} onChange={(value) => set('image', value)} suggestion={blank(form.suggestedPicture)} />
-      <TextField label="Wiki link" type="url" value={form.wikiUrl} onChange={(value) => set('wikiUrl', value)} />
+      <WikiField value={form.wikiUrl} onChange={(value) => set('wikiUrl', value)} onFill={(info) => fillFromWiki(info, 'name', setForm)} />
       <TextField label="Link to a fitting still (optional)" type="url" value={form.suggestedPicture} onChange={(value) => set('suggestedPicture', value)} />
     </FormShell>
   );
