@@ -1277,6 +1277,72 @@ h3,
   }
 }
 
+.who-pin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  pointer-events: auto;
+  filter: drop-shadow(0 1px 3px rgb(0 0 0 / 0.55));
+  transform: translate(-50%, -50%);
+  transition: transform 0.14s;
+}
+
+.who-pin .portrait {
+  display: grid;
+  box-shadow:
+    0 0 0 2px var(--ring),
+    0 0 0 3.5px #fff8e7;
+}
+
+.who-pin.is-followed .portrait {
+  box-shadow:
+    0 0 0 2px var(--ring),
+    0 0 0 4.5px #f2c14e;
+}
+
+.who-pin:hover,
+.who-pin:focus-visible,
+.who-pin.is-selected {
+  z-index: 2;
+  transform: translate(-50%, -50%) scale(1.25);
+}
+
+.who-pin:hover .pin__label,
+.who-pin:focus-visible .pin__label,
+.who-pin.is-selected .pin__label {
+  opacity: 1;
+}
+
+.who-pin .pin__label {
+  font-size: 0.7rem;
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.field-row select {
+  padding: 2px 6px;
+  border: 1px solid var(--edge);
+  border-radius: 6px;
+  background: var(--paper);
+}
+
+.play-button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--edge);
+  border-radius: 50%;
+}
+
 /* ------------------------------------------------------------ map controls */
 
 .map-controls {

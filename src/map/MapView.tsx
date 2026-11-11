@@ -120,9 +120,11 @@ export function MapView({ mapDef, initialView, children }: Props) {
       setApi(null);
       map.remove();
     };
-    // The map is rebuilt only when a different map picture is shown.
+    // Built once. To show a different map picture the parent gives this component a new `key`,
+    // which replaces it (and all layers inside it) as a whole. Reloading the data must not rebuild
+    // the map: the view would jump, and layers could run against a map that is already gone.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mapDef]);
+  }, []);
 
   // Bring a requested point into the part of the map that is not covered by panels.
   useEffect(() => {

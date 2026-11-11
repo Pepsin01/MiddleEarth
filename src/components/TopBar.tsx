@@ -164,6 +164,22 @@ function ViewOptions({ children }: { children?: ReactNode }) {
         <input type="checkbox" checked={options.places} onChange={(event) => setOption('places', event.target.checked)} />
         All named places
       </label>
+      <label className="field-row">
+        Routes of the characters
+        <select value={options.trails} onChange={(event) => setOption('trails', event.target.value as typeof options.trails)}>
+          <option value="off">Hidden</option>
+          <option value="recent">This episode</option>
+          <option value="all">Everything so far</option>
+        </select>
+      </label>
+      <label className="field-row">
+        Play speed
+        <select value={options.speed} onChange={(event) => setOption('speed', event.target.value as typeof options.speed)}>
+          <option value="slow">Slow</option>
+          <option value="normal">Normal</option>
+          <option value="fast">Fast</option>
+        </select>
+      </label>
       {children}
       {hasTint && (
         <label className="check">

@@ -19,6 +19,7 @@ export function Timeline({ controls }: Props) {
   const setEpisode = useStore((state) => state.setEpisode);
   const stepEpisode = useStore((state) => state.stepEpisode);
   const step = useStore((state) => state.step);
+  const setPlaying = useStore((state) => state.setPlaying);
   const track = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
 
@@ -54,6 +55,7 @@ export function Timeline({ controls }: Props) {
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
     if (event.button !== 0) return;
+    setPlaying(false); // taking the slider by hand stops Play
     dragging.current = true;
     event.currentTarget.setPointerCapture(event.pointerId);
     pickAt(event.clientX);

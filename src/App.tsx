@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { DetailPanel } from './components/DetailPanel.tsx';
 import { Legend } from './components/Legend.tsx';
+import { PlayButton, usePlayer } from './components/Player.tsx';
 import { Timeline } from './components/Timeline.tsx';
 import { TopBar } from './components/TopBar.tsx';
 import { MapControls } from './map/MapControls.tsx';
@@ -16,12 +17,21 @@ function useKeyboard() {
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName) || target.isContentEditable) return;
       if (event.altKey || event.ctrlKey || event.metaKey) return;
       if (document.querySelector('[role="dialog"][aria-modal="true"]')) return;
-      const { step, stepEpisode, select, selection } = useStore.getState();
+      const { step, stepEpisode, select, selection, playing, setPlaying } = useStore.getState();
+      if (event.key === ' ' && target.tagName !== 'BUTTON' && target.tagName !== 'A') {
+        event.preventDefault();
+        setPlaying(!playing);
+        return;
+      }
       if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
         event.preventDefault();
         const delta = event.key === 'ArrowRight' ? 1 : -1;
-        if (event.shiftKey) step(delta);
-        else stepEpisode(delta);
+        if (event.shiftKey) {
+          step(delta);
+        } else {
+          setPlaying(false);
+          stepEpisode(delta);
+        }
       } else if (event.key === 'Escape' && selection) {
         select(null);
       }
@@ -41,6 +51,7 @@ export function App() {
     void init();
   }, [init]);
   useKeyboard();
+  usePlayer();
 
   if (status === 'error') {
     return (
@@ -65,14 +76,14 @@ export function App() {
 
   return (
     <div className="app">
-      <MapView mapDef={bundle.map} initialView={bundle.saga.view}>
+      <MapView key={`${bundle.map.id}:${bundle.map.tiles.path}:${bundle.map.width}`} mapDef={bundle.map} initialView={bundle.saga.view}>
         <SceneLayers />
         <MapControls />
       </MapView>
       <TopBar />
       <Legend />
       <DetailPanel />
-      <Timeline />
+      <Timeline controls={<PlayButton />} />
       <a className="map-credit" href={bundle.map.creditUrl} target="_blank" rel="noreferrer">
         {bundle.map.credit}
       </a>

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { buildTimeline, cursorTime, endOfEpisode } from '../shared/timeline.ts';
 import type { SagaBundle } from '../shared/schema.ts';
 import { fold, search } from '../src/lib/search.ts';
-import { buildScene, declutter, eventsAtPlace, journeySoFar } from '../src/scene.ts';
+import { buildScene, buildTrails, declutter, eventsAtPlace, journeySoFar } from '../src/scene.ts';
 import { bundle as fixture } from './fixture.ts';
 
 const bundle: SagaBundle = { ...fixture(), problems: [] };
@@ -43,6 +43,32 @@ describe('scene', () => {
     expect(journeySoFar(timeline, 'galadriel', cursorTime(timeline, 's1e2', 'e3')).map((timed) => timed.event.id)).toEqual(['e3', 'e1']);
     expect(eventsAtPlace(timeline, 'moria', endOfEpisode(0)).map((timed) => timed.event.id)).toEqual(['e2']);
     expect(eventsAtPlace(timeline, 'moria', endOfEpisode(2)).map((timed) => timed.event.id)).toEqual(['e4', 'e2']);
+  });
+});
+
+describe('trails', () => {
+  const route = [
+    [100, 100],
+    [200, 150],
+    [300, 300],
+    [500, 400],
+  ];
+
+  it("draws this episode's movement of the characters on the map", () => {
+    const scene = buildScene(bundle, timeline, 's1e2', null, [], [], true)!;
+    expect(buildTrails(bundle, timeline, scene, 'recent', [])).toEqual([{ points: route, color: '#2b6cb0', kind: 'recent' }]);
+    expect(buildTrails(bundle, timeline, scene, 'off', [])).toEqual([]);
+  });
+
+  it('draws earlier movement as the journey when everything is asked for', () => {
+    const scene = buildScene(bundle, timeline, 's2e1', null, [], [], true)!;
+    const trails = buildTrails(bundle, timeline, scene, 'all', []);
+    expect(trails).toContainEqual({ points: route, color: '#2b6cb0', kind: 'journey' });
+  });
+
+  it('always draws the whole journey of followed characters, even with routes switched off', () => {
+    const scene = buildScene(bundle, timeline, 's2e1', null, [], ['galadriel'], true)!;
+    expect(buildTrails(bundle, timeline, scene, 'off', ['galadriel'])).toEqual([{ points: route, color: '#2b6cb0', kind: 'journey' }]);
   });
 });
 
