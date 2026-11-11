@@ -366,6 +366,43 @@ describe('backups', () => {
     expect((await request(server()).post('/api/backups/..%2F..%2Fetc/restore').set(EDIT)).status).toBe(404);
   });
 
+  it('exports everything as a zip that can be imported again', async () => {
+    const app = server();
+    const exported = await request(app).get('/api/export').set(EDIT).buffer(true).parse((res, done) => {
+      const chunks: Buffer[] = [];
+      res.on('data', (chunk: Buffer) => chunks.push(chunk));
+      res.on('end', () => done(null, Buffer.concat(chunks)));
+    });
+    expect(exported.status).toBe(200);
+    expect(exported.headers['content-type']).toBe('application/zip');
+    const zip = exported.body as Buffer;
+
+    await request(app).delete(`${SAGA}/events/e1`).set(EDIT);
+    await request(app).delete(`${SAGA}/characters/stranger?cascade=1`).set(EDIT);
+    const imported = await request(app).post('/api/import').set(EDIT).attach('file', zip, 'export.zip');
+    expect(imported.status).toBe(200);
+    expect(imported.body.dataFiles).toBeGreaterThan(5);
+    const bundle = (await request(app).get(SAGA)).body as SagaBundle;
+    expect(bundle.events).toHaveLength(5);
+    expect(bundle.characters.map((character) => character.id)).toContain('stranger');
+    expect(bundle.problems).toEqual([]);
+  });
+
+  it('refuses a zip with files that do not belong to an export', async () => {
+    const { zipSync, strToU8 } = await import('fflate');
+    const app = server();
+    const evil = Buffer.from(zipSync({ '../outside.json': strToU8('{}'), 'sagas/test-saga/saga.json': strToU8('{}') }));
+    const res = await request(app).post('/api/import').set(EDIT).attach('file', evil, 'evil.zip');
+    expect(res.status).toBe(400);
+    const script = Buffer.from(zipSync({ 'media/img/run.js': strToU8('alert(1)') }));
+    expect((await request(app).post('/api/import').set(EDIT).attach('file', script, 'script.zip')).status).toBe(400);
+    const broken = Buffer.from(zipSync({ 'sagas/test-saga/places.json': strToU8('[ oops') }));
+    expect((await request(app).post('/api/import').set(EDIT).attach('file', broken, 'broken.zip')).status).toBe(400);
+    expect((await request(app).post('/api/import').set(EDIT).attach('file', Buffer.from('not a zip'), 'x.zip')).status).toBe(400);
+    // nothing was changed by any of these
+    expect(((await request(app).get(SAGA)).body as SagaBundle).places).toHaveLength(2);
+  });
+
   it('keeps only the newest snapshots', async () => {
     const app = server({ MAX_BACKUPS: '3' });
     for (let i = 0; i < 6; i++) await request(app).post('/api/backups').set(EDIT);

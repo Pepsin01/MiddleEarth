@@ -14,8 +14,8 @@ export class ApiError extends Error {
 
 async function request<T>(method: string, url: string, body?: unknown): Promise<T> {
   const headers: Record<string, string> = {};
-  // Requests that change data must carry this header (see server/auth.ts).
-  if (method !== 'GET') headers['X-Chronicle'] = '1';
+  // Requests that change data (and a few protected reads) must carry this header (see server/auth.ts).
+  headers['X-Chronicle'] = '1';
   let payload: BodyInit | undefined;
   if (body instanceof FormData) {
     payload = body;
@@ -61,6 +61,20 @@ export const api = {
     request<ItemOf[N]>('PUT', `${saga(sagaId)}/${collection}/${encodeURIComponent(id)}${position === undefined ? '' : `?position=${position}`}`, input),
   remove: (sagaId: string, collection: CollectionName, id: string, cascade = false) =>
     request<{ ok: true }>('DELETE', `${saga(sagaId)}/${collection}/${encodeURIComponent(id)}${cascade ? '?cascade=1' : ''}`),
+  backups: () => request<Array<{ name: string; createdAt: string; label: string }>>('GET', '/api/backups'),
+  backupNow: () => request<{ name: string | null }>('POST', '/api/backups'),
+  restoreBackup: (name: string) => request<{ ok: true }>('POST', `/api/backups/${encodeURIComponent(name)}/restore`),
+  /** Downloads everything as a zip and returns it as a file object. */
+  exportZip: async (pictures: boolean, mapPictures: boolean): Promise<Blob> => {
+    const res = await fetch(`/api/export?pictures=${pictures ? 1 : 0}&maps=${mapPictures ? 1 : 0}`, { headers: { 'X-Chronicle': '1' }, credentials: 'same-origin' });
+    if (!res.ok) throw new ApiError(res.status, 'The export failed.');
+    return res.blob();
+  },
+  importZip: (file: Blob) => {
+    const form = new FormData();
+    form.append('file', file, 'import.zip');
+    return request<{ dataFiles: number; pictures: number }>('POST', '/api/import', form);
+  },
   uploadPicture: (file: Blob, name: string) => {
     const form = new FormData();
     form.append('file', file, name);

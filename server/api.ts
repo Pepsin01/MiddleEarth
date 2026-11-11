@@ -5,6 +5,7 @@ import { z } from 'zod';
 import { HttpUrl } from '../shared/schema.ts';
 import type { CollectionName } from '../shared/schema.ts';
 import { EDIT_HEADER } from './auth.ts';
+import { exportArchive, importArchive } from './archive.ts';
 import type { Auth } from './auth.ts';
 import { HttpError, parseOrThrow } from './errors.ts';
 import { storeFromWeb, storeUpload } from './media.ts';
@@ -140,6 +141,22 @@ export function createApi(store: Store, auth: Auth): express.Router {
   api.post('/backups/:name/restore', edit, async (req, res) => {
     await store.restoreBackup(param(req, 'name'));
     res.json({ ok: true });
+  });
+
+  /* ------------------------------------------------------ export / import */
+
+  api.get('/export', edit, async (req, res) => {
+    const zip = await exportArchive(store, { pictures: req.query.pictures === '1', mapPictures: req.query.maps === '1' });
+    res.setHeader('Content-Type', 'application/zip');
+    res.setHeader('Content-Disposition', `attachment; filename="chronicle-${new Date().toISOString().slice(0, 10)}.zip"`);
+    res.send(Buffer.from(zip));
+  });
+
+  const archive = multer({ storage: multer.memoryStorage(), limits: { fileSize: 400 * 1024 * 1024, files: 1 } });
+
+  api.post('/import', edit, archive.single('file'), async (req, res) => {
+    if (!req.file) throw new HttpError(400, 'No file was sent.');
+    res.json(await importArchive(store, req.file.buffer));
   });
 
   return api;

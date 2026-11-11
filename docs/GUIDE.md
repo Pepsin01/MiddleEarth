@@ -232,11 +232,15 @@ data/backups/<date and time>--<what was done>/
 
 The newest 40 are kept, plus one per day for older ones up to 60 days.
 
-**To undo something:** stop the app, copy the `sagas` and `maps` folders from the backup you want over the ones in `data/`, start the app again. (Buttons for this, and an export of everything as one file, are planned.)
+**To undo something:** switch edit mode on and press the clock button in the toolbar. It lists the backups, newest first, each with what was about to happen ("before deleting an event"). "Restore" brings all data back to that point — after backing up the current state, so a restore can itself be undone. "Back up now" makes one by hand.
+
+**Export and import.** The same menu exports everything as one zip file: the data, optionally the pictures (portraits and your uploads), and optionally the large map picture. "Import a zip" unpacks such a file on another machine; entries in the zip replace the current ones, everything else stays. Only files that belong to an export are accepted. After importing on a new machine run `npm run media:fetch` once so the map tiles are built.
+
+By hand it also works: stop the app and copy the `sagas` and `maps` folders from a backup over the ones in `data/`.
 
 The data files are also in git, so `git diff` shows what changed and `git checkout -- data/sagas` throws uncommitted changes away. Committing the data now and then gives you a second, independent history.
 
-To move everything to another machine, copy the whole `data` folder including `data/media`.
+To move everything to another machine, use the export, or copy the whole `data` folder including `data/media`.
 
 ## 9. Docker
 
