@@ -1,0 +1,18 @@
+# Start with:  docker compose up -d --build
+# Settings come from a file called .env next to this one (copy .env.example).
+services:
+  chronicle:
+    build: .
+    image: middle-earth-chronicle
+    restart: unless-stopped
+    ports:
+      # By default only this computer can reach the app. To open it to your
+      # network or the internet set BIND_ADDRESS=0.0.0.0 - and an ADMIN_PASSWORD.
+      - "${BIND_ADDRESS:-127.0.0.1}:${PORT:-8080}:8080"
+    environment:
+      ADMIN_PASSWORD: "${ADMIN_PASSWORD:-}"
+      READ_ONLY: "${READ_ONLY:-false}"
+      TRUST_PROXY: "${TRUST_PROXY:-false}"
+    volumes:
+      # Story data (JSON), pictures, map tiles and backups stay on the host.
+      - ./data:/app/data

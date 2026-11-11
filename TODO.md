@@ -15,7 +15,7 @@ npm run dev             # http://localhost:5173  (API on 8787)
 npm run check           # type checks + tests + data check
 ```
 
-Done and merged: project setup (Node 26, Vite, React, Express), data model + JSON storage + editing API + password login + backups on the server, map pipeline and map view, story data for Seasons 1–2 (126 events, 29 characters, 25 places, Season 3 as empty episodes), main interface (markers, timeline, side panel, legend, search), character journeys (portraits on the map that glide along their routes, route lines, Play mode with Space, speed and route options in the "What the map shows" menu), editor (pencil button: add/edit/delete events, characters and places, episode titles, seasons and storylines; click the map for positions and route points; pictures by file, drag and drop, Ctrl+V or web address; login dialog when a password is set).
+Done and merged: project setup (Node 26, Vite, React, Express), data model + JSON storage + editing API + password login + backups on the server, map pipeline and map view, story data for Seasons 1–2 (126 events, 29 characters, 25 places, Season 3 as empty episodes), main interface (markers, timeline, side panel, legend, search), character journeys (portraits on the map that glide along their routes, route lines, Play mode with Space, speed and route options in the "What the map shows" menu), editor (pencil button: add/edit/delete events, characters and places, episode titles, seasons and storylines; click the map for positions and route points; pictures by file, drag and drop, Ctrl+V or web address; login dialog when a password is set), the guide (`docs/GUIDE.md`) and the Docker files.
 
 ## Features not started (one branch each)
 
@@ -25,7 +25,7 @@ Done and merged: project setup (Node 26, Vite, React, Express), data model + JSO
 - **Storyline chart** — SVG lanes per storyline across episodes, event dots, lines for followed characters, click jumps to the map.
 - **Phone and tablet layout** — panels as bottom sheets/drawers, timeline per season, touch targets. `detailOpen`/`legendOpen` already start closed on small screens.
 - **Backups and export** — server snapshots and restore exist (`/api/backups`); needs the UI, plus export/import of everything (data + media) as a zip (`fflate` is installed; check paths against zip-slip on import).
-- **Docker and guide** — Dockerfile (Node 26, `npm run build`, `node server/index.ts`, `HOST=0.0.0.0`), compose file with `./data` mounted, `ADMIN_PASSWORD` from `.env`, bound to 127.0.0.1 by default. `README.md` is still empty; write `docs/GUIDE.md` (use, edit, add a season/saga/map, data file format, build, deploy, backups). Docker Desktop was not running when checked.
+- **Docker: first build and run.** `Dockerfile`, `docker-compose.yml` and `.env.example` are written but were never built (Docker Desktop was not running). Start Docker, run `docker compose up -d --build`, fix what breaks, then remove the "not been built" note in `docs/GUIDE.md` section 9.
 
 ## Editor leftovers
 
@@ -35,6 +35,8 @@ Done and merged: project setup (Node 26, Vite, React, Express), data model + JSO
 - Deleting the last event of an episode leaves an empty `events/<episode>.json` (`[]`); harmless.
 
 ## Small things
+
+- Keep `docs/GUIDE.md` in step with new features: it says the spoiler lock, backup buttons/export, overlays and a saga form are "planned".
 
 - `npm run media:fetch` once more: `img/characters/stranger.jpg` is still missing (Wikimedia asked for a 10-minute pause).
 - No portrait found on Wikimedia Commons for Mirdania, Theo, Waldreg, Estrid and Pharazôn (they show initials). Add by hand once the editor exists.

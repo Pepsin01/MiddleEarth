@@ -8,7 +8,9 @@ An interactive story map of Middle-earth. It shows where the events of *The Ring
 - A side panel with a description, the people involved and a wiki link for every event, character and place
 - Story data kept in plain JSON files that can be edited by hand
 
-The full guide (editing, adding seasons and maps, Docker, deployment) is still to be written; see [TODO.md](TODO.md) for what is finished and what is not.
+- An editor: add events, characters, places and episodes in the app, with pictures
+
+The full guide is in [docs/GUIDE.md](docs/GUIDE.md): using and editing, pictures, adding seasons, films and maps, the data files, backups, Docker and deployment. [TODO.md](TODO.md) lists what is finished and what is still planned.
 
 ## Run it on your computer
 
