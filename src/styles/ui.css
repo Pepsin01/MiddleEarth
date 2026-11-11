@@ -1057,6 +1057,17 @@ h3,
   border-radius: 50%;
 }
 
+.tick.is-locked .tick__number {
+  border-style: dotted;
+  background: transparent;
+  color: var(--ink-faint);
+}
+
+.tick.is-locked .tick__number svg {
+  width: 12px;
+  height: 12px;
+}
+
 /* ------------------------------------------------------------- map markers */
 
 .pm-anchor {

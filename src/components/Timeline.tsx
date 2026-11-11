@@ -1,9 +1,9 @@
-import { ChevronLeft, ChevronRight, SkipBack, SkipForward } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Lock, SkipBack, SkipForward } from 'lucide-react';
 import { useMemo, useRef } from 'react';
 import type { PointerEvent as ReactPointerEvent, ReactNode } from 'react';
 import type { EpisodeRef } from '../../shared/timeline.ts';
 import { formatDate } from '../lib/format.ts';
-import { useStore } from '../store.ts';
+import { useStore, watchedIndex } from '../store.ts';
 
 interface Props {
   /** Extra controls placed next to the step buttons (the Play button). */
@@ -20,6 +20,8 @@ export function Timeline({ controls }: Props) {
   const stepEpisode = useStore((state) => state.stepEpisode);
   const step = useStore((state) => state.step);
   const setPlaying = useStore((state) => state.setPlaying);
+  const setWatched = useStore((state) => state.setWatched);
+  const limit = useStore(watchedIndex);
   const track = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
 
@@ -63,6 +65,30 @@ export function Timeline({ controls }: Props) {
 
   const tick = (ref: EpisodeRef) => {
     const selected = ref.id === episodeId;
+    if (ref.index > limit) {
+      // Not watched yet: no title (titles can be spoilers), and a click asks before unlocking.
+      return (
+        <button
+          key={ref.id}
+          type="button"
+          className="tick is-locked"
+          aria-label={`${ref.code}: not watched yet`}
+          title={`${ref.code} · not watched yet — click to unlock`}
+          onPointerDown={(event) => event.stopPropagation()}
+          onClick={() => {
+            if (window.confirm(`Have you watched everything up to ${ref.code}? It will be unlocked.`)) {
+              setWatched(ref.id);
+              setEpisode(ref.id);
+            }
+          }}
+        >
+          <span className="tick__number">
+            <Lock aria-hidden="true" />
+          </span>
+          <span className="tick__dots" aria-hidden="true" />
+        </button>
+      );
+    }
     const classes = ['tick'];
     if (selected) classes.push('is-current');
     if (current && ref.index < current.index) classes.push('is-past');

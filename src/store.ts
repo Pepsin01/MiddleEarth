@@ -43,6 +43,8 @@ const DEFAULT_OPTIONS: ViewOptions = { history: true, trails: 'recent', places: 
 
 interface SavedSagaView {
   episodeId?: string;
+  /** Spoiler guard: last watched episode; null = everything may be shown; missing = not asked yet. */
+  watched?: string | null;
   hiddenStorylines?: string[];
   followed?: string[];
 }
@@ -109,6 +111,13 @@ export interface State {
   options: ViewOptions;
   playing: boolean;
   camera: CameraRequest | null;
+  /**
+   * Spoiler guard: the last episode that has been watched. Nothing later is shown,
+   * searched or played. Null = no limit.
+   */
+  watched: string | null;
+  /** False until the viewer has said how far they have watched (asked once per saga). */
+  watchedAnswered: boolean;
   /** Edit mode: shows the editing tools. */
   editing: boolean;
   editorTarget: EditorTarget | null;
@@ -146,6 +155,8 @@ export interface State {
   toggleFollow: (characterId: string) => void;
   setOption: <K extends keyof ViewOptions>(key: K, value: ViewOptions[K]) => void;
   flyTo: (point: Point, minZoom?: number) => void;
+  /** Sets the spoiler guard to an episode id, or null to show everything. */
+  setWatched: (episodeId: string | null) => void;
   setEditing: (editing: boolean) => void;
   openEditor: (target: EditorTarget | null) => void;
   setPick: (pick: 'pos' | 'via' | null) => void;
@@ -182,9 +193,16 @@ function selectionExists(timeline: Timeline, bundle: SagaBundle, selection: Sele
   }
 }
 
-/** Events the stepper walks through: everything in story order except hidden storylines. */
-export function steppable(state: Pick<State, 'timeline' | 'hiddenStorylines'>): TimedEvent[] {
-  return (state.timeline?.events ?? []).filter((timed) => !state.hiddenStorylines.includes(timed.event.storylineId));
+/** Position on the slider of the last watched episode; Infinity while the spoiler guard is off. */
+export function watchedIndex(state: Pick<State, 'timeline' | 'watched'>): number {
+  if (!state.watched) return Number.POSITIVE_INFINITY;
+  return state.timeline?.episodeById.get(state.watched)?.index ?? Number.POSITIVE_INFINITY;
+}
+
+/** Events the stepper walks through: everything watched so far, in story order, except hidden storylines. */
+export function steppable(state: Pick<State, 'timeline' | 'hiddenStorylines' | 'watched'>): TimedEvent[] {
+  const limit = watchedIndex(state);
+  return (state.timeline?.events ?? []).filter((timed) => timed.time.ep <= limit && !state.hiddenStorylines.includes(timed.event.storylineId));
 }
 
 export const useStore = create<State>()((set, get) => ({
@@ -202,6 +220,8 @@ export const useStore = create<State>()((set, get) => ({
   options: { ...DEFAULT_OPTIONS, ...readSaved().options },
   playing: false,
   camera: null,
+  watched: null,
+  watchedAnswered: true,
   editing: false,
   editorTarget: null,
   pick: null,
@@ -234,8 +254,13 @@ export const useStore = create<State>()((set, get) => ({
       const bundle = await api.bundle(sagaId);
       const timeline = buildTimeline(bundle);
       const saved = readSaved().sagas?.[sagaId] ?? {};
-      const episodeId = [initial?.episodeId, saved.episodeId].find((id) => id && timeline.episodeById.has(id)) ?? timeline.episodes[0]?.id ?? '';
-      const selection = initial?.selection && selectionExists(timeline, bundle, initial.selection) ? initial.selection : null;
+      const watched = saved.watched && timeline.episodeById.has(saved.watched) ? saved.watched : null;
+      // Until the viewer has said how far they have watched, only the first episode is shown behind the question.
+      const limit = watched ? timeline.episodeById.get(watched)!.index : saved.watched === undefined ? 0 : Number.POSITIVE_INFINITY;
+      const allowed = (id: string | undefined) => Boolean(id && (timeline.episodeById.get(id)?.index ?? Number.POSITIVE_INFINITY) <= limit);
+      const episodeId = [initial?.episodeId, saved.episodeId].find(allowed) ?? timeline.episodes[0]?.id ?? '';
+      let selection = initial?.selection && selectionExists(timeline, bundle, initial.selection) ? initial.selection : null;
+      if (selection?.kind === 'event' && (timeline.eventById.get(selection.id)?.time.ep ?? 0) > limit) selection = null;
       const storylineIds = new Set(bundle.saga.storylines.map((storyline) => storyline.id));
       set({
         status: 'ready',
@@ -247,6 +272,8 @@ export const useStore = create<State>()((set, get) => ({
         hiddenStorylines: (saved.hiddenStorylines ?? []).filter((id) => storylineIds.has(id)),
         followed: (saved.followed ?? []).filter((id) => timeline.characterById.has(id)),
         camera: null,
+        watched,
+        watchedAnswered: saved.watched !== undefined,
       });
       writeSaved((all) => {
         all.sagaId = sagaId;
@@ -276,7 +303,8 @@ export const useStore = create<State>()((set, get) => ({
   setSession: (session) => set({ session }),
 
   setEpisode: (episodeId) => {
-    if (!get().timeline?.episodeById.has(episodeId)) return;
+    const target = get().timeline?.episodeById.get(episodeId);
+    if (!target || target.index > watchedIndex(get())) return;
     const change: Partial<State> = { episodeId, stepEventId: null };
     // An event of another episode stays selected only while that is deliberate; moving the slider returns to the overview.
     const { selection, timeline } = get();
@@ -298,7 +326,7 @@ export const useStore = create<State>()((set, get) => ({
 
   showEvent: (eventId) => {
     const timed = get().timeline?.eventById.get(eventId);
-    if (!timed) return;
+    if (!timed || timed.time.ep > watchedIndex(get())) return;
     const change: Partial<State> = { selection: { kind: 'event', id: eventId }, detailOpen: true };
     if (timed.event.episodeId !== get().episodeId) {
       change.episodeId = timed.event.episodeId;
@@ -310,7 +338,7 @@ export const useStore = create<State>()((set, get) => ({
 
   peekEvent: (eventId) => {
     const timed = get().timeline?.eventById.get(eventId);
-    if (!timed) return;
+    if (!timed || timed.time.ep > watchedIndex(get())) return;
     set({ selection: { kind: 'event', id: eventId }, detailOpen: true });
     if (timed.pos) get().flyTo(timed.pos);
   },
@@ -390,6 +418,23 @@ export const useStore = create<State>()((set, get) => ({
 
   flyTo: (point, minZoom) => set({ camera: { point, minZoom, nonce: ++cameraNonce } }),
 
+  setWatched: (watched) => {
+    const state = get();
+    const { timeline, bundle } = state;
+    if (!timeline || !bundle) return;
+    const change: Partial<State> = { watched, watchedAnswered: true };
+    const limit = watched ? (timeline.episodeById.get(watched)?.index ?? Number.POSITIVE_INFINITY) : Number.POSITIVE_INFINITY;
+    // Step back if the slider is now beyond what may be shown.
+    if ((timeline.episodeById.get(state.episodeId)?.index ?? 0) > limit) {
+      Object.assign(change, { episodeId: watched!, stepEventId: null, selection: null, playing: false });
+    }
+    set(change);
+    const sagaId = bundle.saga.id;
+    writeSaved((all) => {
+      all.sagas = { ...all.sagas, [sagaId]: { ...all.sagas?.[sagaId], watched } };
+    });
+  },
+
   setEditing: (editing) => set(editing ? { editing, playing: false } : { editing, editorTarget: null, pick: null, draftShape: null }),
   openEditor: (editorTarget) => set({ editorTarget, pick: null, picked: null, draftShape: null, detailOpen: true, playing: false }),
   setPick: (pick) => set({ pick }),
@@ -416,7 +461,7 @@ useStore.subscribe((state, previous) => {
   ) {
     const sagaId = state.bundle.saga.id;
     writeSaved((all) => {
-      all.sagas = { ...all.sagas, [sagaId]: { episodeId: state.episodeId, hiddenStorylines: state.hiddenStorylines, followed: state.followed } };
+      all.sagas = { ...all.sagas, [sagaId]: { ...all.sagas?.[sagaId], episodeId: state.episodeId, hiddenStorylines: state.hiddenStorylines, followed: state.followed } };
     });
   }
 });

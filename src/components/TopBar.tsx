@@ -6,7 +6,7 @@ import type { Time } from '../../shared/timeline.ts';
 import { search } from '../lib/search.ts';
 import type { SearchResult } from '../lib/search.ts';
 import { useScene } from '../useScene.ts';
-import { useStore } from '../store.ts';
+import { useStore, watchedIndex } from '../store.ts';
 import { iconFor } from './icons.tsx';
 import { Picture, Portrait } from './Picture.tsx';
 import { Popover } from './Popover.tsx';
@@ -207,8 +207,9 @@ export function TopBar({ searchScope, viewOptions, tools }: Props) {
   const openSaga = useStore((state) => state.openSaga);
   const legendOpen = useStore((state) => state.legendOpen);
   const setLegendOpen = useStore((state) => state.setLegendOpen);
+  const limit = useStore(watchedIndex);
   if (!bundle || !timeline) return null;
-  const everything = endOfEpisode(Math.max(0, timeline.episodes.length - 1));
+  const everything = endOfEpisode(Math.min(limit, Math.max(0, timeline.episodes.length - 1)));
 
   return (
     <header className="topbar" data-map-inset="top">
