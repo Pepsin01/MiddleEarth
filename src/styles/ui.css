@@ -1343,6 +1343,320 @@ h3,
   border-radius: 50%;
 }
 
+/* ------------------------------------------------------------------ editor */
+
+.button--small {
+  padding: 3px 10px;
+  font-size: 0.9rem;
+}
+
+.button--danger {
+  margin-left: auto;
+  color: var(--red);
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  padding: 14px 16px 18px;
+}
+
+.form__fields {
+  display: grid;
+  gap: 12px;
+}
+
+.form__pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.form__row input[type='text'] {
+  flex: 1;
+  min-width: 0;
+}
+
+.form__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.form__card {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.35);
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.field__label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.field__hint {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+
+.field__hint a {
+  color: var(--red);
+}
+
+.form input[type='text'],
+.form input[type='url'],
+.form input[type='date'],
+.form input[type='password'],
+.form select,
+.form textarea,
+.dialog input {
+  width: 100%;
+  min-width: 0;
+  padding: 5px 8px;
+  border: 1px solid var(--edge);
+  border-radius: 6px;
+  background: #fffdf6;
+}
+
+.form textarea {
+  resize: vertical;
+  line-height: 1.35;
+}
+
+.form input[type='color'] {
+  flex: none;
+  width: 34px;
+  height: 30px;
+  padding: 1px;
+  border: 1px solid var(--edge);
+  border-radius: 6px;
+  background: none;
+}
+
+.form-error {
+  margin: 0;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: rgb(155 44 30 / 0.1);
+  color: var(--red);
+  font-size: 0.92rem;
+  white-space: pre-wrap;
+}
+
+.chip--toggle {
+  padding: 3px 11px;
+}
+
+.chip--toggle.is-selected {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper-light);
+  box-shadow: none;
+}
+
+.image-field {
+  padding: 8px;
+  border: 1px dashed var(--edge);
+  border-radius: 8px;
+}
+
+.image-field.is-over {
+  border-color: var(--red);
+  background: rgb(155 44 30 / 0.06);
+}
+
+.image-field__preview {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: crosshair;
+}
+
+.image-field__preview img {
+  display: block;
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  background: var(--paper-dark);
+}
+
+.image-field__preview i {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: -7px 0 0 -7px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--red);
+  pointer-events: none;
+}
+
+.image-field__empty {
+  margin: 0;
+  color: var(--ink-faint);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.image-field__actions,
+.image-field__web {
+  display: flex;
+  gap: 8px;
+}
+
+.image-field__web input {
+  flex: 1;
+}
+
+.episode-row summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.episode-row summary::-webkit-details-marker {
+  display: none;
+}
+
+.episode-row__number {
+  flex: none;
+  width: 20px;
+  color: var(--ink-faint);
+  font: 600 0.8rem var(--font-display);
+  text-align: center;
+}
+
+.episode-row__more {
+  flex: none;
+  color: var(--red);
+  font-size: 0.82rem;
+}
+
+.episode-row[open] {
+  display: grid;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--edge);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 7px;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: rgb(42 32 22 / 0.09);
+}
+
+.menu-item svg {
+  width: 17px;
+  height: 17px;
+  color: var(--ink-soft);
+}
+
+.problem-list {
+  max-height: 50vh;
+  margin: 0;
+  padding-left: 18px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.dialog-backdrop {
+  position: fixed;
+  z-index: 60;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgb(30 24 18 / 0.55);
+}
+
+.dialog {
+  display: grid;
+  gap: 12px;
+  width: min(380px, 100%);
+  padding: 20px;
+}
+
+.dialog p {
+  margin: 0;
+}
+
+.map.is-picking,
+.map.is-picking .leaflet-grab {
+  cursor: crosshair;
+}
+
+.pick-hint {
+  position: absolute;
+  z-index: 11;
+  top: var(--top);
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100% - 2 * var(--gap));
+  padding: 8px 10px 8px 14px;
+  transform: translateX(-50%);
+}
+
+.draft-pin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0 -13px;
+  border: 3px dashed #fff8e7;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow:
+    0 0 0 2px var(--ink),
+    0 2px 8px rgb(0 0 0 / 0.5);
+}
+
+.draft-via {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font: 600 0.66rem var(--font-display);
+}
+
 /* ------------------------------------------------------------ map controls */
 
 .map-controls {

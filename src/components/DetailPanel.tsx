@@ -1,4 +1,4 @@
-import { ArrowLeft, BookOpen, ChevronLeft, ChevronRight, ExternalLink, ImageIcon, LocateFixed, MapPin, Route, X } from 'lucide-react';
+import { ArrowLeft, BookOpen, CalendarDays, ChevronLeft, ChevronRight, ExternalLink, ImageIcon, LocateFixed, MapPin, Pencil, Plus, Route, X } from 'lucide-react';
 import type { CSSProperties, ReactNode } from 'react';
 import type { Character, ImageRef, Place } from '../../shared/schema.ts';
 import { characterAt, hasHiddenIdentity, identityAt } from '../../shared/timeline.ts';
@@ -6,6 +6,7 @@ import type { Time, TimedEvent } from '../../shared/timeline.ts';
 import { formatDate, plural } from '../lib/format.ts';
 import { eventPicture, eventsAtPlace, journeySoFar, storylineColor } from '../scene.ts';
 import { useScene } from '../useScene.ts';
+import { EditorPanel } from '../editor/EditTools.tsx';
 import { useStore } from '../store.ts';
 import { iconFor } from './icons.tsx';
 import { MapVignette } from './MapVignette.tsx';
@@ -98,6 +99,9 @@ function Header({ children }: { children?: ReactNode }) {
   const selection = useStore((state) => state.selection);
   const setDetailOpen = useStore((state) => state.setDetailOpen);
   const code = useStore((state) => state.timeline?.episodeById.get(state.episodeId)?.code);
+  const editing = useStore((state) => state.editing);
+  const openEditor = useStore((state) => state.openEditor);
+  const editable = editing && selection && selection.kind !== 'overlay' ? selection : null;
   return (
     <header className="detail__header">
       {selection ? (
@@ -106,6 +110,11 @@ function Header({ children }: { children?: ReactNode }) {
         </button>
       ) : (
         <span className="detail__kicker">{children}</span>
+      )}
+      {editable && (
+        <button type="button" className="button button--small" onClick={() => openEditor({ kind: editable.kind as 'event' | 'character' | 'place', id: editable.id })}>
+          <Pencil aria-hidden="true" /> Edit
+        </button>
       )}
       <button type="button" className="icon-button" onClick={() => setDetailOpen(false)} aria-label="Hide this panel">
         <X aria-hidden="true" />
@@ -119,6 +128,8 @@ function EpisodeView() {
   const episodeId = useStore((state) => state.episodeId);
   const hidden = useStore((state) => state.hiddenStorylines);
   const showEvent = useStore((state) => state.showEvent);
+  const editing = useStore((state) => state.editing);
+  const openEditor = useStore((state) => state.openEditor);
   const ref = timeline.episodeById.get(episodeId);
   if (!ref) return null;
   const all = timeline.eventsByEpisode.get(episodeId) ?? [];
@@ -138,6 +149,16 @@ function EpisodeView() {
           {ref.episode.synopsis && <p className="prose">{ref.episode.synopsis}</p>}
           <WikiLink url={ref.episode.wikiUrl} />
           {!ref.episode.image && <StillLink url={ref.episode.suggestedPicture} />}
+          {editing && (
+            <div className="actions">
+              <button type="button" className="button" onClick={() => openEditor({ kind: 'event', id: null })}>
+                <Plus aria-hidden="true" /> Add an event to {ref.code}
+              </button>
+              <button type="button" className="button" onClick={() => openEditor({ kind: 'saga', id: null })}>
+                <CalendarDays aria-hidden="true" /> Episode titles
+              </button>
+            </div>
+          )}
           <section>
             <h3>What happens</h3>
             {events.length > 0 ? (
@@ -367,7 +388,16 @@ export function DetailPanel() {
   const setOpen = useStore((state) => state.setDetailOpen);
   const selection = useStore((state) => state.selection);
   const timeline = useStore((state) => state.timeline);
+  const editorOpen = useStore((state) => state.editorTarget !== null);
   if (!timeline) return null;
+
+  if (editorOpen) {
+    return (
+      <aside className="panel detail detail--editor" data-map-inset="right" aria-label="Editor">
+        <EditorPanel />
+      </aside>
+    );
+  }
 
   if (!open) {
     return (

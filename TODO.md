@@ -15,11 +15,10 @@ npm run dev             # http://localhost:5173  (API on 8787)
 npm run check           # type checks + tests + data check
 ```
 
-Done and merged: project setup (Node 26, Vite, React, Express), data model + JSON storage + editing API + password login + backups on the server, map pipeline and map view, story data for Seasons 1–2 (126 events, 29 characters, 25 places, Season 3 as empty episodes), main interface (markers, timeline, side panel, legend, search), character journeys (portraits on the map that glide along their routes, route lines, Play mode with Space, speed and route options in the "What the map shows" menu).
+Done and merged: project setup (Node 26, Vite, React, Express), data model + JSON storage + editing API + password login + backups on the server, map pipeline and map view, story data for Seasons 1–2 (126 events, 29 characters, 25 places, Season 3 as empty episodes), main interface (markers, timeline, side panel, legend, search), character journeys (portraits on the map that glide along their routes, route lines, Play mode with Space, speed and route options in the "What the map shows" menu), editor (pencil button: add/edit/delete events, characters and places, episode titles, seasons and storylines; click the map for positions and route points; pictures by file, drag and drop, Ctrl+V or web address; login dialog when a password is set).
 
 ## Features not started (one branch each)
 
-- **Editor** (`feature/editor`) — the biggest piece. Edit-mode toggle in the toolbar; login dialog when `session.authRequired`. Forms for event, character, place, episodes/seasons, storylines. Click the map to set a position, drag markers, draw route points. Picture field: upload, drag and drop, paste from clipboard, or a web address the server tries to download. Server still needs `POST /api/media/upload` (multer is installed) and `POST /api/media/fetch`. The API for saving entries already exists (`src/api.ts`). Show `bundle.problems` in edit mode. Keep high effort for this one.
 - **Wiki autofill** — server proxy to `https://lotr.fandom.com/api.php` (`opensearch` for search; `prop=pageimages|info` for the link; first paragraph via `action=parse&section=0`, the wiki has no `extracts`). Fill in title, wiki link, summary and the *suggested picture link* only — never download or embed wiki pictures (see below).
 - **Spoiler guard** — "watched up to" per saga in localStorage; lock later ticks on the timeline, cap `step`/Play, pass the limit as `searchScope` to `TopBar`, first-visit question. Identity reveals already work (`identityAt`, `hasHiddenIdentity`).
 - **Changing-world overlays** — schema, validation and `overlayVisible()` exist and `scene.overlays` is computed; needs map rendering (labels, regions, lines), an editor form, and data (Southlands → Mordor at `s1e7-the-southlands-become-mordor`, siege of Eregion S2E6–E8, Imladris from S2E8, Second Age names over the Third Age labels of the map).
@@ -27,6 +26,13 @@ Done and merged: project setup (Node 26, Vite, React, Express), data model + JSO
 - **Phone and tablet layout** — panels as bottom sheets/drawers, timeline per season, touch targets. `detailOpen`/`legendOpen` already start closed on small screens.
 - **Backups and export** — server snapshots and restore exist (`/api/backups`); needs the UI, plus export/import of everything (data + media) as a zip (`fflate` is installed; check paths against zip-slip on import).
 - **Docker and guide** — Dockerfile (Node 26, `npm run build`, `node server/index.ts`, `HOST=0.0.0.0`), compose file with `./data` mounted, `ADMIN_PASSWORD` from `.env`, bound to 127.0.0.1 by default. `README.md` is still empty; write `docs/GUIDE.md` (use, edit, add a season/saga/map, data file format, build, deploy, backups). Docker Desktop was not running when checked.
+
+## Editor leftovers
+
+- Checked in a real browser: adding and deleting an event (with map click), the character form. Not yet clicked through: place form, episodes/storylines form, picture upload from the form (the server side is tested), login dialog (server side is tested).
+- No form yet for overlays, for creating a new saga, or for registering a map (use `npm run map:add` and the API for now).
+- Events can be placed "before X / last"; there is no drag-to-reorder list and markers cannot be dragged on the map.
+- Deleting the last event of an episode leaves an empty `events/<episode>.json` (`[]`); harmless.
 
 ## Small things
 
