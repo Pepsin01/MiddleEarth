@@ -1354,6 +1354,83 @@ h3,
   border-radius: 50%;
 }
 
+.world-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 1px 9px;
+  border: 1px solid color-mix(in srgb, var(--c) 55%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--paper-light) 86%, var(--c));
+  color: color-mix(in srgb, var(--c) 78%, #000);
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+}
+
+.world-label--marker {
+  padding-left: 2px;
+}
+
+.world-label__icon {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--c);
+  color: #fff;
+}
+
+.world-label__icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.world-label.is-compact {
+  padding: 1px;
+  border-color: #fff8e7;
+  opacity: 0.9;
+}
+
+.world-label.is-compact .world-label__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.world-label.is-compact .world-label__icon svg {
+  width: 10px;
+  height: 10px;
+}
+
+.world-label.is-compact .world-label__text {
+  display: none;
+}
+
+.world-label.is-compact:hover,
+.world-label.is-compact.is-selected {
+  padding: 1px 9px 1px 2px;
+  opacity: 1;
+}
+
+.world-label.is-compact:hover .world-label__text,
+.world-label.is-compact.is-selected .world-label__text {
+  display: inline;
+}
+
+.world-label:hover,
+.world-label.is-selected {
+  z-index: 2;
+  box-shadow: 0 0 0 2px #f2c14e;
+}
+
 /* ------------------------------------------------------------------ editor */
 
 .button--small {

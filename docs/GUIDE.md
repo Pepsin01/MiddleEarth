@@ -161,7 +161,7 @@ data/maps/<map>.json                      a map: size, source, credit
 data/sagas/<saga>/saga.json               title, seasons and episodes, storylines
 data/sagas/<saga>/places.json             named places
 data/sagas/<saga>/characters.json         characters
-data/sagas/<saga>/overlays.json           map annotations that change over time (not shown yet)
+data/sagas/<saga>/overlays.json           regions, lines and labels that appear and disappear over time
 data/sagas/<saga>/events/<episode>.json   the events of one episode, in story order
 ```
 
@@ -189,6 +189,28 @@ Rules worth knowing:
 - The order of events inside a file is the order of the story.
 - `importance` is `major`, `minor` or `travel`. `icon` is one of: star, battle, council, journey, arrival, death, magic, craft, discovery, omen, disaster, crown, ship, bond.
 - All fields are described, with comments, in [shared/schema.ts](../shared/schema.ts).
+
+**The changing world.** `overlays.json` holds annotations that are only shown during part of the story — the Southlands becoming Mordor, a siege, an army's march. There is no form for them yet, so they are edited by hand:
+
+```json
+{
+  "id": "siege-of-eregion",
+  "kind": "region",
+  "title": "Eregion besieged",
+  "points": [[4380, 3640], [4560, 3600], [4700, 3690], [4690, 3810], [4520, 3870], [4360, 3800]],
+  "color": "#5a3d8a",
+  "dashed": true,
+  "from": "s2e6",
+  "fromEvent": "s2e6-the-siege-of-eregion-begins",
+  "untilEvent": "s2e8-the-death-of-celebrimbor"
+}
+```
+
+- `kind`: `region` (an outline, three or more points), `line` (two or more points), `label` or `marker` (one point; a marker has an `icon`).
+- `from` is the episode it appears in; add `fromEvent` to make it appear exactly when that event happens.
+- `until` is the last episode it is shown in; `untilEvent` makes it disappear exactly when that event happens. Leave both out for "from then on".
+- To read positions off the map, switch edit mode on, start adding a place, click the map and note the two numbers shown next to "Move it".
+- Zoomed far out, overlays shrink to small symbols; hover or zoom in to read them. They can be switched off in the layers menu.
 
 After editing, check your work:
 

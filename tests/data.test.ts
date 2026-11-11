@@ -4,11 +4,32 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { loadConfig } from '../server/config.ts';
 import { Store } from '../server/store.ts';
-import { buildTimeline, characterAt, endOfEpisode, firstAppearance } from '../shared/timeline.ts';
+import { buildTimeline, characterAt, cursorTime, endOfEpisode, firstAppearance, overlayVisible } from '../shared/timeline.ts';
 
 const config = loadConfig({});
 const store = new Store(config.dataDir);
 const sagaIds = fs.readdirSync(path.join(config.dataDir, 'sagas'));
+
+describe('the changing world of The Rings of Power', () => {
+  it('turns the Southlands into Mordor at the right moments', async () => {
+    const bundle = await store.loadBundle('rings-of-power');
+    const timeline = buildTimeline(bundle);
+    const shown = (episodeId: string, eventId?: string) =>
+      bundle.overlays.filter((overlay) => overlayVisible(timeline, overlay, cursorTime(timeline, episodeId, eventId))).map((overlay) => overlay.id);
+
+    expect(shown('s1e1')).toContain('the-southlands');
+    expect(shown('s1e6', 's1e6-the-key-turns')).toContain('the-southlands');
+    expect(shown('s1e6')).toContain('the-ash-cloud');
+    expect(shown('s1e6')).not.toContain('the-southlands');
+    expect(shown('s1e7')).toContain('mordor');
+    expect(shown('s1e7')).not.toContain('the-ash-cloud');
+    expect(shown('s2e4')).toContain('march-on-eregion');
+    expect(shown('s2e6')).not.toContain('march-on-eregion');
+    expect(shown('s2e7')).toContain('siege-of-eregion');
+    expect(shown('s2e8')).toEqual(expect.arrayContaining(['eregion-fallen', 'imladris-founded', 'durins-bane-awake']));
+    expect(shown('s2e8')).not.toContain('siege-of-eregion');
+  });
+});
 
 describe.each(sagaIds)('data/sagas/%s', (sagaId) => {
   it('loads without any problems', async () => {

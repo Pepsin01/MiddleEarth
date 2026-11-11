@@ -9,6 +9,7 @@ import { buildTrails, declutter, storylineColor } from '../scene.ts';
 import { useScene } from '../useScene.ts';
 import type { HistorySpot, LayoutItem, SceneCharacter } from '../scene.ts';
 import { useStore } from '../store.ts';
+import { OverlayLayer } from './OverlayLayer.tsx';
 import { PortalMarker } from './PortalMarker.tsx';
 import { TrailLayer } from './TrailLayer.tsx';
 import { useMapScale } from './useMapScale.ts';
@@ -74,6 +75,7 @@ export function SceneLayers() {
   const select = useStore((state) => state.select);
   const showPlaces = useStore((state) => state.options.places);
   const trailMode = useStore((state) => state.options.trails);
+  const showOverlays = useStore((state) => state.options.overlays);
   const followed = useStore((state) => state.followed);
   const scale = useMapScale();
 
@@ -117,6 +119,7 @@ export function SceneLayers() {
 
   return (
     <>
+      {showOverlays && <OverlayLayer overlays={scene.overlays} />}
       <TrailLayer trails={trails} />
 
       {scene.characters.map((entry) => (
