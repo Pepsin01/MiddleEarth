@@ -1745,6 +1745,28 @@ h3,
   font: 600 0.66rem var(--font-display);
 }
 
+.backup-list {
+  display: grid;
+  gap: 2px;
+  max-height: 34vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  font-size: 0.92rem;
+}
+
+.backup-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.backup-list small {
+  color: var(--ink-faint);
+}
+
 /* ------------------------------------------------------------ map controls */
 
 .map-controls {

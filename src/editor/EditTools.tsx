@@ -4,6 +4,7 @@ import type { FormEvent } from 'react';
 import { api, errorText } from '../api.ts';
 import { Popover } from '../components/Popover.tsx';
 import { useStore } from '../store.ts';
+import { BackupTools } from './BackupTools.tsx';
 import { CharacterForm, EventForm, PlaceForm, SagaForm } from './forms.tsx';
 
 const TITLES = { event: 'event', character: 'character', place: 'place', saga: 'Episodes and storylines' } as const;
@@ -124,6 +125,7 @@ export function EditTools() {
           )}
         </Popover>
       )}
+      {editing && <BackupTools />}
       {editing && problems.length > 0 && (
         <Popover label={`${problems.length} problem${problems.length === 1 ? '' : 's'} in the data files`} icon={<AlertTriangle aria-hidden="true" />} active>
           <h3>Problems in the data files</h3>
