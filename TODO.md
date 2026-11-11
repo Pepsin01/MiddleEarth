@@ -15,12 +15,11 @@ npm run dev             # http://localhost:5173  (API on 8787)
 npm run check           # type checks + tests + data check
 ```
 
-Done and merged: project setup (Node 26, Vite, React, Express), data model + JSON storage + editing API + password login + backups on the server, map pipeline and map view, story data for Seasons 1–2 (126 events, 29 characters, 25 places, Season 3 as empty episodes), main interface (markers, timeline, side panel, legend, search), character journeys (portraits on the map that glide along their routes, route lines, Play mode with Space, speed and route options in the "What the map shows" menu), editor (pencil button: add/edit/delete events, characters and places, episode titles, seasons and storylines; click the map for positions and route points; pictures by file, drag and drop, Ctrl+V or web address; login dialog when a password is set), the guide (`docs/GUIDE.md`) and the Docker files.
+Done and merged: project setup (Node 26, Vite, React, Express), data model + JSON storage + editing API + password login + backups on the server, map pipeline and map view, story data for Seasons 1–2 (126 events, 29 characters, 25 places, Season 3 as empty episodes), main interface (markers, timeline, side panel, legend, search), character journeys (portraits on the map that glide along their routes, route lines, Play mode with Space, speed and route options in the "What the map shows" menu), editor (pencil button: add/edit/delete events, characters and places, episode titles, seasons and storylines; click the map for positions and route points; pictures by file, drag and drop, Ctrl+V or web address; login dialog when a password is set), the guide (`docs/GUIDE.md`) and the Docker files, spoiler guard (eye button: "watched up to"; later episodes are locked on the slider and excluded from search, stepping and Play; asked once on the first visit).
 
 ## Features not started (one branch each)
 
 - **Wiki autofill** — server proxy to `https://lotr.fandom.com/api.php` (`opensearch` for search; `prop=pageimages|info` for the link; first paragraph via `action=parse&section=0`, the wiki has no `extracts`). Fill in title, wiki link, summary and the *suggested picture link* only — never download or embed wiki pictures (see below).
-- **Spoiler guard** — "watched up to" per saga in localStorage; lock later ticks on the timeline, cap `step`/Play, pass the limit as `searchScope` to `TopBar`, first-visit question. Identity reveals already work (`identityAt`, `hasHiddenIdentity`).
 - **Changing-world overlays** — schema, validation and `overlayVisible()` exist and `scene.overlays` is computed; needs map rendering (labels, regions, lines), an editor form, and data (Southlands → Mordor at `s1e7-the-southlands-become-mordor`, siege of Eregion S2E6–E8, Imladris from S2E8, Second Age names over the Third Age labels of the map).
 - **Storyline chart** — SVG lanes per storyline across episodes, event dots, lines for followed characters, click jumps to the map.
 - **Phone and tablet layout** — panels as bottom sheets/drawers, timeline per season, touch targets. `detailOpen`/`legendOpen` already start closed on small screens.
@@ -36,7 +35,7 @@ Done and merged: project setup (Node 26, Vite, React, Express), data model + JSO
 
 ## Small things
 
-- Keep `docs/GUIDE.md` in step with new features: it says the spoiler lock, backup buttons/export, overlays and a saga form are "planned".
+- Keep `docs/GUIDE.md` in step with new features: it says backup buttons/export, overlays and a saga form are "planned".
 
 - `npm run media:fetch` once more: `img/characters/stranger.jpg` is still missing (Wikimedia asked for a 10-minute pause).
 - No portrait found on Wikimedia Commons for Mirdania, Theo, Waldreg, Estrid and Pharazôn (they show initials). Add by hand once the editor exists.

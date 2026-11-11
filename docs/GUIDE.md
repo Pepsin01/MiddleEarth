@@ -49,6 +49,7 @@ Pictures and map tiles are kept in `data/media`, which is deliberately **not** s
 | Hide a storyline | Menu button (top left), then click the storyline. The small target icon shows only that one. |
 | Follow one character | Open the character and press "Follow the journey": the whole route is drawn |
 | Search | The search box, or press `/`. It finds events, characters and places. |
+| Avoid spoilers | Eye button (top right): say how far you have watched; later episodes are locked |
 | Change what the map shows | Layers button (top right): earlier events, place names, routes, Play speed, paper tint |
 | Zoom | Mouse wheel, pinch, or the + and − buttons. The frame button shows the whole map. |
 
@@ -115,7 +116,7 @@ In the data this is why "Halbrand" and "The Stranger" have no wiki link at first
 
 When you add a new character with a secret, enter the name as first known, leave the wiki link empty, and add a reveal (in the character form) for the moment the truth comes out.
 
-A "watched up to here" lock for the time slider is planned but not built yet.
+**The spoiler guard.** The first time you open a saga the app asks how far you have watched. Episodes after that are locked on the time slider (a small padlock), and search, stepping and Play stay inside the limit; the titles of locked episodes are not shown either. Click a locked episode to unlock everything up to it, or use the eye button in the toolbar to move the limit or switch the guard off. The setting is remembered in your browser. Wiki pages opened from the app can of course still contain spoilers.
 
 ## 6. Adding a season, the films, or another map
 

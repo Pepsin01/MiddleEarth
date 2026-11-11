@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { DetailPanel } from './components/DetailPanel.tsx';
 import { Legend } from './components/Legend.tsx';
 import { PlayButton, usePlayer } from './components/Player.tsx';
+import { SpoilerGuard, SpoilerQuestion } from './components/SpoilerGuard.tsx';
 import { Timeline } from './components/Timeline.tsx';
 import { TopBar } from './components/TopBar.tsx';
 import { EditTools } from './editor/EditTools.tsx';
@@ -83,10 +84,18 @@ export function App() {
         <PickLayer />
         <MapControls />
       </MapView>
-      <TopBar tools={<EditTools />} />
+      <TopBar
+        tools={
+          <>
+            <SpoilerGuard />
+            <EditTools />
+          </>
+        }
+      />
       <Legend />
       <DetailPanel />
       <Timeline controls={<PlayButton />} />
+      <SpoilerQuestion />
       <a className="map-credit" href={bundle.map.creditUrl} target="_blank" rel="noreferrer">
         {bundle.map.credit}
       </a>
