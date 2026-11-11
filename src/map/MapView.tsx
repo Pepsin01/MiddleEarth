@@ -34,6 +34,9 @@ function coveredEdges(container: HTMLElement) {
         break;
     }
   });
+  // Panels that together would cover (nearly) the whole map are ignored: there is no free area to aim for.
+  if (covered.left + covered.right > box.width * 0.75) covered.left = covered.right = 0;
+  if (covered.top + covered.bottom > box.height * 0.75) covered.top = covered.bottom = 0;
   return covered;
 }
 
@@ -41,6 +44,7 @@ interface Props {
   mapDef: MapDef;
   /** Where to open the map; the whole map is shown when left out. */
   initialView?: { center: Point; zoom: number };
+  /** Map layers and controls. They can use useMap(). */
   children?: ReactNode;
 }
 
@@ -57,6 +61,8 @@ export function MapView({ mapDef, initialView, children }: Props) {
       crs: L.CRS.Simple,
       zoomControl: false,
       attributionControl: false,
+      // The arrow keys move through the story, so Leaflet must not use them for panning.
+      keyboard: false,
       zoomSnap: 0.25,
       zoomDelta: 0.5,
       wheelPxPerZoomLevel: 100,
@@ -71,6 +77,16 @@ export function MapView({ mapDef, initialView, children }: Props) {
       return [Math.round(projected.x), Math.round(projected.y)];
     };
     const bounds = L.latLngBounds(toLatLng([0, mapDef.height]), toLatLng([mapDef.width, 0]));
+
+    // Layers for the story, bottom to top: route lines, faded earlier events, character portraits, current events.
+    for (const [name, zIndex] of [
+      ['trails', 450],
+      ['history', 560],
+      ['characters', 610],
+      ['events', 620],
+    ] as const) {
+      map.createPane(name).style.zIndex = String(zIndex);
+    }
 
     // "Paper" under the map: with the tint switched on, the map picture is blended into this colour.
     map.createPane('paper').style.zIndex = '150';
@@ -92,10 +108,14 @@ export function MapView({ mapDef, initialView, children }: Props) {
     fitMinZoom();
     map.on('resize', fitMinZoom);
 
+    const fitAll = () => {
+      const covered = coveredEdges(element);
+      map.fitBounds(bounds, { animate: false, paddingTopLeft: [covered.left, covered.top], paddingBottomRight: [covered.right, covered.bottom] });
+    };
     if (initialView) map.setView(toLatLng(initialView.center), initialView.zoom, { animate: false });
-    else map.fitBounds(bounds, { animate: false });
+    else fitAll();
 
-    setApi({ map, maxZoom, toLatLng, toPoint });
+    setApi({ map, maxZoom, toLatLng, toPoint, fitAll });
     return () => {
       setApi(null);
       map.remove();
@@ -129,11 +149,9 @@ export function MapView({ mapDef, initialView, children }: Props) {
   }, [api, camera]);
 
   return (
-    <div
-      ref={container}
-      className={`map${tint && mapDef.tint ? ' map--tinted' : ''}`}
-      style={{ background: mapDef.background ?? '#2b241c' }}
-    >
+    <div className="map-wrap">
+      {/* Leaflet owns this element; React-rendered layers and controls live next to it. */}
+      <div ref={container} className={`map${tint && mapDef.tint ? ' map--tinted' : ''}`} style={{ background: mapDef.background ?? '#2b241c' }} />
       {api && <MapContext.Provider value={api}>{children}</MapContext.Provider>}
     </div>
   );

@@ -103,6 +103,9 @@ export interface State {
   options: ViewOptions;
   playing: boolean;
   camera: CameraRequest | null;
+  /** Whether the side panel (details) and the legend (storylines, characters) are open. */
+  detailOpen: boolean;
+  legendOpen: boolean;
 
   init: () => Promise<void>;
   openSaga: (sagaId: string, initial?: { episodeId?: string; selection?: Selection }) => Promise<void>;
@@ -110,13 +113,21 @@ export interface State {
   reload: () => Promise<void>;
   setSession: (session: SessionInfo) => void;
   setEpisode: (episodeId: string) => void;
+  /** Moves the slider one episode forward (+1) or back (-1). */
+  stepEpisode: (delta: 1 | -1) => void;
   select: (selection: Selection) => void;
+  setDetailOpen: (open: boolean) => void;
+  setLegendOpen: (open: boolean) => void;
   /** Selects an event, moves the slider to its episode if needed and brings it into view. */
   showEvent: (eventId: string) => void;
+  /** Selects an event and brings it into view without moving the time slider. */
+  peekEvent: (eventId: string) => void;
   /** Moves the story one event forward (+1) or back (-1). Returns false at either end. */
   step: (delta: 1 | -1) => boolean;
   setPlaying: (playing: boolean) => void;
   toggleStoryline: (storylineId: string) => void;
+  /** Shows only this storyline; called again on the only visible storyline it shows all of them. */
+  soloStoryline: (storylineId: string) => void;
   toggleFollow: (characterId: string) => void;
   setOption: <K extends keyof ViewOptions>(key: K, value: ViewOptions[K]) => void;
   flyTo: (point: Point, minZoom?: number) => void;
@@ -158,6 +169,9 @@ export const useStore = create<State>()((set, get) => ({
   options: { ...DEFAULT_OPTIONS, ...readSaved().options },
   playing: false,
   camera: null,
+  // On small screens the panels start closed so the map is visible first.
+  detailOpen: window.matchMedia('(min-width: 900px)').matches,
+  legendOpen: window.matchMedia('(min-width: 1200px)').matches,
 
   init: async () => {
     try {
@@ -225,20 +239,41 @@ export const useStore = create<State>()((set, get) => ({
 
   setEpisode: (episodeId) => {
     if (!get().timeline?.episodeById.has(episodeId)) return;
-    set({ episodeId, stepEventId: null });
+    const change: Partial<State> = { episodeId, stepEventId: null };
+    // An event of another episode stays selected only while that is deliberate; moving the slider returns to the overview.
+    const { selection, timeline } = get();
+    if (selection?.kind === 'event' && timeline?.eventById.get(selection.id)?.event.episodeId !== episodeId) change.selection = null;
+    set(change);
   },
 
-  select: (selection) => set({ selection }),
+  stepEpisode: (delta) => {
+    const { timeline, episodeId } = get();
+    if (!timeline) return;
+    const index = timeline.episodeById.get(episodeId)?.index ?? 0;
+    const next = timeline.episodes[index + delta];
+    if (next) get().setEpisode(next.id);
+  },
+
+  select: (selection) => set(selection ? { selection, detailOpen: true } : { selection }),
+  setDetailOpen: (detailOpen) => set({ detailOpen }),
+  setLegendOpen: (legendOpen) => set({ legendOpen }),
 
   showEvent: (eventId) => {
     const timed = get().timeline?.eventById.get(eventId);
     if (!timed) return;
-    const change: Partial<State> = { selection: { kind: 'event', id: eventId } };
+    const change: Partial<State> = { selection: { kind: 'event', id: eventId }, detailOpen: true };
     if (timed.event.episodeId !== get().episodeId) {
       change.episodeId = timed.event.episodeId;
       change.stepEventId = null;
     }
     set(change);
+    if (timed.pos) get().flyTo(timed.pos);
+  },
+
+  peekEvent: (eventId) => {
+    const timed = get().timeline?.eventById.get(eventId);
+    if (!timed) return;
+    set({ selection: { kind: 'event', id: eventId }, detailOpen: true });
     if (timed.pos) get().flyTo(timed.pos);
   },
 
@@ -275,6 +310,14 @@ export const useStore = create<State>()((set, get) => ({
   toggleStoryline: (storylineId) => {
     const hidden = get().hiddenStorylines;
     set({ hiddenStorylines: hidden.includes(storylineId) ? hidden.filter((id) => id !== storylineId) : [...hidden, storylineId] });
+  },
+
+  soloStoryline: (storylineId) => {
+    const all = get().bundle?.saga.storylines.map((storyline) => storyline.id) ?? [];
+    const others = all.filter((id) => id !== storylineId);
+    const hidden = get().hiddenStorylines;
+    const alreadySolo = others.every((id) => hidden.includes(id)) && !hidden.includes(storylineId);
+    set({ hiddenStorylines: alreadySolo ? [] : others });
   },
 
   toggleFollow: (characterId) => {

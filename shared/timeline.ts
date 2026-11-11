@@ -250,6 +250,18 @@ export function identityAt(timeline: Timeline, character: Character, time: Time)
   return identity;
 }
 
+/**
+ * True while a character still has a change of name ahead of them. Links about
+ * such a character (wiki pages, stills) could give the secret away, so they are held back.
+ */
+export function hasHiddenIdentity(timeline: Timeline, character: Character, time: Time): boolean {
+  return (character.reveals ?? []).some((reveal) => {
+    if (!reveal.name) return false;
+    const moment = revealTime(timeline, reveal.from, reveal.event);
+    return moment !== null && isBefore(time, moment);
+  });
+}
+
 function revealTime(timeline: Timeline, episodeId: string, eventId?: string): Time | null {
   const event = eventId ? timeline.eventById.get(eventId) : undefined;
   if (event) return event.time;

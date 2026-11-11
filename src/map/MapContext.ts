@@ -8,6 +8,8 @@ export interface MapApi {
   maxZoom: number;
   toLatLng: (point: Point) => L.LatLng;
   toPoint: (latLng: L.LatLng) => Point;
+  /** Shows the whole map in the area not covered by panels. */
+  fitAll: () => void;
 }
 
 export const MapContext = createContext<MapApi | null>(null);
