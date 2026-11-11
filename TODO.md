@@ -12,27 +12,10 @@ Run it:
 npm install
 npm run media:fetch     # downloads the map and the portraits into data/media (not in git), cuts map tiles
 npm run dev             # http://localhost:5173  (API on 8787)
-npm run check           # type checks + 72 tests + data check
+npm run check           # type checks + tests + data check
 ```
 
-Done and merged: project setup (Node 26, Vite, React, Express), data model + JSON storage + editing API + password login + backups on the server, map pipeline and map view, story data for Seasons 1–2 (126 events, 29 characters, 25 places, Season 3 as empty episodes), main interface (markers, timeline, side panel, legend, search).
-
-## Unfinished branch: `feature/character-journeys`
-
-One "WIP" commit, type-checks, not merged. Already there:
-
-- `src/map/PortalMarker.tsx` — `route` prop: marker glides along a route when its position changes
-- `src/map/TrailLayer.tsx` — draws route lines in the `trails` map pane
-- `src/scene.ts` — `buildTrails()` and `TrailMode`
-- `src/store.ts` — `options.speed`, `PLAY_SECONDS`, `setPlaying(true)` starts at the episode's first event
-
-Still to do on it:
-
-1. `src/map/SceneLayers.tsx`: render character portraits (pane `characters`, `Portrait` size 30, ring = storyline colour, name label on hover, click selects). Put events **and** characters into one `declutter()` call. Keep the previous `scene.time` in a ref and pass `characterPath(prev, now).at(-1)` as `route` when it ends at the new position.
-2. Render `<TrailLayer trails={buildTrails(...)} />`.
-3. Play button in `Timeline` (the `controls` prop exists) + a `usePlayer` hook: while `playing`, call `step(1)` every `PLAY_SECONDS[speed]`; stop when it returns false. Space = play/pause. Moving the slider by hand pauses.
-4. "What the map shows" menu: trails off / this episode / everything; play speed.
-5. Styles for the portrait markers; screenshots; tests for `buildTrails`; merge.
+Done and merged: project setup (Node 26, Vite, React, Express), data model + JSON storage + editing API + password login + backups on the server, map pipeline and map view, story data for Seasons 1–2 (126 events, 29 characters, 25 places, Season 3 as empty episodes), main interface (markers, timeline, side panel, legend, search), character journeys (portraits on the map that glide along their routes, route lines, Play mode with Space, speed and route options in the "What the map shows" menu).
 
 ## Features not started (one branch each)
 
@@ -51,6 +34,7 @@ Still to do on it:
 - No portrait found on Wikimedia Commons for Mirdania, Theo, Waldreg, Estrid and Pharazôn (they show initials). Add by hand once the editor exists.
 - Check the portrait crops (`image.focus` in `characters.json`) for everyone, not just the few seen in screenshots.
 - Marker rows at low zoom can sit far from their real spots (e.g. Eregion in S2E7–E8); consider a thin leader line or a smaller cluster radius.
+- Play mode: consider showing a small progress ring on the Play button, and pausing while the pointer is over the side panel.
 - A default opening view (`view` in `saga.json`) centred on the western lands might be nicer than fitting the whole map.
 
 ## Decisions and facts worth remembering
