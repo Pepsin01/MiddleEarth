@@ -8,10 +8,14 @@ import type { Point, SagaBundle, SagaSummary, SessionInfo } from '../shared/sche
 import { buildTimeline } from '../shared/timeline.ts';
 import type { TimedEvent, Timeline } from '../shared/timeline.ts';
 import { api, errorText } from './api.ts';
+import type { TrailMode } from './scene.ts';
 
 export type SelectionKind = 'event' | 'character' | 'place' | 'overlay';
 export type Selection = { kind: SelectionKind; id: string } | null;
-export type TrailMode = 'off' | 'recent' | 'all';
+export type PlaySpeed = 'slow' | 'normal' | 'fast';
+
+/** Seconds each event stays on screen while playing. */
+export const PLAY_SECONDS: Record<PlaySpeed, number> = { slow: 8, normal: 5, fast: 2.5 };
 
 export interface ViewOptions {
   /** Show earlier episodes' events as small faded dots. */
@@ -24,6 +28,8 @@ export interface ViewOptions {
   overlays: boolean;
   /** Tint the map like old paper. */
   tint: boolean;
+  /** How fast Play moves from event to event. */
+  speed: PlaySpeed;
 }
 
 export interface CameraRequest {
@@ -33,7 +39,7 @@ export interface CameraRequest {
   nonce: number;
 }
 
-const DEFAULT_OPTIONS: ViewOptions = { history: true, trails: 'recent', places: false, overlays: true, tint: true };
+const DEFAULT_OPTIONS: ViewOptions = { history: true, trails: 'recent', places: false, overlays: true, tint: true, speed: 'normal' };
 
 interface SavedSagaView {
   episodeId?: string;
@@ -124,6 +130,7 @@ export interface State {
   peekEvent: (eventId: string) => void;
   /** Moves the story one event forward (+1) or back (-1). Returns false at either end. */
   step: (delta: 1 | -1) => boolean;
+  /** Starts or stops Play. Started at the end of an episode, it begins with that episode's first event. */
   setPlaying: (playing: boolean) => void;
   toggleStoryline: (storylineId: string) => void;
   /** Shows only this storyline; called again on the only visible storyline it shows all of them. */
@@ -305,7 +312,24 @@ export const useStore = create<State>()((set, get) => ({
     return true;
   },
 
-  setPlaying: (playing) => set({ playing }),
+  setPlaying: (playing) => {
+    if (!playing) {
+      set({ playing: false });
+      return;
+    }
+    const state = get();
+    const { timeline } = state;
+    if (!timeline) return;
+    if (!state.stepEventId) {
+      // Not in the middle of an episode: start with the first event of the current one (or of the next one that has any).
+      const index = timeline.episodeById.get(state.episodeId)?.index ?? 0;
+      const first = steppable(state).find((timed) => timed.time.ep >= index);
+      if (!first) return;
+      set({ episodeId: first.event.episodeId, stepEventId: first.event.id, selection: { kind: 'event', id: first.event.id }, detailOpen: true });
+      if (first.pos) state.flyTo(first.pos);
+    }
+    set({ playing: true });
+  },
 
   toggleStoryline: (storylineId) => {
     const hidden = get().hiddenStorylines;

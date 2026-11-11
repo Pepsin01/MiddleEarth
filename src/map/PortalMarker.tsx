@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import type { Point } from '../../shared/schema.ts';
+import { pathLength, pointAlong } from '../../shared/timeline.ts';
 import { useMap } from './MapContext.ts';
 
 interface Props {
@@ -14,14 +15,22 @@ interface Props {
   pane: string;
   /** Raises the marker above its neighbours in the same layer. */
   raised?: boolean;
+  /**
+   * When the position changes and this route (ending at the new position) is given,
+   * the marker travels along it instead of jumping.
+   */
+  route?: Point[];
   children: ReactNode;
 }
+
+const prefersReducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const easeInOut = (t: number) => (t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2);
 
 /**
  * A map marker whose content is ordinary React. Leaflet keeps it glued to the
  * right spot while the map moves and zooms; React renders what is inside.
  */
-export function PortalMarker({ pos, offset, pane, raised = false, children }: Props) {
+export function PortalMarker({ pos, offset, pane, raised = false, route, children }: Props) {
   const { map, toLatLng } = useMap();
   const [element] = useState(() => {
     const created = document.createElement('div');
@@ -31,6 +40,8 @@ export function PortalMarker({ pos, offset, pane, raised = false, children }: Pr
     return created;
   });
   const marker = useRef<L.Marker | null>(null);
+  const latestRoute = useRef(route);
+  latestRoute.current = route;
   const [x, y] = pos;
 
   useEffect(() => {
@@ -50,7 +61,25 @@ export function PortalMarker({ pos, offset, pane, raised = false, children }: Pr
   }, [map, element, pane]);
 
   useEffect(() => {
-    marker.current?.setLatLng(toLatLng([x, y]));
+    const target = marker.current;
+    if (!target) return;
+    const path = latestRoute.current;
+    if (!path || path.length < 2 || prefersReducedMotion()) {
+      target.setLatLng(toLatLng([x, y]));
+      return;
+    }
+    // Longer journeys take longer, within reason.
+    const duration = Math.min(2600, 700 + pathLength(path) / 3);
+    const started = performance.now();
+    let frame = requestAnimationFrame(function tick(now) {
+      const progress = Math.min(1, (now - started) / duration);
+      target.setLatLng(toLatLng(pointAlong(path, easeInOut(progress))));
+      if (progress < 1) frame = requestAnimationFrame(tick);
+    });
+    return () => {
+      cancelAnimationFrame(frame);
+      target.setLatLng(toLatLng([x, y]));
+    };
   }, [x, y, toLatLng]);
 
   useEffect(() => {

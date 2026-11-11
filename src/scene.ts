@@ -4,7 +4,7 @@
  * Pure logic only - the React hook that feeds it from the app state is in useScene.ts.
  */
 import type { Character, ImageRef, Overlay, Place, Point, SagaBundle } from '../shared/schema.ts';
-import { characterAt, cursorTime, identityAt, isAtOrBefore, isBefore, overlayVisible } from '../shared/timeline.ts';
+import { characterAt, characterPath, cursorTime, identityAt, isAtOrBefore, isBefore, overlayVisible, startOfEpisode } from '../shared/timeline.ts';
 import type { EpisodeRef, Identity, Stop, Time, TimedEvent, Timeline } from '../shared/timeline.ts';
 
 export interface SceneCharacter {
@@ -107,6 +107,42 @@ export function journeySoFar(timeline: Timeline, characterId: string, time: Time
 /** Events that happened at a place before or at the given moment, latest first. */
 export function eventsAtPlace(timeline: Timeline, placeId: string, time: Time): TimedEvent[] {
   return timeline.events.filter((timed) => timed.event.placeId === placeId && !isBefore(time, timed.time)).reverse();
+}
+
+/* ---------------------------------------------------------------- trails */
+
+/** Which routes are drawn: none, this episode's movement, or everything so far. */
+export type TrailMode = 'off' | 'recent' | 'all';
+
+export interface Trail {
+  points: Point[];
+  color: string;
+  /** "recent" = movement within the current episode; "journey" = everything before it. */
+  kind: 'recent' | 'journey';
+}
+
+/**
+ * The route lines to draw. Followed characters always get their whole journey,
+ * whatever the mode, and even while they are off the map.
+ */
+export function buildTrails(bundle: SagaBundle, timeline: Timeline, scene: Scene, mode: TrailMode, followed: string[]): Trail[] {
+  const trails: Trail[] = [];
+  const episodeStart = startOfEpisode(scene.time.ep);
+  const beginning = startOfEpisode(0);
+  const onMap = new Map(scene.characters.map((entry) => [entry.character.id, entry]));
+  const ids = new Set([...onMap.keys(), ...followed]);
+  for (const id of ids) {
+    const character = timeline.characterById.get(id);
+    if (!character) continue;
+    const isFollowed = followed.includes(id);
+    if (!isFollowed && (mode === 'off' || !onMap.has(id))) continue;
+    const color = onMap.get(id)?.color ?? storylineColor(bundle, identityAt(timeline, character, scene.time).storylineId);
+    if (isFollowed || mode === 'all') {
+      for (const points of characterPath(timeline, id, beginning, episodeStart)) trails.push({ points, color, kind: 'journey' });
+    }
+    for (const points of characterPath(timeline, id, episodeStart, scene.time)) trails.push({ points, color, kind: 'recent' });
+  }
+  return trails;
 }
 
 /* ---------------------------------------------------------------- layout */
