@@ -33,7 +33,8 @@ export function MapVignette({ pos, color, children }: Props) {
     return () => observer.disconnect();
   }, []);
 
-  const height = Math.round((width * 9) / 16);
+  // flatter on narrow screens, where the panel is short
+  const height = Math.round(width * (width < 420 ? 0.4 : 9 / 16));
   const tiles = useMemo(() => {
     const { size, maxZoom, path, ext } = mapDef.tiles;
     const zoom = Math.max(0, maxZoom - 2); // a quarter of full size: enough to recognise the surroundings

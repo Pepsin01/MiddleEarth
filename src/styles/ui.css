@@ -1943,3 +1943,145 @@ h3,
     transition: none;
   }
 }
+
+/* ------------------------------------------------------- phones and tablets */
+
+/* Fingers need larger targets than a mouse pointer. */
+@media (pointer: coarse) {
+  .icon-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-button--small {
+    width: 34px;
+    height: 34px;
+  }
+
+  .map-controls {
+    display: none; /* pinch to zoom */
+  }
+}
+
+/* Tablets and narrow windows: side panels a little slimmer. */
+@media (max-width: 1100px) {
+  .legend {
+    width: 240px;
+  }
+
+  .detail {
+    width: min(340px, calc(100% - 2 * var(--gap)));
+  }
+}
+
+/* Phones: one column. Panels become sheets over the map, the time slider shows one season. */
+@media (max-width: 720px) {
+  :root {
+    --gap: 8px;
+    --timeline-h: 104px;
+  }
+
+  .brand {
+    padding: 0 6px;
+  }
+
+  .brand__text {
+    display: none;
+  }
+
+  .search {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .search__results {
+    position: fixed;
+    top: calc(var(--gap) + var(--bar-h) + 6px);
+    right: var(--gap);
+    left: var(--gap);
+    min-width: 0;
+  }
+
+  .toolbar {
+    padding: 0 3px;
+    gap: 0;
+  }
+
+  .popover {
+    position: fixed;
+    top: calc(var(--gap) + var(--bar-h) + 8px);
+    right: var(--gap);
+    left: var(--gap);
+    width: auto;
+    max-width: none;
+    max-height: calc(100% - var(--bar-h) - var(--timeline-h) - 5 * var(--gap));
+    overflow-y: auto;
+  }
+
+  .legend {
+    right: var(--gap);
+    width: auto;
+    max-height: 46%;
+  }
+
+  .detail {
+    top: auto;
+    left: var(--gap);
+    width: auto;
+    height: 52%;
+    border-radius: 14px 14px 10px 10px;
+  }
+
+  .detail--editor {
+    height: 62%;
+  }
+
+  .picture--hero img {
+    aspect-ratio: 21 / 9;
+  }
+
+  .panel-tab--detail {
+    top: auto;
+    bottom: calc(var(--timeline-h) + 2 * var(--gap));
+  }
+
+  .chart {
+    max-height: 60%;
+  }
+
+  .timeline {
+    padding: 4px 8px 6px;
+  }
+
+  .timeline__date,
+  .timeline__title em {
+    display: none;
+  }
+
+  .timeline__name {
+    font-size: 0.95rem;
+  }
+
+  .season:not(.is-active) {
+    display: none;
+  }
+
+  .tick__number {
+    width: 30px;
+    height: 30px;
+  }
+
+  .map-credit {
+    display: none;
+  }
+
+  .pick-hint {
+    right: var(--gap);
+    left: var(--gap);
+    transform: none;
+  }
+
+  .form__pair {
+    grid-template-columns: 1fr;
+  }
+}

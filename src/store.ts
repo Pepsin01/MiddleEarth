@@ -345,7 +345,8 @@ export const useStore = create<State>()((set, get) => ({
     const timed = get().timeline?.eventById.get(eventId);
     if (!timed || timed.time.ep > watchedIndex(get())) return;
     set({ selection: { kind: 'event', id: eventId }, detailOpen: true });
-    if (timed.pos) get().flyTo(timed.pos);
+    // minZoom 0: keep the current zoom, only slide the map if the marker would be hidden by a panel
+    if (timed.pos) get().flyTo(timed.pos, 0);
   },
 
   step: (delta) => {

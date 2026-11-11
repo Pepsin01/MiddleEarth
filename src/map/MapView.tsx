@@ -19,7 +19,12 @@ function coveredEdges(container: HTMLElement) {
   document.querySelectorAll<HTMLElement>('[data-map-inset]').forEach((element) => {
     const rect = element.getBoundingClientRect();
     if (rect.width === 0 || rect.height === 0) return;
-    switch (element.dataset.mapInset) {
+    let side = element.dataset.mapInset;
+    // On narrow screens side panels become sheets across the whole width: they then cover the map from above or below.
+    if ((side === 'left' || side === 'right') && rect.width > box.width * 0.6) {
+      side = rect.top + rect.height / 2 > box.top + box.height / 2 ? 'bottom' : 'top';
+    }
+    switch (side) {
       case 'top':
         covered.top = Math.max(covered.top, rect.bottom - box.top);
         break;
@@ -110,6 +115,13 @@ export function MapView({ mapDef, initialView, children }: Props) {
 
     const fitAll = () => {
       const covered = coveredEdges(element);
+      const size = map.getSize();
+      if (size.y > size.x * 1.15) {
+        // Portrait screens: the whole (landscape) map would be tiny, so start closer, on the lands the story is about.
+        const zoom = Math.min(map.getBoundsZoom(bounds, true), map.getBoundsZoom(bounds, false) + 1.25);
+        map.setView(toLatLng([mapDef.width * 0.46, mapDef.height * 0.47]), zoom, { animate: false });
+        return;
+      }
       map.fitBounds(bounds, { animate: false, paddingTopLeft: [covered.left, covered.top], paddingBottomRight: [covered.right, covered.bottom] });
     };
     if (initialView) map.setView(toLatLng(initialView.center), initialView.zoom, { animate: false });
@@ -130,6 +142,7 @@ export function MapView({ mapDef, initialView, children }: Props) {
   useEffect(() => {
     if (!api || !camera || !container.current) return;
     const { map } = api;
+    map.stop();
     const target = api.toLatLng(camera.point);
     const zoom = Math.max(map.getZoom(), camera.minZoom ?? api.maxZoom - 2.5);
     const covered = coveredEdges(container.current);

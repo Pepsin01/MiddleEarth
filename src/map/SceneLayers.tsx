@@ -73,6 +73,8 @@ export function SceneLayers() {
   const timeline = useStore((state) => state.timeline);
   const selection = useStore((state) => state.selection);
   const select = useStore((state) => state.select);
+  const peekEvent = useStore((state) => state.peekEvent);
+  const flyTo = useStore((state) => state.flyTo);
   const showPlaces = useStore((state) => state.options.places);
   const trailMode = useStore((state) => state.options.trails);
   const showOverlays = useStore((state) => state.options.overlays);
@@ -131,7 +133,14 @@ export function SceneLayers() {
           raised={entry.character.id === selectedCharacterId}
           route={routes.get(entry.character.id)}
         >
-          <CharacterPin entry={entry} selected={entry.character.id === selectedCharacterId} onSelect={() => select({ kind: 'character', id: entry.character.id })} />
+          <CharacterPin
+            entry={entry}
+            selected={entry.character.id === selectedCharacterId}
+            onSelect={() => {
+              select({ kind: 'character', id: entry.character.id });
+              flyTo(entry.pos, 0);
+            }}
+          />
         </PortalMarker>
       ))}
 
@@ -165,7 +174,7 @@ export function SceneLayers() {
             timed={timed}
             color={storylineColor(bundle, timed.event.storylineId)}
             selected={timed.event.id === selectedEventId}
-            onSelect={() => select({ kind: 'event', id: timed.event.id })}
+            onSelect={() => peekEvent(timed.event.id)}
           />
         </PortalMarker>
       ))}
