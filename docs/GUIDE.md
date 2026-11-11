@@ -54,6 +54,8 @@ Pictures and map tiles are kept in `data/media`, which is deliberately **not** s
 | Change what the map shows | Layers button (top right): earlier events, place names, routes, Play speed, paper tint |
 | Zoom | Mouse wheel, pinch, or the + and − buttons. The frame button shows the whole map. |
 
+**On a phone or tablet** the app rearranges itself: the time slider shows one season at a time (the arrows move on to the next), details open as a sheet from the bottom, and the storyline list opens from the menu button. To use it from the sofa while the app runs on your computer, start it with `HOST=0.0.0.0` (PowerShell: `$env:HOST='0.0.0.0'; npm start` after `npm run build`) and open `http://<your computer's address>:8787` on the phone — and set an `ADMIN_PASSWORD` if others share the network.
+
 The address bar always describes what you are looking at (saga, episode, selection), so a bookmark or a copied link brings you back to the same view.
 
 Events without a picture of their own show an excerpt of the map around them. Where a fitting still exists on the LOTR wiki, a link to it is shown underneath.

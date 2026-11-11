@@ -164,7 +164,7 @@ export function Timeline({ controls }: Props) {
         onPointerCancel={() => (dragging.current = false)}
       >
         {seasons.map(({ season, episodes }) => (
-          <div className="season" key={season.id} style={{ flexGrow: Math.max(1, episodes.length) }}>
+          <div className={`season${current?.season.id === season.id ? ' is-active' : ''}`} key={season.id} style={{ flexGrow: Math.max(1, episodes.length) }}>
             <span className="season__label">{season.title}</span>
             <div className="season__ticks">{episodes.map(tick)}</div>
           </div>
