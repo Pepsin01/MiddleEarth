@@ -49,6 +49,7 @@ Pictures and map tiles are kept in `data/media`, which is deliberately **not** s
 | Hide a storyline | Menu button (top left), then click the storyline. The small target icon shows only that one. |
 | Follow one character | Open the character and press "Follow the journey": the whole route is drawn |
 | Search | The search box, or press `/`. It finds events, characters and places. |
+| See the whole story at once | Chart button (top right): one lane per storyline, one column per episode, a dot per event. Click a dot to go there. Followed characters are drawn as lines moving between the storylines. |
 | Avoid spoilers | Eye button (top right): say how far you have watched; later episodes are locked |
 | Change what the map shows | Layers button (top right): earlier events, place names, routes, Play speed, paper tint |
 | Zoom | Mouse wheel, pinch, or the + and − buttons. The frame button shows the whole map. |

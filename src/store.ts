@@ -129,6 +129,8 @@ export interface State {
   /** Whether the side panel (details) and the legend (storylines, characters) are open. */
   detailOpen: boolean;
   legendOpen: boolean;
+  /** Whether the storyline chart is open. */
+  chartOpen: boolean;
 
   init: () => Promise<void>;
   openSaga: (sagaId: string, initial?: { episodeId?: string; selection?: Selection }) => Promise<void>;
@@ -141,6 +143,7 @@ export interface State {
   select: (selection: Selection) => void;
   setDetailOpen: (open: boolean) => void;
   setLegendOpen: (open: boolean) => void;
+  setChartOpen: (open: boolean) => void;
   /** Selects an event, moves the slider to its episode if needed and brings it into view. */
   showEvent: (eventId: string) => void;
   /** Selects an event and brings it into view without moving the time slider. */
@@ -220,6 +223,7 @@ export const useStore = create<State>()((set, get) => ({
   options: { ...DEFAULT_OPTIONS, ...readSaved().options },
   playing: false,
   camera: null,
+  chartOpen: false,
   watched: null,
   watchedAnswered: true,
   editing: false,
@@ -323,6 +327,7 @@ export const useStore = create<State>()((set, get) => ({
   select: (selection) => set(selection ? { selection, detailOpen: true } : { selection }),
   setDetailOpen: (detailOpen) => set({ detailOpen }),
   setLegendOpen: (legendOpen) => set({ legendOpen }),
+  setChartOpen: (chartOpen) => set({ chartOpen }),
 
   showEvent: (eventId) => {
     const timed = get().timeline?.eventById.get(eventId);

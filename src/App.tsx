@@ -3,6 +3,7 @@ import { DetailPanel } from './components/DetailPanel.tsx';
 import { Legend } from './components/Legend.tsx';
 import { PlayButton, usePlayer } from './components/Player.tsx';
 import { SpoilerGuard, SpoilerQuestion } from './components/SpoilerGuard.tsx';
+import { ChartButton, StorylineChart } from './components/StorylineChart.tsx';
 import { Timeline } from './components/Timeline.tsx';
 import { TopBar } from './components/TopBar.tsx';
 import { EditTools } from './editor/EditTools.tsx';
@@ -87,6 +88,7 @@ export function App() {
       <TopBar
         tools={
           <>
+            <ChartButton />
             <SpoilerGuard />
             <EditTools />
           </>
@@ -95,6 +97,7 @@ export function App() {
       <Legend />
       <DetailPanel />
       <Timeline controls={<PlayButton />} />
+      <StorylineChart />
       <SpoilerQuestion />
       <a className="map-credit" href={bundle.map.creditUrl} target="_blank" rel="noreferrer">
         {bundle.map.credit}
