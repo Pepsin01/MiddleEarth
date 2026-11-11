@@ -8,10 +8,7 @@
     "pos": [4420, 3800],
     "description": "Adar shows Galadriel Morgoth's crown, which once unmade Sauron's body, and asks for her ring to finish the work. She sees the trap too late: Sauron has no army of his own — so he lured Adar's here.",
     "characters": ["galadriel", "adar"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/0/0d/Adar_-_S2_E6.png/revision/latest?cb=20240922183112",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Adar_-_S2_E6.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Iron_Crown"
   },
   {
@@ -23,10 +20,7 @@
     "placeId": "armenelos",
     "description": "Elendil refuses to bend the knee and is sentenced to trial by the abyss. Míriel takes his place and is cast into the sea; the sea-worm lets her go, and the Faithful hail her Queen of the Sea.",
     "characters": ["miriel", "elendil", "pharazon", "earien", "kemen"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/a9/Seaworm.png/revision/latest?cb=20241003021142",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Seaworm.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Tar-M%C3%ADriel"
   },
   {
@@ -71,10 +65,7 @@
     "pos": [4470, 3770],
     "description": "Adar's catapults open fire on Ost-in-Edhil. Inside the forge, wrapped in Annatar's illusion of a quiet morning, Celebrimbor hears nothing.",
     "characters": ["adar"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/a7/SiegeOfEregion.png/revision/latest?cb=20250327132435",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:SiegeOfEregion.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Siege_of_Eregion"
   }
 ]

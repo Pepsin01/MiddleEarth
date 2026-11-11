@@ -35,8 +35,11 @@ for (const sagaId of sagaIds) {
     );
     const empty = episodes.filter((episode) => !bundle.events.some((event) => event.episodeId === episode.id));
     if (empty.length) console.log(`  episodes without events yet: ${empty.map((episode) => episode.code).join(', ')}`);
-    const noPicture = bundle.events.filter((event) => !event.image).length;
-    if (noPicture) console.log(`  ${noPicture} event(s) have no picture of their own (the place's or a character's picture is shown instead)`);
+    const noPicture = bundle.events.filter((event) => !event.image);
+    if (noPicture.length) {
+      const suggested = noPicture.filter((event) => event.suggestedPicture).length;
+      console.log(`  ${noPicture.length} event(s) have no picture of their own and show a map excerpt instead (${suggested} of them link to a suggested still)`);
+    }
     const noLink = bundle.events.filter((event) => !event.wikiUrl).length;
     if (noLink) console.log(`  ${noLink} event(s) have no wiki link`);
     for (const problem of bundle.problems) {

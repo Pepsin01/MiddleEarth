@@ -9,10 +9,7 @@
     "description": "Long ago, at the dawn of the Second Age: in a fortress of the north Sauron proclaims himself the Orcs' new master. Adar crowns him with Morgoth's crown — points downward — and the Orcs finish it. What is left of him seeps into the rock and, over centuries, crawls back toward a body.",
     "characters": ["halbrand", "adar"],
     "flashback": true,
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/0/0b/Sauron_takes_the_crown_-_TRoP.png/revision/latest?cb=20241003231623",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Sauron_takes_the_crown_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Sauron"
   },
   {
@@ -37,10 +34,7 @@
     "description": "In Lindon Galadriel confesses that Halbrand was Sauron. Gil-galad wants to use the rings anyway; Elrond, sure that they are tainted, seizes them and leaps from a waterfall.",
     "characters": ["galadriel", "elrond", "gil-galad"],
     "via": [[3950, 3180], [3300, 2790], [2345, 2800]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/6/67/Galadriel_in_Lindon_-_TRoP_S2.png/revision/latest?cb=20240915012902",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Galadriel_in_Lindon_-_TRoP_S2.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
   },
   {
@@ -52,10 +46,7 @@
     "placeId": "grey-havens",
     "description": "Elrond brings the rings to Círdan the Shipwright, eldest of the Elves, who agrees to drop them into the deepest sea — until he looks at them.",
     "characters": ["elrond", "cirdan"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/1/14/C%C3%ADrdan_RoP_first_look.jpg/revision/latest?cb=20240711230154",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:C%C3%ADrdan_RoP_first_look.jpg",
     "wikiUrl": "https://lotr.fandom.com/wiki/C%C3%ADrdan"
   },
   {
@@ -67,10 +58,7 @@
     "placeId": "lindon",
     "description": "As the last leaves fall from the great tree, Círdan arrives wearing Narya. Gil-galad takes Vilya, Galadriel takes Nenya, and the tree bursts into bloom. Elrond alone will not trust them.",
     "characters": ["galadriel", "gil-galad", "cirdan", "elrond"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/c/c5/Lindonrop.png/revision/latest?cb=20250324210005",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Lindonrop.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
   },
   {
@@ -95,10 +83,7 @@
     "description": "Halbrand lets Adar's Orcs take him. He tells Adar that Sauron has returned and sits in Eregion among the Elves — and offers to deliver him, if Adar will bring his army. Waldreg, who tormented him in his cell, does not outlive his release.",
     "characters": ["halbrand", "adar", "waldreg"],
     "exits": ["waldreg"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/4/40/Adar_-_RoP_S02.png/revision/latest?cb=20240727093957",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Adar_-_RoP_S02.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Adar"
   }
 ]

@@ -9,10 +9,7 @@
     "description": "In the Greenwood the Mystics hail the Stranger as Lord Sauron and try to carry him east. The Harfoots come to his rescue; he takes up the Mystics' staff and scatters them — and as they vanish they call him something else: Istar. Sadoc dies of his wound at sunrise.",
     "characters": ["stranger", "nori", "poppy", "sadoc"],
     "exits": ["sadoc"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/2/24/The_Stranger_renewed_-_TRoP.png/revision/latest?cb=20221016041322",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:The_Stranger_renewed_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Mystics"
   },
   {
@@ -25,10 +22,7 @@
     "description": "Six days' ride brings Galadriel and the wounded Halbrand to Eregion, just as Gil-galad is about to end Celebrimbor's work. Healed, Halbrand offers the great smith a thought: do not stretch the mithril — alloy it.",
     "characters": ["galadriel", "halbrand", "elrond", "celebrimbor", "gil-galad"],
     "via": [[6560, 5630], [5900, 5350], [5000, 4950], [4580, 4860], [4350, 4400], [4400, 3950]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/d/d3/Halbrand_%26_Celebrimbor_-_TRoP.png/revision/latest?cb=20221015035131",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Halbrand_%26_Celebrimbor_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Eregion"
   },
   {
@@ -40,10 +34,7 @@
     "placeId": "armenelos",
     "description": "Tar-Palantir dies. Eärien, sent to sketch him for his tomb, finds the palantír uncovered and waiting.",
     "characters": ["earien", "pharazon", "kemen"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/d/df/Tar-Palantir_-_TRoP.png/revision/latest?cb=20220925204231",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Tar-Palantir_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Tar-Palantir"
   },
   {
@@ -55,10 +46,7 @@
     "placeId": "ost-in-edhil",
     "description": "An old scroll proves that the line of Southland kings died out a thousand years ago. Confronted by the river, Halbrand drops the mask — he is Sauron — and offers Galadriel a throne at his side. She refuses him.",
     "characters": ["galadriel", "halbrand"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/1/14/Galadriel_reacts_to_Halbrand%27s_true_identity_-_TRoP.png/revision/latest?cb=20221016034850",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Galadriel_reacts_to_Halbrand's_true_identity_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Sauron"
   },
   {
@@ -70,10 +58,7 @@
     "placeId": "ost-in-edhil",
     "description": "Galadriel tells no one who Halbrand was — only that there must be three, to balance one another. Her brother's dagger is melted down for its gold and silver of Valinor, and Narya, Nenya and Vilya are made.",
     "characters": ["galadriel", "elrond", "celebrimbor"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/e/e0/The_Three_Rings_-_TRoP.png/revision/latest?cb=20221015044319",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:The_Three_Rings_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
   },
   {

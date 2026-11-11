@@ -217,6 +217,7 @@ function dropRepeats(points: Point[]): Point[] {
 export interface Identity {
   name: string;
   storylineId?: string;
+  playedBy?: string;
   description?: string;
   wikiUrl?: string;
   image?: ImageRef;
@@ -229,6 +230,7 @@ export function identityAt(timeline: Timeline, character: Character, time: Time)
   const identity: Identity = {
     name: character.name,
     storylineId: character.storylineId,
+    playedBy: character.playedBy,
     description: character.description,
     wikiUrl: character.wikiUrl,
     image: character.image,
@@ -240,6 +242,7 @@ export function identityAt(timeline: Timeline, character: Character, time: Time)
     identity.revealed = true;
     if (reveal.name) identity.name = reveal.name;
     if (reveal.storylineId) identity.storylineId = reveal.storylineId;
+    if (reveal.playedBy) identity.playedBy = reveal.playedBy;
     if (reveal.description) identity.description = reveal.description;
     if (reveal.wikiUrl) identity.wikiUrl = reveal.wikiUrl;
     if (reveal.image) identity.image = reveal.image;

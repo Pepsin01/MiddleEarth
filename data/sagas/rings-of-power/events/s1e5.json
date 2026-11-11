@@ -9,10 +9,7 @@
     "description": "The Harfoots trek through marsh and woodland toward their autumn home. Nori teaches the Stranger his first words, among them 'friend' and 'peril'.",
     "characters": ["nori", "poppy", "stranger", "sadoc"],
     "via": [[5870, 3480]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/7/7a/Nori_%26_Stranger_-_TRoP.png/revision/latest?cb=20221016203350",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Nori_%26_Stranger_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Harfoots"
   },
   {
@@ -24,10 +21,7 @@
     "pos": [5960, 3330],
     "description": "Three pale figures arrive at the Stranger's crater and study the scorched ground. They are looking for him.",
     "characters": [],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/b/b6/The_Mystics_-_TRoP.png/revision/latest?cb=20221025023817",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:The_Mystics_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Mystics"
   },
   {
@@ -40,10 +34,7 @@
     "description": "Wolves fall on the stragglers. The Stranger drives them off with a blow that shakes the earth — and frightens Nori when the ice that heals his arm nearly takes hers.",
     "characters": ["nori", "poppy", "stranger", "sadoc"],
     "via": [[6050, 3950]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/f/fa/Stranger_opposes_wolves_-_TRoP.png/revision/latest?cb=20220929221752",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Stranger_opposes_wolves_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Partings_(episode)"
   },
   {
@@ -66,10 +57,7 @@
     "pos": [7040, 5430],
     "description": "Waldreg hails Adar as Sauron and is beaten for the name. To prove his loyalty he is handed a knife and a boy from his own village.",
     "characters": ["adar", "waldreg"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/0/07/Waldreg%27s_choice_-_TRoP.png/revision/latest?cb=20221001223142",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Waldreg's_choice_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Waldreg"
   },
   {
@@ -81,10 +69,7 @@
     "placeId": "armenelos",
     "description": "Galadriel drills the volunteers in the square, one Elf against a dozen. Isildur, refused by his father, schemes for a place aboard; Halbrand insists he is staying in Númenor.",
     "characters": ["galadriel", "valandil", "isildur", "elendil", "halbrand"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/1/14/Valandil_%26_Galadriel_-_TRoP.png/revision/latest?cb=20221029194636",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Valandil_%26_Galadriel_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Partings_(episode)"
   },
   {
@@ -96,10 +81,7 @@
     "placeId": "armenelos",
     "description": "Urged on by Eärien, Kemen slips aboard to burn the ships. Isildur, stowed away below, drags him out of the blaze and keeps his secret.",
     "characters": ["kemen", "isildur", "earien"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/5/5e/Kemen_%26_Isildur_-_TRoP.png/revision/latest?cb=20221027022854",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Kemen_%26_Isildur_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Kemen"
   },
   {
@@ -112,10 +94,7 @@
     "description": "Durin dines in Lindon. Afterwards Gil-galad tells Elrond the legend behind his interest — that mithril holds the light of a lost Silmaril — and the truth: the Elves are fading, and without it they must leave Middle-earth by spring.",
     "characters": ["elrond", "gil-galad", "celebrimbor", "durin-iv"],
     "via": [[4540, 3724], [3950, 3180], [3300, 2790], [2345, 2800]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/1/1d/Gil-galad_at_meeting_with_Durin.jpeg/revision/latest?cb=20220901001922",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Gil-galad_at_meeting_with_Durin.jpeg",
     "wikiUrl": "https://lotr.fandom.com/wiki/Mithril"
   },
   {
@@ -127,10 +106,7 @@
     "placeId": "armenelos",
     "description": "Halbrand takes up the kingship Galadriel offers him. Three ships leave the harbour for Middle-earth with the Queen Regent aboard.",
     "characters": ["galadriel", "halbrand", "miriel", "elendil", "isildur", "valandil"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/5/5d/Galadriel_%26_Halbrand_setting_sail_-_TRoP.png/revision/latest?cb=20220929215511",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Galadriel_%26_Halbrand_setting_sail_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Partings_(episode)"
   }
 ]

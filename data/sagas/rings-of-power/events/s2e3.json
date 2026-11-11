@@ -8,10 +8,7 @@
     "pos": [6880, 5710],
     "description": "Isildur's horse returns to the ash-lands and finds his master alive, cocooned in a cave of giant spiders. Together they fight free of the brood and its mother.",
     "characters": ["isildur"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/f/f9/TROPIsildur.jpg/revision/latest?cb=20220901001321",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:TROPIsildur.jpg",
     "wikiUrl": "https://lotr.fandom.com/wiki/Isildur"
   },
   {
@@ -24,10 +21,7 @@
     "description": "On the road Isildur helps a wounded woman, Estrid, who hides Adar's brand on her neck. Wild Men ambush them and steal the horse; the Elf Arondir drives the raiders off.",
     "characters": ["isildur", "estrid", "arondir"],
     "via": [[6660, 5830]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/8/8c/Estrid_first_look.jpg/revision/latest?cb=20240611013601",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Estrid_first_look.jpg",
     "wikiUrl": "https://lotr.fandom.com/wiki/Estrid"
   },
   {
@@ -62,10 +56,7 @@
     "placeId": "armenelos",
     "description": "At Míriel's coronation Eärien denounces her before the court, holding up the palantír. Then a Great Eagle lands on the balcony — and Pharazôn steps out to meet it. The crowd takes it for a sign and shouts his name.",
     "characters": ["miriel", "elendil", "pharazon", "earien", "kemen", "valandil"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/0/0d/Greagle.png/revision/latest?cb=20260331170548",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Greagle.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Great_Eagles"
   },
   {
@@ -77,10 +68,7 @@
     "placeId": "ost-in-edhil",
     "description": "Celebrimbor invites Prince Durin and Disa to Eregion and offers rings of power to save their darkening kingdom, in return for mithril. Durin distrusts the smooth stranger at the smith's shoulder. His father does not.",
     "characters": ["celebrimbor", "halbrand", "durin-iv", "disa", "mirdania"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/9/92/Annatar_-_TRoP_S2_E3.png/revision/latest?cb=20240915013123",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Annatar_-_TRoP_S2_E3.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Rings_of_Power"
   },
   {
@@ -92,10 +80,7 @@
     "pos": [7230, 5500],
     "description": "Adar has made up his mind: every Orc in Mordor will march on Eregion to destroy Sauron. Not all of his children want another war.",
     "characters": ["adar"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/a1/Glug_-_TRoP_S2_E3.png/revision/latest?cb=20240915013424",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Glug_-_TRoP_S2_E3.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Adar"
   }
 ]

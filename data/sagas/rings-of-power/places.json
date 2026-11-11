@@ -6,10 +6,7 @@
     "pos": [1480, 2836],
     "description": "Realm of the High Elves on the western shore, ruled by High King Gil-galad.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Lindon",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/c/c5/Lindonrop.png/revision/latest?cb=20250324210005",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Lindonrop.png"
   },
   {
     "id": "grey-havens",
@@ -18,10 +15,7 @@
     "pos": [2345, 2800],
     "description": "The harbour of the Elves at the head of the Gulf of Lune, from which ships sail into the West. Home of Círdan the Shipwright.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Grey_Havens",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/8/81/Mithlondwide.jpg/revision/latest?cb=20220923022528",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Mithlondwide.jpg"
   },
   {
     "id": "ost-in-edhil",
@@ -30,10 +24,7 @@
     "pos": [4540, 3724],
     "description": "City of the Elven-smiths and capital of Eregion, where Celebrimbor has his forge.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Ost-in-Edhil",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/7/7b/Ost-in-Edhil_-_The_Rings_of_Power.png/revision/latest?cb=20220902205938",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Ost-in-Edhil_-_The_Rings_of_Power.png"
   },
   {
     "id": "khazad-dum",
@@ -42,10 +33,7 @@
     "pos": [4960, 3640],
     "description": "The great Dwarven kingdom under the Misty Mountains, at the height of its glory.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Khazad-d%C3%BBm",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/8/86/Khazad-d%C3%BBm_-_The_Rings_of_Power.png/revision/latest?cb=20220902211108",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Khazad-d%C3%BBm_-_The_Rings_of_Power.png"
   },
   {
     "id": "barrow-downs",
@@ -70,10 +58,7 @@
     "pos": [5250, 1185],
     "description": "A ruined stronghold of the enemy in the frozen wastes of the Forodwaith.",
     "wikiUrl": "https://lotr.fandom.com/wiki/D%C3%BArnost",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/d/d1/D%C3%BArnost_-_TRoP.png/revision/latest?cb=20221126033810",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:D%C3%BArnost_-_TRoP.png"
   },
   {
     "id": "harfoot-camp",
@@ -82,10 +67,7 @@
     "pos": [5860, 3270],
     "description": "Seasonal camp of the wandering Harfoots in the wilds of Rhovanion. Its position on this map is approximate.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Harfoots",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/a8/Harfoot_village_-_The_Rings_of_Power.png/revision/latest?cb=20220908023208",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Harfoot_village_-_The_Rings_of_Power.png"
   },
   {
     "id": "the-grove",
@@ -94,10 +76,7 @@
     "pos": [6700, 3720],
     "description": "The orchard at the edge of the Greenwood where the Harfoots spend the autumn. Its position on this map is approximate.",
     "wikiUrl": "https://lotr.fandom.com/wiki/The_Grove",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/c/c2/The_Grove_-_TRoP.png/revision/latest?cb=20221013020257",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:The_Grove_-_TRoP.png"
   },
   {
     "id": "greenwood",
@@ -114,10 +93,7 @@
     "pos": [6990, 5650],
     "description": "A village of Men in the Southlands, watched by the Elves since the fall of Morgoth.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Tirharad",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/2/2d/RoP_-_Tirharad_village_road.png/revision/latest?cb=20220817204230",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:RoP_-_Tirharad_village_road.png"
   },
   {
     "id": "ostirith",
@@ -126,10 +102,7 @@
     "pos": [6900, 5580],
     "description": "The Elven watchtower above Tirharad.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Ostirith",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/e/e7/Ostirith_-_The_Rings_of_Power.png/revision/latest?cb=20220904193217",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Ostirith_-_The_Rings_of_Power.png"
   },
   {
     "id": "hordern",
@@ -138,10 +111,7 @@
     "pos": [7060, 5520],
     "description": "A neighbouring village of Tirharad.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Hordern",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/4/46/Hordern_-_The_Rings_of_Power.png/revision/latest?cb=20220902204620",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Hordern_-_The_Rings_of_Power.png"
   },
   {
     "id": "orodruin",
@@ -150,10 +120,7 @@
     "pos": [7115, 5395],
     "description": "The fire-mountain of the Southlands.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Mount_Doom",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/d/dc/Orodruin_eruption_-_TRoP.png/revision/latest?cb=20221001044051",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Orodruin_eruption_-_TRoP.png"
   },
   {
     "id": "numenorean-camp",
@@ -161,10 +128,7 @@
     "kind": "other",
     "pos": [6660, 5830],
     "description": "Field camp of the Númenórean expedition near the Anduin, outside the ash cloud. Its position on this map is approximate.",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/3/36/Brownyn_meets_M%C3%ADriel_-_TRoP.png/revision/latest?cb=20221024171651",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Brownyn_meets_M%C3%ADriel_-_TRoP.png"
   },
   {
     "id": "pelargir",
@@ -181,10 +145,7 @@
     "pos": [1705, 7960],
     "description": "Capital and royal harbour of Númenor, the island kingdom of Men.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Armenelos",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/6/66/Armenelos_-_The_Rings_of_Power.png/revision/latest?cb=20220909061026",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Armenelos_-_The_Rings_of_Power.png"
   },
   {
     "id": "hall-of-lore",
@@ -192,10 +153,7 @@
     "kind": "other",
     "pos": [1450, 8060],
     "description": "Archive founded by Elros, first king of Númenor. Its position on this map is approximate.",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/7/75/Galadriel_%26_Elendil_in_the_Hall_of_Lore_-_TRoP.png/revision/latest?cb=20220919214238",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Galadriel_%26_Elendil_in_the_Hall_of_Lore_-_TRoP.png"
   },
   {
     "id": "andunie",
@@ -212,10 +170,7 @@
     "pos": [2000, 5300],
     "description": "The great ocean between Middle-earth and the Undying Lands.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Belegaer",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/6/68/Galadriel_and_Halbrand_at_sea_-_TRoP.png/revision/latest?cb=20220919210126",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Galadriel_and_Halbrand_at_sea_-_TRoP.png"
   },
   {
     "id": "far-west",
@@ -240,10 +195,7 @@
     "pos": [9620, 4130],
     "description": "A canyon settlement of the Stoors, desert cousins of the Harfoots. Its position on this map is approximate.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Stoors",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/5/5f/Stoors_-_Rings_of_Power.png/revision/latest?cb=20240908173637",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Stoors_-_Rings_of_Power.png"
   },
   {
     "id": "tom-bombadils-house",
@@ -252,10 +204,7 @@
     "pos": [9100, 4080],
     "description": "A cottage in the desert of Rhûn. Its position on this map is approximate.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Tom_Bombadil",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/a4/Tom_-_TRoP_S2_E4.png/revision/latest?cb=20240917023831",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Tom_-_TRoP_S2_E4.png"
   },
   {
     "id": "caras-gaer",
@@ -264,9 +213,6 @@
     "pos": [9660, 3800],
     "description": "Stronghold of the Dark Wizard in Rhûn. Its position on this map is approximate.",
     "wikiUrl": "https://lotr.fandom.com/wiki/Caras_Gaer",
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/d/db/Caras_Gaer_-_TRoP.png/revision/latest?cb=20240914223235",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    }
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Caras_Gaer_-_TRoP.png"
   }
 ]

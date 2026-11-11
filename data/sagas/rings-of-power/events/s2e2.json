@@ -8,10 +8,7 @@
     "placeId": "khazad-dum",
     "description": "Tremors from the burning mountain collapse the sun-shafts that light and feed Khazad-dûm. Disa's singers can no longer hear the rock, and father and son still will not speak to each other.",
     "characters": ["durin-iv", "disa", "durin-iii"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/a/ad/Durin_III.png/revision/latest?cb=20260309084935",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Durin_III.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Khazad-d%C3%BBm"
   },
   {
@@ -34,10 +31,7 @@
     "placeId": "caras-gaer",
     "description": "In his fortress of Caras Gaer a Dark Wizard learns that the Istar has come to Rhûn, and sends his masked riders to bring him in.",
     "characters": ["dark-wizard"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/d/db/Caras_Gaer_-_TRoP.png/revision/latest?cb=20240914223235",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Caras_Gaer_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Dark_Wizard"
   },
   {
@@ -61,10 +55,7 @@
     "description": "Halbrand waits at the gates of Eregion until Celebrimbor, though warned never to see him again, lets him in. In the forge he walks into the flames and out again as Annatar, 'Lord of Gifts', a messenger of the Valar — and proposes rings for Dwarves and for Men.",
     "characters": ["halbrand", "celebrimbor", "mirdania"],
     "via": [[6760, 5090], [6500, 4900], [5900, 4750], [5200, 4800], [4580, 4860], [4350, 4400], [4400, 3950]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/7/7e/Annatar_rop.jpg/revision/latest?cb=20240727130059",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Annatar_rop.jpg",
     "wikiUrl": "https://lotr.fandom.com/wiki/Annatar"
   }
 ]
