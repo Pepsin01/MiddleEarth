@@ -1,6 +1,35 @@
 import { useEffect } from 'react';
+import { DetailPanel } from './components/DetailPanel.tsx';
+import { Legend } from './components/Legend.tsx';
+import { Timeline } from './components/Timeline.tsx';
+import { TopBar } from './components/TopBar.tsx';
+import { MapControls } from './map/MapControls.tsx';
 import { MapView } from './map/MapView.tsx';
+import { SceneLayers } from './map/SceneLayers.tsx';
 import { useStore } from './store.ts';
+
+/** Keyboard: arrows move through episodes, Shift+arrows through single events, Escape goes back to the overview. */
+function useKeyboard() {
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement;
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName) || target.isContentEditable) return;
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      if (document.querySelector('[role="dialog"][aria-modal="true"]')) return;
+      const { step, stepEpisode, select, selection } = useStore.getState();
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault();
+        const delta = event.key === 'ArrowRight' ? 1 : -1;
+        if (event.shiftKey) step(delta);
+        else stepEpisode(delta);
+      } else if (event.key === 'Escape' && selection) {
+        select(null);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+}
 
 export function App() {
   const status = useStore((state) => state.status);
@@ -11,6 +40,7 @@ export function App() {
   useEffect(() => {
     void init();
   }, [init]);
+  useKeyboard();
 
   if (status === 'error') {
     return (
@@ -35,7 +65,14 @@ export function App() {
 
   return (
     <div className="app">
-      <MapView mapDef={bundle.map} initialView={bundle.saga.view} />
+      <MapView mapDef={bundle.map} initialView={bundle.saga.view}>
+        <SceneLayers />
+        <MapControls />
+      </MapView>
+      <TopBar />
+      <Legend />
+      <DetailPanel />
+      <Timeline />
       <a className="map-credit" href={bundle.map.creditUrl} target="_blank" rel="noreferrer">
         {bundle.map.credit}
       </a>
