@@ -1767,6 +1767,38 @@ h3,
   color: var(--ink-faint);
 }
 
+.wiki-field__search {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wiki-field__search svg {
+  flex: none;
+  width: 15px;
+  height: 15px;
+  color: var(--ink-faint);
+}
+
+.wiki-field__search input {
+  flex: 1;
+}
+
+.wiki-field__results {
+  display: grid;
+  margin: 0;
+  padding: 4px;
+  border: 1px solid var(--edge);
+  border-radius: 8px;
+  background: #fffdf6;
+  list-style: none;
+}
+
+.wiki-field__results .menu-item {
+  width: 100%;
+  padding: 3px 8px;
+}
+
 /* ------------------------------------------------------------ map controls */
 
 .map-controls {
