@@ -20,10 +20,7 @@
     "placeId": "tom-bombadils-house",
     "description": "Alone in the desert, the Stranger follows a goat track to a cottage under strange stars and is half swallowed by a tree. Its keeper, a singing fellow called Tom Bombadil, names himself Eldest — and says the Stranger is meant to face both the Dark Wizard and Sauron.",
     "characters": ["stranger", "tom-bombadil"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/9/97/Tom_Bombadil_meets_the_Stranger_-_TRoP.png/revision/latest?cb=20240917023342",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Tom_Bombadil_meets_the_Stranger_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Tom_Bombadil"
   },
   {
@@ -35,10 +32,7 @@
     "placeId": "stoor-village",
     "description": "Nori and Poppy are caught by Stoors, desert cousins of the Harfoots who live in a canyon. Their leader knows the name Burrows: a Stoor who went west long ago to find a land of green hills, and never came back.",
     "characters": ["nori", "poppy"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/5/5f/Stoors_-_Rings_of_Power.png/revision/latest?cb=20240908173637",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Stoors_-_Rings_of_Power.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Stoors"
   },
   {
@@ -50,10 +44,7 @@
     "pos": [6420, 6230],
     "description": "Tracking Theo, the three wade into a bog where a nameless creature drags Arondir and Isildur under. Estrid, unmasked as one of Adar's branded, earns back their trust by pulling Isildur out.",
     "characters": ["arondir", "isildur", "estrid"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/5/52/Nameless_Thing_ROP_Season_2_EP3.jpeg/revision/latest?cb=20260320045751",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Nameless_Thing_ROP_Season_2_EP3.jpeg",
     "wikiUrl": "https://lotr.fandom.com/wiki/Nameless_things"
   },
   {
@@ -65,10 +56,7 @@
     "pos": [6480, 6150],
     "description": "What took Theo was a pair of Ents, Snaggleroot and Winterbloom, enraged by the army that hacked a road through their forest. Arondir asks their forgiveness, and they let their captives go.",
     "characters": ["arondir", "isildur", "estrid", "theo"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/8/83/Arondir_meets_the_Ents.png/revision/latest?cb=20240923004550",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Arondir_meets_the_Ents.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Ents"
   },
   {

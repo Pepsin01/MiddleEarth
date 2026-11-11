@@ -156,6 +156,12 @@ describe('identity reveals', () => {
     expect(identityAt(timeline, stranger, startOfEpisode(2))).toMatchObject({ name: 'Gandalf', revealed: true });
   });
 
+  it('switches the actor when a role was recast', () => {
+    const adar = { id: 'adar', name: 'Adar', playedBy: 'First Actor', reveals: [{ from: 's2e1', playedBy: 'Second Actor' }] };
+    expect(identityAt(timeline, adar, endOfEpisode(1))).toMatchObject({ name: 'Adar', playedBy: 'First Actor' });
+    expect(identityAt(timeline, adar, endOfEpisode(2))).toMatchObject({ name: 'Adar', playedBy: 'Second Actor' });
+  });
+
   it('can time a reveal by an event and change the storyline colour', () => {
     const halbrand = {
       id: 'halbrand',

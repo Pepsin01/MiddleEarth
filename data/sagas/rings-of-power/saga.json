@@ -16,10 +16,7 @@
           "airDate": "2022-09-01",
           "synopsis": "Galadriel hunts for Sauron in the frozen north. Harfoots, Southlanders and Elves each sense the long peace ending — and a stranger falls from the sky.",
           "wikiUrl": "https://lotr.fandom.com/wiki/A_Shadow_of_the_Past_(episode)",
-          "image": {
-            "source": "https://static.wikia.nocookie.net/lotr/images/2/23/Amazon-com-S1E1_thumbnail-galadriel.jpg/revision/latest?cb=20240905221237",
-            "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-          }
+          "suggestedPicture": "https://lotr.fandom.com/wiki/File:Amazon-com-S1E1_thumbnail-galadriel.jpg"
         },
         {
           "id": "s1e2",
@@ -27,10 +24,7 @@
           "airDate": "2022-09-01",
           "synopsis": "Galadriel meets a castaway on the Sundering Seas, Elrond visits Khazad-dûm, and Orcs come up through the floors of the Southlands.",
           "wikiUrl": "https://lotr.fandom.com/wiki/Adrift_(episode)",
-          "image": {
-            "source": "https://static.wikia.nocookie.net/lotr/images/7/7b/Amazon-com-S1E2_thumbnail-halbrand.jpg/revision/latest?cb=20240905221236",
-            "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-          }
+          "suggestedPicture": "https://lotr.fandom.com/wiki/File:Amazon-com-S1E2_thumbnail-halbrand.jpg"
         },
         {
           "id": "s1e3",
@@ -38,10 +32,7 @@
           "airDate": "2022-09-09",
           "synopsis": "Galadriel and Halbrand reach Númenor, Arondir is enslaved in the trenches of the Orcs, and the Harfoots discover the Stranger.",
           "wikiUrl": "https://lotr.fandom.com/wiki/Adar_(episode)",
-          "image": {
-            "source": "https://static.wikia.nocookie.net/lotr/images/b/b0/Amazon-com-S1E3_thumbnail-elendil.jpg/revision/latest?cb=20240905221234",
-            "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-          }
+          "suggestedPicture": "https://lotr.fandom.com/wiki/File:Amazon-com-S1E3_thumbnail-elendil.jpg"
         },
         {
           "id": "s1e4",
@@ -49,10 +40,7 @@
           "airDate": "2022-09-16",
           "synopsis": "Míriel reveals her vision of Númenor's fall, Adar sends his ultimatum, and Elrond learns the secret of the Dwarves.",
           "wikiUrl": "https://lotr.fandom.com/wiki/The_Great_Wave_(episode)",
-          "image": {
-            "source": "https://static.wikia.nocookie.net/lotr/images/7/7a/Amazon-com-S1E4_thumbnail-durin_iv_disa.jpg/revision/latest?cb=20240905221233",
-            "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-          }
+          "suggestedPicture": "https://lotr.fandom.com/wiki/File:Amazon-com-S1E4_thumbnail-durin_iv_disa.jpg"
         },
         {
           "id": "s1e5",
@@ -60,10 +48,7 @@
           "airDate": "2022-09-23",
           "synopsis": "The Southlanders must choose a side, Númenor sets sail, and Gil-galad reveals why the Elves need mithril.",
           "wikiUrl": "https://lotr.fandom.com/wiki/Partings_(episode)",
-          "image": {
-            "source": "https://static.wikia.nocookie.net/lotr/images/3/3d/Amazon-com-S1E5_thumbnail-stranger_nori.jpg/revision/latest?cb=20240905221232",
-            "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-          }
+          "suggestedPicture": "https://lotr.fandom.com/wiki/File:Amazon-com-S1E5_thumbnail-stranger_nori.jpg"
         },
         {
           "id": "s1e6",
@@ -71,10 +56,7 @@
           "airDate": "2022-09-30",
           "synopsis": "Adar attacks the Southlands. Númenor arrives in time to win the battle — but not to stop what the Orcs were really digging for.",
           "wikiUrl": "https://lotr.fandom.com/wiki/Ud%C3%BBn_(episode)",
-          "image": {
-            "source": "https://static.wikia.nocookie.net/lotr/images/5/57/Amazon-com-S1E6_thumbnail-orcs.jpg/revision/latest?cb=20240905221230",
-            "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-          }
+          "suggestedPicture": "https://lotr.fandom.com/wiki/File:Amazon-com-S1E6_thumbnail-orcs.jpg"
         },
         {
           "id": "s1e7",
@@ -82,10 +64,7 @@
           "airDate": "2022-10-07",
           "synopsis": "Survivors stumble through the ash, the Harfoots meet the Stranger's hunters, and King Durin shuts the mithril mine, waking something below.",
           "wikiUrl": "https://lotr.fandom.com/wiki/The_Eye_(episode)",
-          "image": {
-            "source": "https://static.wikia.nocookie.net/lotr/images/0/0c/Amazon-com-S1E7_thumbnail-galadriel.jpg/revision/latest?cb=20240905221229",
-            "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-          }
+          "suggestedPicture": "https://lotr.fandom.com/wiki/File:Amazon-com-S1E7_thumbnail-galadriel.jpg"
         },
         {
           "id": "s1e8",
@@ -93,10 +72,7 @@
           "airDate": "2022-10-14",
           "synopsis": "The Stranger learns what he is, Halbrand is unmasked, and three rings are forged in Eregion.",
           "wikiUrl": "https://lotr.fandom.com/wiki/Alloyed_(episode)",
-          "image": {
-            "source": "https://static.wikia.nocookie.net/lotr/images/7/7f/Amazon-com-S1E8_thumbnail-celebrimbor_elrond.jpg/revision/latest?cb=20240905221227",
-            "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-          }
+          "suggestedPicture": "https://lotr.fandom.com/wiki/File:Amazon-com-S1E8_thumbnail-celebrimbor_elrond.jpg"
         }
       ]
     },

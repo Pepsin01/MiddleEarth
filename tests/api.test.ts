@@ -221,6 +221,29 @@ describe('editing places and characters', () => {
     expect((await readData<Array<{ pos: number[] }>>('sagas/test-saga/places.json'))[0].pos).toEqual([120, 90]);
   });
 
+  it('stores a character with actor, credited picture and a suggested picture link', async () => {
+    const app = server();
+    const res = await request(app)
+      .post(`${SAGA}/characters`)
+      .set(EDIT)
+      .send({
+        name: 'Elrond',
+        playedBy: 'Some Actor',
+        image: { file: 'img/characters/elrond.jpg', credit: 'Photo: Someone, CC BY 3.0', page: 'https://commons.wikimedia.org/wiki/File:Example.jpg', focus: [0.5, 0.3] },
+        suggestedPicture: 'https://lotr.fandom.com/wiki/File:Example.png',
+      });
+    expect(res.status).toBe(201);
+    expect(res.body).toMatchObject({ id: 'elrond', playedBy: 'Some Actor', suggestedPicture: 'https://lotr.fandom.com/wiki/File:Example.png' });
+
+    const bad = await request(app).post(`${SAGA}/characters`).set(EDIT).send({ name: 'Gil-galad', suggestedPicture: 'not a link' });
+    expect(bad.status).toBe(400);
+    const escaping = await request(app)
+      .post(`${SAGA}/characters`)
+      .set(EDIT)
+      .send({ name: 'Gil-galad', image: { file: '../../secrets.txt' } });
+    expect(escaping.status).toBe(400);
+  });
+
   it('rejects a place outside the map and odd links', async () => {
     const app = server();
     expect((await request(app).post(`${SAGA}/places`).set(EDIT).send({ name: 'Valinor', pos: [-500, 100] })).status).toBe(400);

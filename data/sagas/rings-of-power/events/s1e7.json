@@ -9,10 +9,7 @@
     "description": "Galadriel wakes in a world of red ash. Isildur vanishes when a burning house comes down on him, and Míriel, struck by falling embers, loses her sight.",
     "characters": ["galadriel", "theo", "miriel", "elendil", "isildur", "valandil"],
     "exits": ["isildur"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/8/86/Galadriel_covered_in_ash_-_TRoP.png/revision/latest?cb=20221012020238",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Galadriel_covered_in_ash_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/The_Eye_(episode)"
   },
   {
@@ -24,10 +21,7 @@
     "pos": [6830, 5760],
     "description": "Leading the boy through the burning woods, Galadriel speaks for the first time of the husband she lost in the war, and gives Theo a sword.",
     "characters": ["galadriel", "theo"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/9/9b/Theo_%26_Galadriel_-_TRoP.png/revision/latest?cb=20221025031952",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Theo_%26_Galadriel_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/The_Eye_(episode)"
   },
   {
@@ -40,10 +34,7 @@
     "description": "The Harfoots arrive to find their orchard scorched by the mountain's fire. The Stranger's attempt to heal a tree goes wrong and they send him away — yet by morning the whole Grove is in fruit.",
     "characters": ["nori", "poppy", "stranger", "sadoc"],
     "via": [[6400, 4050], [6650, 3900]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/c/c2/The_Grove_-_TRoP.png/revision/latest?cb=20221013020257",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:The_Grove_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/The_Grove"
   },
   {
@@ -66,10 +57,7 @@
     "placeId": "the-grove",
     "description": "The three white-robed hunters come looking for the Stranger and set the carts alight. Nori, Poppy, Marigold and Sadoc set out to warn him.",
     "characters": ["nori", "poppy", "sadoc"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/c/c8/The_Dweller_-_TRoP.png/revision/latest?cb=20220923185557",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:The_Dweller_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Mystics"
   },
   {
@@ -82,10 +70,7 @@
     "description": "King Durin III refuses to dig mithril for the Elves. Durin and Elrond dig anyway and strike a vast vein — the king catches them, banishes Elrond and strips his son of his rank.",
     "characters": ["elrond", "durin-iv", "durin-iii", "disa"],
     "via": [[2345, 2800], [3300, 2790], [3950, 3180], [4540, 3724]],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/4/4c/Elrond_gives_proposal_to_Durin_-_TRoP.png/revision/latest?cb=20221027021345",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Elrond_gives_proposal_to_Durin_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Durin_III"
   },
   {
@@ -97,10 +82,7 @@
     "placeId": "khazad-dum",
     "description": "The king seals the shaft and casts the withered Elven leaf into it. Far below, the falling leaf wakes a Balrog.",
     "characters": ["durin-iii"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/3/32/Durin%27s_Bane_-_TRoP.png/revision/latest?cb=20221007060836",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Durin's_Bane_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Durin's_Bane"
   },
   {
@@ -113,10 +95,7 @@
     "description": "Survivors gather outside the ash. Elendil mourns his son; blind Míriel vows that Númenor will return. Halbrand is found badly wounded, and Galadriel rides with him in search of Elvish healing.",
     "characters": ["galadriel", "theo", "bronwyn", "arondir", "miriel", "elendil", "valandil", "halbrand"],
     "exits": ["bronwyn"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/3/36/Brownyn_meets_M%C3%ADriel_-_TRoP.png/revision/latest?cb=20221024171651",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Brownyn_meets_M%C3%ADriel_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/The_Eye_(episode)"
   },
   {
@@ -128,10 +107,7 @@
     "pos": [7090, 5520],
     "description": "Under the ash cloud the Orcs can walk by day. Adar strikes the old name from the land and gives it a new one.",
     "characters": ["adar", "waldreg"],
-    "image": {
-      "source": "https://static.wikia.nocookie.net/lotr/images/3/31/Adar_gives_Mordor_its_name_-_TRoP.png/revision/latest?cb=20221016013059",
-      "credit": "The Rings of Power © Amazon Studios, via lotr.fandom.com"
-    },
+    "suggestedPicture": "https://lotr.fandom.com/wiki/File:Adar_gives_Mordor_its_name_-_TRoP.png",
     "wikiUrl": "https://lotr.fandom.com/wiki/Mordor"
   }
 ]
