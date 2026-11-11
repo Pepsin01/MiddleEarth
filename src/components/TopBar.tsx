@@ -164,6 +164,10 @@ function ViewOptions({ children }: { children?: ReactNode }) {
         <input type="checkbox" checked={options.places} onChange={(event) => setOption('places', event.target.checked)} />
         All named places
       </label>
+      <label className="check">
+        <input type="checkbox" checked={options.overlays} onChange={(event) => setOption('overlays', event.target.checked)} />
+        Changes in the world (regions, sieges, marches)
+      </label>
       <label className="field-row">
         Routes of the characters
         <select value={options.trails} onChange={(event) => setOption('trails', event.target.value as typeof options.trails)}>

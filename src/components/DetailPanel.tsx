@@ -1,6 +1,6 @@
 import { ArrowLeft, BookOpen, CalendarDays, ChevronLeft, ChevronRight, ExternalLink, ImageIcon, LocateFixed, MapPin, Pencil, Plus, Route, X } from 'lucide-react';
 import type { CSSProperties, ReactNode } from 'react';
-import type { Character, ImageRef, Place } from '../../shared/schema.ts';
+import type { Character, ImageRef, Overlay, Place } from '../../shared/schema.ts';
 import { characterAt, hasHiddenIdentity, identityAt } from '../../shared/timeline.ts';
 import type { Time, TimedEvent } from '../../shared/timeline.ts';
 import { formatDate, plural } from '../lib/format.ts';
@@ -382,6 +382,31 @@ function PlaceView({ place }: { place: Place }) {
   );
 }
 
+function OverlayView({ overlay }: { overlay: Overlay }) {
+  const timeline = useStore((state) => state.timeline)!;
+  const flyTo = useStore((state) => state.flyTo);
+  const since = timeline.episodeById.get(overlay.from);
+  return (
+    <>
+      <Header />
+      <div className="detail__scroll">
+        <MapVignette pos={overlay.points[Math.floor(overlay.points.length / 2)]} color={overlay.color ?? '#5b4a36'}>
+          <MapPin aria-hidden="true" />
+        </MapVignette>
+        <div className="detail__body">
+          <p className="eyebrow">The changing world{since ? ` · since ${since.code}` : ''}</p>
+          <h2>{overlay.title}</h2>
+          <button type="button" className="place-link" onClick={() => flyTo(overlay.points[Math.floor(overlay.points.length / 2)])}>
+            <LocateFixed aria-hidden="true" /> Show on the map
+          </button>
+          {overlay.description && <p className="prose">{overlay.description}</p>}
+          <WikiLink url={overlay.wikiUrl} />
+        </div>
+      </div>
+    </>
+  );
+}
+
 /** The side panel: an overview of the current episode, or details of whatever is selected. */
 export function DetailPanel() {
   const open = useStore((state) => state.detailOpen);
@@ -389,6 +414,7 @@ export function DetailPanel() {
   const selection = useStore((state) => state.selection);
   const timeline = useStore((state) => state.timeline);
   const editorOpen = useStore((state) => state.editorTarget !== null);
+  const bundle = useStore((state) => state.bundle);
   if (!timeline) return null;
 
   if (editorOpen) {
@@ -410,10 +436,11 @@ export function DetailPanel() {
   const timed = selection?.kind === 'event' ? timeline.eventById.get(selection.id) : undefined;
   const character = selection?.kind === 'character' ? timeline.characterById.get(selection.id) : undefined;
   const place = selection?.kind === 'place' ? timeline.placeById.get(selection.id) : undefined;
+  const overlay = selection?.kind === 'overlay' ? bundle?.overlays.find((entry) => entry.id === selection.id) : undefined;
 
   return (
     <aside className="panel detail" data-map-inset="right" aria-label="Details">
-      {timed ? <EventView key={timed.event.id} timed={timed} /> : character ? <CharacterView key={character.id} character={character} /> : place ? <PlaceView key={place.id} place={place} /> : <EpisodeView />}
+      {overlay ? <OverlayView key={overlay.id} overlay={overlay} /> : timed ? <EventView key={timed.event.id} timed={timed} /> : character ? <CharacterView key={character.id} character={character} /> : place ? <PlaceView key={place.id} place={place} /> : <EpisodeView />}
     </aside>
   );
 }

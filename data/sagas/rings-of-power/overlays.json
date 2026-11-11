@@ -1,1 +1,128 @@
-[]
+[
+  {
+    "id": "the-southlands",
+    "kind": "region",
+    "title": "The Southlands",
+    "description": "A land of Men who once served Morgoth, watched over by the Elves. The map already prints the name it will have later.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Mordor",
+    "points": [[6850, 5200], [7500, 5140], [8300, 5200], [8700, 5500], [8520, 6000], [8400, 6400], [7600, 6450], [6950, 6350], [6850, 5800]],
+    "color": "#3f8a3a",
+    "dashed": true,
+    "from": "s1e1",
+    "untilEvent": "s1e6-orodruin-erupts"
+  },
+  {
+    "id": "the-ash-cloud",
+    "kind": "region",
+    "title": "The Southlands under ash",
+    "description": "Orodruin has erupted. A cloud of ash hides the sun, and Orcs walk freely by day.",
+    "points": [[6850, 5200], [7500, 5140], [8300, 5200], [8700, 5500], [8520, 6000], [8400, 6400], [7600, 6450], [6950, 6350], [6850, 5800]],
+    "color": "#5a3d2a",
+    "from": "s1e6",
+    "fromEvent": "s1e6-orodruin-erupts",
+    "untilEvent": "s1e7-the-southlands-become-mordor"
+  },
+  {
+    "id": "mordor",
+    "kind": "region",
+    "title": "Mordor, the Black Land",
+    "description": "Adar strikes out the old name. The Southlands are now a home for the Orcs under a sky of ash.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Mordor",
+    "points": [[6850, 5200], [7500, 5140], [8300, 5200], [8700, 5500], [8520, 6000], [8400, 6400], [7600, 6450], [6950, 6350], [6850, 5800]],
+    "color": "#3a2a3a",
+    "from": "s1e7",
+    "fromEvent": "s1e7-the-southlands-become-mordor"
+  },
+  {
+    "id": "mount-doom-burning",
+    "kind": "marker",
+    "title": "Mount Doom is burning",
+    "description": "The fire-mountain keeps erupting; its tremors are felt as far as Khazad-dûm.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Mount_Doom",
+    "points": [[7115, 5330]],
+    "color": "#a32a2a",
+    "icon": "disaster",
+    "from": "s1e7"
+  },
+  {
+    "id": "eregion-realm",
+    "kind": "label",
+    "title": "Eregion, realm of the Elven-smiths",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Eregion",
+    "points": [[4500, 3580]],
+    "color": "#b07d12",
+    "from": "s1e1",
+    "untilEvent": "s2e6-the-siege-of-eregion-begins"
+  },
+  {
+    "id": "march-on-eregion",
+    "kind": "line",
+    "title": "The march of Adar's host",
+    "description": "The Orcs of Mordor cross the Anduin and the plains of Calenardhon, cutting their way through the forests towards Eregion.",
+    "points": [[7230, 5500], [6760, 5090], [6500, 4900], [5900, 4750], [5200, 4800], [4580, 4860], [4350, 4400], [4400, 3950], [4420, 3800]],
+    "color": "#5a3d8a",
+    "dashed": true,
+    "from": "s2e3",
+    "fromEvent": "s2e3-adars-host-sets-out",
+    "until": "s2e5"
+  },
+  {
+    "id": "siege-of-eregion",
+    "kind": "region",
+    "title": "Eregion besieged",
+    "description": "Adar's host surrounds Ost-in-Edhil.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Siege_of_Eregion",
+    "points": [[4380, 3640], [4560, 3600], [4700, 3690], [4690, 3810], [4520, 3870], [4360, 3800]],
+    "color": "#5a3d8a",
+    "dashed": true,
+    "from": "s2e6",
+    "fromEvent": "s2e6-the-siege-of-eregion-begins",
+    "untilEvent": "s2e8-the-death-of-celebrimbor"
+  },
+  {
+    "id": "eregion-fallen",
+    "kind": "label",
+    "title": "Eregion has fallen",
+    "description": "Ost-in-Edhil is sacked and its lord is dead. Sauron holds the city, the Nine and an army.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Siege_of_Eregion",
+    "points": [[4500, 3580]],
+    "color": "#5a3d8a",
+    "from": "s2e8",
+    "fromEvent": "s2e8-the-death-of-celebrimbor"
+  },
+  {
+    "id": "khazad-dum-dark",
+    "kind": "label",
+    "title": "Khazad-dûm in darkness",
+    "description": "The sun-shafts have collapsed; without light the Dwarves' crops are failing.",
+    "points": [[5080, 3560]],
+    "color": "#b3541e",
+    "from": "s2e2",
+    "fromEvent": "s2e2-khazad-dum-goes-dark",
+    "untilEvent": "s2e5-the-kings-ring"
+  },
+  {
+    "id": "durins-bane-awake",
+    "kind": "marker",
+    "title": "Durin's Bane is awake",
+    "description": "A Balrog of Morgoth, buried under the mithril since the First Age.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Durin%27s_Bane",
+    "points": [[5040, 3700]],
+    "color": "#b3541e",
+    "icon": "omen",
+    "from": "s2e8",
+    "fromEvent": "s2e8-durins-bane"
+  },
+  {
+    "id": "imladris-founded",
+    "kind": "marker",
+    "title": "A refuge is founded",
+    "description": "The valley where the survivors of Eregion gather will become Imladris — Rivendell.",
+    "wikiUrl": "https://lotr.fandom.com/wiki/Rivendell",
+    "points": [[5075, 2720]],
+    "color": "#2b6cb0",
+    "icon": "star",
+    "from": "s2e8",
+    "fromEvent": "s2e8-a-hidden-valley"
+  }
+]
