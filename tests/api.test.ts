@@ -306,6 +306,45 @@ describe('editing the saga itself', () => {
   });
 });
 
+describe('pictures', () => {
+  // the smallest valid PNG: one transparent pixel
+  const png = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==', 'base64');
+
+  it('stores an uploaded picture and serves it, also shrunk', async () => {
+    const app = server();
+    const res = await request(app).post('/api/media/upload').set(EDIT).attach('file', png, 'My Still (1).png');
+    expect(res.status).toBe(201);
+    expect(res.body.file).toMatch(/^img\/uploads\/my-still-1-[0-9a-f]{8}\.png$/);
+    expect((await request(app).get(`/media/${res.body.file}`)).status).toBe(200);
+    const thumb = await request(app).get(`/thumb/96/${res.body.file}`);
+    expect(thumb.status).toBe(200);
+    expect(thumb.headers['content-type']).toBe('image/webp');
+  });
+
+  it('refuses files that are not pictures, and uploads without permission', async () => {
+    const app = server();
+    const notPicture = await request(app).post('/api/media/upload').set(EDIT).attach('file', Buffer.from('<script>alert(1)</script>'), 'evil.png');
+    expect(notPicture.status).toBe(400);
+    expect((await request(app).post('/api/media/upload').attach('file', png, 'a.png')).status).toBe(400);
+    const locked = server({ ADMIN_PASSWORD: 'mellon' });
+    expect((await request(locked).post('/api/media/upload').set(EDIT).attach('file', png, 'a.png')).status).toBe(401);
+  });
+
+  it('does not serve anything outside the media folder', async () => {
+    const app = server();
+    const escape = await request(app).get('/media/..%2Fsagas%2Ftest-saga%2Fsaga.json');
+    expect([403, 404]).toContain(escape.status);
+    expect(escape.text).not.toContain('Test saga');
+    expect((await request(app).get('/thumb/96/..%2F..%2Fpackage.json')).status).toBe(400);
+    expect((await request(app).get('/thumb/97/img/a.png')).status).toBe(400);
+  });
+
+  it('only accepts web addresses for fetching', async () => {
+    const res = await request(server()).post('/api/media/fetch').set(EDIT).send({ url: 'file:///etc/passwd' });
+    expect(res.status).toBe(400);
+  });
+});
+
 describe('backups', () => {
   it('saves a snapshot before every change and can restore it', async () => {
     const app = server();

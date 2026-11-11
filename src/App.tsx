@@ -4,6 +4,8 @@ import { Legend } from './components/Legend.tsx';
 import { PlayButton, usePlayer } from './components/Player.tsx';
 import { Timeline } from './components/Timeline.tsx';
 import { TopBar } from './components/TopBar.tsx';
+import { EditTools } from './editor/EditTools.tsx';
+import { PickLayer } from './editor/PickLayer.tsx';
 import { MapControls } from './map/MapControls.tsx';
 import { MapView } from './map/MapView.tsx';
 import { SceneLayers } from './map/SceneLayers.tsx';
@@ -32,7 +34,7 @@ function useKeyboard() {
           setPlaying(false);
           stepEpisode(delta);
         }
-      } else if (event.key === 'Escape' && selection) {
+      } else if (event.key === 'Escape' && selection && !useStore.getState().editorTarget) {
         select(null);
       }
     };
@@ -78,9 +80,10 @@ export function App() {
     <div className="app">
       <MapView key={`${bundle.map.id}:${bundle.map.tiles.path}:${bundle.map.width}`} mapDef={bundle.map} initialView={bundle.saga.view}>
         <SceneLayers />
+        <PickLayer />
         <MapControls />
       </MapView>
-      <TopBar />
+      <TopBar tools={<EditTools />} />
       <Legend />
       <DetailPanel />
       <Timeline controls={<PlayButton />} />

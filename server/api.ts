@@ -1,10 +1,13 @@
 import express from 'express';
+import multer from 'multer';
 import type { Request } from 'express';
 import { z } from 'zod';
+import { HttpUrl } from '../shared/schema.ts';
 import type { CollectionName } from '../shared/schema.ts';
 import { EDIT_HEADER } from './auth.ts';
 import type { Auth } from './auth.ts';
 import { HttpError, parseOrThrow } from './errors.ts';
+import { storeFromWeb, storeUpload } from './media.ts';
 import type { Store } from './store.ts';
 
 const LISTS = ['places', 'characters', 'overlays'] as const;
@@ -108,6 +111,20 @@ export function createApi(store: Store, auth: Auth): express.Router {
     if (!['places', 'characters', 'overlays', 'events'].includes(collection)) throw new HttpError(404, 'Not found.');
     await store.removeItem(param(req, 'sagaId'), collection as CollectionName, param(req, 'id'), req.query.cascade === '1');
     res.json({ ok: true });
+  });
+
+  /* ------------------------------------------------------------ pictures */
+
+  const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 25 * 1024 * 1024, files: 1 } });
+
+  api.post('/media/upload', edit, upload.single('file'), async (req, res) => {
+    if (!req.file) throw new HttpError(400, 'No file was sent.');
+    res.status(201).json({ file: await storeUpload(store.mediaDir, req.file.buffer, req.file.originalname || 'picture') });
+  });
+
+  api.post('/media/fetch', edit, async (req, res) => {
+    const { url } = parseOrThrow(z.object({ url: HttpUrl }), req.body);
+    res.status(201).json({ file: await storeFromWeb(store.mediaDir, url), source: url });
   });
 
   /* ------------------------------------------------------------- backups */

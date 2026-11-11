@@ -109,6 +109,14 @@ export interface State {
   options: ViewOptions;
   playing: boolean;
   camera: CameraRequest | null;
+  /** Edit mode: shows the editing tools. */
+  editing: boolean;
+  editorTarget: EditorTarget | null;
+  /** What the next click on the map is for: the entry's position or another route point. */
+  pick: 'pos' | 'via' | null;
+  /** The last point picked on the map, for the form to take over. */
+  picked: { mode: 'pos' | 'via'; point: Point; nonce: number } | null;
+  draftShape: DraftShape | null;
   /** Whether the side panel (details) and the legend (storylines, characters) are open. */
   detailOpen: boolean;
   legendOpen: boolean;
@@ -138,6 +146,24 @@ export interface State {
   toggleFollow: (characterId: string) => void;
   setOption: <K extends keyof ViewOptions>(key: K, value: ViewOptions[K]) => void;
   flyTo: (point: Point, minZoom?: number) => void;
+  setEditing: (editing: boolean) => void;
+  openEditor: (target: EditorTarget | null) => void;
+  setPick: (pick: 'pos' | 'via' | null) => void;
+  mapPicked: (point: Point) => void;
+  setDraftShape: (shape: DraftShape | null) => void;
+}
+
+/** What the editor form is working on. `id: null` means a new entry. */
+export interface EditorTarget {
+  kind: 'event' | 'character' | 'place' | 'saga';
+  id: string | null;
+}
+
+/** The position and route of the entry being edited, shown on the map while the form is open. */
+export interface DraftShape {
+  pos?: Point;
+  via?: Point[];
+  color: string;
 }
 
 let cameraNonce = 0;
@@ -176,6 +202,11 @@ export const useStore = create<State>()((set, get) => ({
   options: { ...DEFAULT_OPTIONS, ...readSaved().options },
   playing: false,
   camera: null,
+  editing: false,
+  editorTarget: null,
+  pick: null,
+  picked: null,
+  draftShape: null,
   // On small screens the panels start closed so the map is visible first.
   detailOpen: window.matchMedia('(min-width: 900px)').matches,
   legendOpen: window.matchMedia('(min-width: 1200px)').matches,
@@ -358,6 +389,17 @@ export const useStore = create<State>()((set, get) => ({
   },
 
   flyTo: (point, minZoom) => set({ camera: { point, minZoom, nonce: ++cameraNonce } }),
+
+  setEditing: (editing) => set(editing ? { editing, playing: false } : { editing, editorTarget: null, pick: null, draftShape: null }),
+  openEditor: (editorTarget) => set({ editorTarget, pick: null, picked: null, draftShape: null, detailOpen: true, playing: false }),
+  setPick: (pick) => set({ pick }),
+  mapPicked: (point) => {
+    const mode = get().pick;
+    if (!mode) return;
+    // A position is picked once; route points keep coming until the mode is switched off.
+    set({ picked: { mode, point, nonce: ++cameraNonce }, pick: mode === 'via' ? 'via' : null });
+  },
+  setDraftShape: (draftShape) => set({ draftShape }),
 }));
 
 // Remember the view between visits and keep the address bar in sync.

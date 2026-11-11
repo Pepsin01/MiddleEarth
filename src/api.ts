@@ -61,6 +61,12 @@ export const api = {
     request<ItemOf[N]>('PUT', `${saga(sagaId)}/${collection}/${encodeURIComponent(id)}${position === undefined ? '' : `?position=${position}`}`, input),
   remove: (sagaId: string, collection: CollectionName, id: string, cascade = false) =>
     request<{ ok: true }>('DELETE', `${saga(sagaId)}/${collection}/${encodeURIComponent(id)}${cascade ? '?cascade=1' : ''}`),
+  uploadPicture: (file: Blob, name: string) => {
+    const form = new FormData();
+    form.append('file', file, name);
+    return request<{ file: string }>('POST', '/api/media/upload', form);
+  },
+  fetchPicture: (url: string) => request<{ file: string; source: string }>('POST', '/api/media/fetch', { url }),
   reorder: (sagaId: string, episodeId: string, ids: string[]) =>
     request<{ ok: true }>('PUT', `${saga(sagaId)}/episodes/${encodeURIComponent(episodeId)}/order`, { ids }),
 };
